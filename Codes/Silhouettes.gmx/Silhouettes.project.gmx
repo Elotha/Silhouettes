@@ -43,6 +43,9 @@
       <script>scripts\scr_light.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_Dialog</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_Character</object>
     <object>objects\obj_PeopleRight</object>
@@ -67,7 +70,7 @@
       <object>objects\obj_Hedge2</object>
       <object>objects\obj_TrashCan</object>
       <object>objects\obj_Chest</object>
-      <object>objects\obj_fountain</object>
+      <object>objects\obj_Fountain</object>
     </objects>
   </objects>
   <rooms name="rooms">
