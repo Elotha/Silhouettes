@@ -11,7 +11,6 @@
     <sprite>sprites\spr_lamp</sprite>
     <sprite>sprites\spr_bank</sprite>
     <sprite>sprites\spr_lamp2</sprite>
-    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_1</background>
