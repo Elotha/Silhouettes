@@ -45,7 +45,9 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_Character</object>
+    <object>objects\obj_PeopleRight</object>
     <objects name="System">
+      <object>objects\obj_CreatePeople</object>
       <object>objects\obj_Editor</object>
       <object>objects\obj_Camera</object>
       <object>objects\obj_System</object>
@@ -68,7 +70,6 @@
       <object>objects\obj_fountain</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
   </rooms>

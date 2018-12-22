@@ -68,6 +68,7 @@
     <instance objName="obj_DialogBox" x="64" y="0" name="inst_EDB78B75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Particles" x="0" y="864" name="inst_5E65E871" locked="0" code="image_xscale = room_width/32;&#xA;image_yscale = room_height/32;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Music" x="96" y="0" name="inst_853B1084" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_CreatePeople" x="544" y="640" name="inst_47BD6866" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
