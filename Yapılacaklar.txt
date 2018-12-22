@@ -2,8 +2,6 @@
 
 Ana karakterin odanýn bir yerinden çýktýðý zaman tersinden geri gelmesi kodlanacak (wrap diye geçiyor).
 
-Dialog kutusunda mesaj çýkmasý, bu mesajlarýn E tuþu ile geçilebilmesi, mesaj henüz tamamlanmamýþken E tuþuna basýldýðý zaman tam haline geçmesi kodlanacak. (string_length, string_copy, string_width gibi þeylere ihtiyacýn olacak bi strings kýsmýný oku helpten)
-
 Dialoglar esnasýnda ara sýra seçeneklerin çýkabilmesi ve seçenek seçebilme kodlanacak. Çizimler gelene kadar þimdilik dikdörtgen kutularla idare ediver.
 
 Silüetlerin hayat akýþýnda giderken farklý renklerde olmasý kodlanacak. (Grinin tonlarý ve çok hafif mavilik. Ama bazýlarý bir týk daha koyu mavi olacak.)
@@ -17,8 +15,4 @@ Pause menüsü için <Esc> tuþuna bastýðýmzda ekranýn yarým kararmasý ve bunun üzer
 
 Renkler düzenlenecek, þuanda renkler birbiriyle hiç uyuþmuyor.
 
-Gece lambasýna dayanarak oturmuþ silüetler çizilecek. Sanki aðaca yaslanmýþ gibi duracaklar. Vakit olursa üç tane çizilsin, bir tanesi önüne, iki tanesi yanlara gelecek þekilde. Ama çok dizilmiþ gibi durmasýnlar, doðal görünsün.
-
-Yere çökmüþ oturan silüet.
-
-Dialog seçme kutucuklarý çizilecek.
+Dialog kutusu aþaðý doðru kararabilir.
