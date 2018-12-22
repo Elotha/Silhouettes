@@ -147,7 +147,7 @@
     
     //move_wrap(true, false, -256);  //odadan çıktıktan sonra kamera takip ettiği için bütün haritayı dolanıyor 
     //move_wrap(false,true,-192);
-    if x &lt; 256 
+    /*if x &lt; 256 
     {
         obj_Camera.x =room_width-256
         x =room_width-256
@@ -166,7 +166,7 @@
     {
         obj_Camera.y =192
         x =192
-    }
+    }*/
 }
 </string>
           </argument>

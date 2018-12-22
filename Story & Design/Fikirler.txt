@@ -16,8 +16,6 @@ Sandýk: Silüetlerin saklamak istedikleri þeyler.
 
 Çöp kovasý: Silüetlerin unutmak istediði ya da görmezden gelmek istediði þeyleri koyduðu yer.
 
-Altar: Dini yol.
-
 ------
 
 Silüetlerin rengine göre sona ne kadar yakýn olduklarýný görebiliyoruz. Bazýlarýnýn etrafýnda hafif bir ýþýk var.

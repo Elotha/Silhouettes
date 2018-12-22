@@ -8,8 +8,6 @@ Dialoglar esnasýnda ara sýra seçeneklerin çýkabilmesi ve seçenek seçebilme kodla
 
 Çeþitli silüetler çizildikten sonra sonra bunlarýn ana karakterin yürüme efektinde olduðu gibi yürümesi kodlanacak. Ama sadece saða doðru gidecekler ve sadece yol üstünde bulunacaklar. Yolun baþýndayken alpha deðerleri 0'dan 0.8'e artacak. Yolun sonuna geldiklerinde de 0'a geri düþecek.
 
-Onur müziði hallettiði zaman müzik oyuna konulacak.
-
 Bankýn önüne geldiðimiz zaman E tuþuna bastýðýmýzda karakterin banka oturmasý kodlanacak.
 
 Pause menüsü çizimi geldiði zaman, <Esc> tuþuna bastýðýmzda ekranýn yarým kararmasý ve bunun üzerine pause menüsünün çýkmasý kodlanacak. <Esc> tuþuna tekrar basarsak oyuna geri dönücez.
