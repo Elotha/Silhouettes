@@ -28,7 +28,7 @@
             <string>///random
 {
 
-    rand[0]=irandom(7)
+    rand[0]=irandom(2)
     rand[1]=irandom(5)
     rand[2]=irandom(5)
 

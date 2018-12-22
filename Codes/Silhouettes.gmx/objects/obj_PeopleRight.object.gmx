@@ -60,7 +60,7 @@
      last_ver = 16;
      silhouette = 0;
      image_blend = c_dkgray
-     spwn_spd = irandom_range(10,20)
+     spwn_spd = irandom_range(5,20)
 }
 </string>
           </argument>
@@ -140,8 +140,17 @@ x += last_hor
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///movement
 {
+    if obj_CreatePeople.x+32 &gt; x then image_alpha = 0.3
+    if obj_CreatePeople.x+64 &gt; x then image_alpha = 0.5
+    if obj_CreatePeople.x+128 &gt; x then image_alpha = 0.8
+    if obj_CreatePeople.x+292 &gt; x then image_alpha = 1
+    if obj_CreatePeople.x+room_width-32 &lt; x then image_alpha = 0.3
+    if obj_CreatePeople.x+room_width-64 &lt; x then image_alpha = 0.5
+    if obj_CreatePeople.x+room_width-128 &lt; x then image_alpha = 0.8
+
+
 
     if alarm[2]=-1
        {

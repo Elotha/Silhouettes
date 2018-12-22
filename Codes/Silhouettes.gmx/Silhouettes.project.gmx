@@ -30,6 +30,8 @@
     <sprite>sprites\spr_FallenAngelRight</sprite>
     <sprite>sprites\spr_FallenAngelLeft</sprite>
     <sprite>sprites\spr_Button</sprite>
+    <sprite>sprites\spr_LampShadow</sprite>
+    <sprite>sprites\spr_DialogReplyBox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -62,6 +64,8 @@
       <object>objects\obj_Light</object>
       <object>objects\obj_Effect</object>
       <object>objects\obj_DialogBox</object>
+      <object>objects\obj_PauseMenu</object>
+      <object>objects\obj_Button</object>
     </objects>
     <objects name="Environmental Objects">
       <object>objects\obj_Bank</object>
@@ -71,10 +75,13 @@
       <object>objects\obj_TrashCan</object>
       <object>objects\obj_Chest</object>
       <object>objects\obj_Fountain</object>
+      <object>objects\obj_LampShadow</object>
     </objects>
+    <object>objects\obj_DialogReplyBox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
