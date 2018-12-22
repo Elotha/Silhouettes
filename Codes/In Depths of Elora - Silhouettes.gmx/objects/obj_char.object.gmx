@@ -37,6 +37,18 @@
     image_blend=c_gray
     efc_1 = 0.8
     set_effect = false
+    silh[0]=0
+    silhx[0]=0
+    silhy[0]=0
+    
+    silh[1]=0
+    silhx[1]=0
+    silhy[1]=0
+    silh[1]=0
+    silhx[1]=0
+    silhy[1]=0
+    hor_sil = -hor_mov*gap
+    ver_sil = +ver_mor*gap
 }
 </string>
           </argument>
@@ -87,27 +99,43 @@ mov_cd = true
             <string>///movement
 {
     
-   ver_mov = keyboard_check(ord('D')) - keyboard_check(ord('A')) 
-   hor_mov = keyboard_check(ord("W")) - keyboard_check(ord("S")) 
+   hor_mov = keyboard_check(ord('D')) - keyboard_check(ord('A')) 
+   ver_mov = keyboard_check(ord("W")) - keyboard_check(ord("S")) 
     
-   if mov_cd &amp;&amp; alarm[0] = -1 //&amp;&amp; collision_point(x+ver_mov*gap,y-hor_mov*gap,obj_bank,true,false) = true
+   if mov_cd &amp;&amp; alarm[0] = -1 &amp;&amp; (hor_mov !=0 || ver_mov!=0)//&amp;&amp; collision_point(x+ver_mov*gap,y-hor_mov*gap,obj_bank,true,false) = true
       {
-      var obstacle = collision_line(x,y,x+ver_mov*gap,y-hor_mov*gap,obj_obsticle,false,true)
+      var obstacle = collision_line(x,y,x+hor_mov*gap,y-ver_mov*gap,obj_obsticle,false,true)
       if obstacle = noone
           {
           mov_cd = false
           set_effect=true
           alarm[1] = 3
           alarm[0] = 10
-          x += ver_mov*gap
-          y -= hor_mov*gap
+          x += hor_mov*gap
+          y -= ver_mov*gap
+          if silh[0] = 0 
+           {
+                silh[0]=30
+                silhx[0]=30
+                silhy[0]=30
+           }
+          else if silh[1]=0
+           {
+                silh[1]=30
+                silhx[1]=30
+                silhy[1]=30
+           }
+          else if silh[2]=0
+           {
+                silh[2]=30
+                silhx[2]=30
+                silhy[2]=30
+           }
+           
           }
       }
     
-    //if collision_point(x+)
-    
-    
-    //if ver_mov=1 &amp;&amp; hor_mov=0
+   
 }
 </string>
           </argument>
@@ -189,21 +217,9 @@ depth=-y
           <argument>
             <kind>1</kind>
             <string>///movement_effect
-{                 draw_sprite_ext(obj_char.image_index,image_number,x,y,1,1,0,c_teal,efc_1)
-    if set_effect draw_sprite_ext(obj_char.image_index,image_number,x,y,1,1,0,c_teal,efc_1)
-    if efc_1 &gt; 0.05 efc_1 -= 0.01
-    
-    
-    
-
-
-
-
-    // var efct
-    //for (efct = 0; efct &lt; 4
-    //array[efct] = efct
-    //array[29] = e_alp;
-    
+{
+    for(var i; i&lt;3; i--;)
+    draw_sprite_ext(sprite_index,image_index,silhx[i],silhy[i],1,1,0,c_white,silh[30]/60)
 
 }
 </string>
