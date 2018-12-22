@@ -36,6 +36,7 @@
     last_ver = 0;
     silhouette = 0;
     image_speed = 0;
+
     event_inherited();
 }
 </string>
@@ -123,6 +124,10 @@
     hor_mov = keyboard_check(ord('D')) - keyboard_check(ord('A'));
     ver_mov = keyboard_check(ord("W")) - keyboard_check(ord("S")) ;
     
+    //if hor_mov = 1 then sprite_index = spr_FallenAngelRight; else if hor_mov = -1 then sprite_index = spr_FallenAngelLeft;
+    //if ver_mov = 1 then sprite_index = spr_FallenAngelUp; else if ver_mov = -1 then sprite_index = spr_FallenAngelDown;
+
+    
     if hor_mov = 1 then sprite_index = spr_CharacterRight; else if hor_mov = -1 then sprite_index = spr_CharacterLeft;
     if ver_mov = 1 then sprite_index = spr_CharacterUp; else if ver_mov = -1 then sprite_index = spr_CharacterDown;
      
@@ -138,6 +143,29 @@
             last_ver = ver_mov*gap;
             silhouette = 10;
             }
+    }
+    
+    //move_wrap(true, false, -256);  //odadan çıktıktan sonra kamera takip ettiği için bütün haritayı dolanıyor 
+    //move_wrap(false,true,-192);
+    if x &lt; 256 
+    {
+        obj_Camera.x =room_width-256
+        x =room_width-256
+    }
+    if x &gt; room_width-256
+    {
+        obj_Camera.x =256
+        x =256
+    }
+    if y&gt;192
+    {
+        obj_Camera.y =room_height+192
+        y =room_width+192
+    }
+    if y&lt;room_height-192
+    {
+        obj_Camera.y =192
+        x =192
     }
 }
 </string>

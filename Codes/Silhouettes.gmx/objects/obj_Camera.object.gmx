@@ -63,10 +63,32 @@
     //y = clamp(y,0+view_hview[0]/2,room_height-view_hview[0]/2);
         
     if instance_number(obj_Character) != 0 //Odada bir karakter var mı? Karakter yoksa hata verir çünkü.
-        {
-        x += ((obj_Character.x - x) * .1)+camera_x; //.1 ile 0.1 aynı şeydir. Burada kameranın gecikmeli gelmesi sağlanıyor.
+    {
         y += ((clamp(obj_Character.y,0+view_hview[0]/2,room_height-view_hview[0]/2) - y) * .1)+camera_y;
-        }
+        x += ((obj_Character.x - x) * .1)+camera_x; //.1 ile 0.1 aynı şeydir. Burada kameranın gecikmeli gelmesi sağlanıyor.
+    }      
+      /*  if obj_Character.x&gt;280 or obj_Character.x&lt;room_width-280
+           {
+           x += ((obj_Character.x - x) * .1)+camera_x; //.1 ile 0.1 aynı şeydir. Burada kameranın gecikmeli gelmesi sağlanıyor.
+           }
+        if obj_Character.x&lt;280 or obj_Character.x&gt;room_width - 280
+           {
+           x +=(obj_Character.x - x);
+           }
+           //x +=(obj_Character.x - x);
+
+        if obj_Character.y&gt;384 || obj_Character.y&lt;room_height-384
+           {
+           y += ((clamp(obj_Character.y,0+view_hview[0]/2,room_height-view_hview[0]/2) - y) * .1)+camera_y;
+           }
+           else
+           {
+           y +=(obj_Character.y - y)+camera_y;
+           }
+           */
+    
+        
+        
         
     x = clamp(x,0+view_wview[0]/2,room_width-view_wview[0]/2);
     y = clamp(y,0+view_hview[0]/2,room_height-view_hview[0]/2);

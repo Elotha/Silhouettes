@@ -22,6 +22,11 @@
     <sprite>sprites\spr_Chest</sprite>
     <sprite>sprites\spr_DialogBox</sprite>
     <sprite>sprites\spr_PauseMenu</sprite>
+    <sprite>sprites\spr_fountain</sprite>
+    <sprite>sprites\spr_FallenAngelUp</sprite>
+    <sprite>sprites\spr_FallenAngelDown</sprite>
+    <sprite>sprites\spr_FallenAngelRight</sprite>
+    <sprite>sprites\spr_FallenAngelLeft</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -39,8 +44,8 @@
     <object>objects\obj_Character</object>
     <objects name="System">
       <object>objects\obj_Editor</object>
-      <object>objects\obj_System</object>
       <object>objects\obj_Camera</object>
+      <object>objects\obj_System</object>
       <object>objects\obj_Block</object>
       <object>objects\obj_TileCreator</object>
       <object>objects\obj_Particles</object>
@@ -56,10 +61,12 @@
       <object>objects\obj_Hedge2</object>
       <object>objects\obj_TrashCan</object>
       <object>objects\obj_Chest</object>
+      <object>objects\obj_fountain</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
