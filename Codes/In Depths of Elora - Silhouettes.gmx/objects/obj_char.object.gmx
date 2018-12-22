@@ -33,6 +33,7 @@
     //hor_spd = 32
     //ver_spd = 32
     mov_cd = true
+    gap = 16
 
 }
 </string>
@@ -116,15 +117,84 @@ mov_cd = true
    ver_mov = keyboard_check(ord('D')) - keyboard_check(ord('A')) 
    hor_mov = keyboard_check(ord("W")) - keyboard_check(ord("S")) 
     
-   if mov_cd = true &amp;&amp; alarm[0] = -1
-    {
-    mov_cd = false
-    alarm[0] = 10
-    x += ver_mov*16
-    y -= hor_mov*16
-    }
-
+   if mov_cd = true &amp;&amp; alarm[0] = -1 //&amp;&amp; collision_point(x+ver_mov*gap,y-hor_mov*gap,obj_bank,true,false) = true
+      {
+      var obstacle;
+      obstacle = collision_point(x+ver_mov*gap,y-hor_mov*gap,obj_obsticle,false,true) = false
+      if obstacle = noone
+          {
+          mov_cd = false
+          alarm[0] = 10
+          x += ver_mov*gap
+          y -= hor_mov*gap
+          }
+      }
+      
+    
+    //if collision_point(x+)
+    
+    
+    //if ver_mov=1 &amp;&amp; hor_mov=0
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///depth
+depth=-y
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>500</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring>draw_self();</codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_point(x+ver_mov*gap,y-hor_mov*gap)
 </string>
           </argument>
         </arguments>
