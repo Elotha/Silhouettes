@@ -57,6 +57,10 @@
     draw_sprite_ext(sprite_index,0,view_wview[0]/2+lengthdir_x(4,rnd[2]),view_hview[0]-64+lengthdir_y(4,rnd[2]),1,1,0,c_white,0.1);
     draw_sprite_ext(sprite_index,0,view_wview[0]/2+lengthdir_x(5,rnd[2]),view_hview[0]-64+lengthdir_y(5,rnd[2]),1,1,0,c_white,0.05);
     
+    draw_set_font(fnt_Dialog);
+    draw_set_color(c_white);
+    draw_text(view_wview[0]/2-sprite_get_width(sprite_index)/2+32,view_hview[0]-64-sprite_get_height(sprite_index)/2+30,"What are you doing here? #Is everything alright in your life?");
+    
     //draw_sprite(spr_PauseMenu,0,view_wview[0]/2,view_hview[0]/2);
 }
 </string>
