@@ -45,7 +45,7 @@ Sandýk, ayna, çit gibi nesneler, her oyunda farklý bir yerde rastgele oluþsun.
 ------ Çizimler ------
 
 Arrows to Move
-<E> to Sit // Down to Stand Up
+<E> to Sit // Down to Get Up
 Seçim kutularý (parlak ve koyu iki tane)
 Karanlýkta oturan silüetler ve sandýk, ayna gibi nesnelerin altýna koymak için elips bir gölge alaný gerekiyor.
 Menü ekraný (Resume, Quit)
