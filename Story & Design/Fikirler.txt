@@ -1,1 +1,62 @@
-asdasdasd
+Kaldýrým taþlarýnýn oluþturduðu ana bir yolda yürüyen silüetler. (Hayatýn genel akýþý)
+
+Kaldýrým taþlarýnýn bölündüðü yollar. (Farklý hayat yollarý. örneðin: din)
+
+Bank: Durup hayatýna ve sisteme dýþardan baktýðýn an.
+
+Sokak lambasý: Yol gösteren ya da karanlýktan kurtaran ýþýk.
+
+Çeþme: Bilgi.
+
+Çit: Seni kýsýtlamak isteyen silüetler.
+
+Ayna: Kendine baktýðýn yer.
+
+Sandýk: Silüetlerin saklamak istedikleri þeyler.
+
+Çöp kovasý: Silüetlerin unutmak istediði ya da görmezden gelmek istediði þeyleri koyduðu yer.
+
+Altar: Dini yol.
+
+------
+
+Silüetlerin rengine göre sona ne kadar yakýn olduklarýný görebiliyoruz. Bazýlarýnýn etrafýnda hafif bir ýþýk var.
+
+Biz sistemi deðiþtirebilecek güce sahibiz. Bizim kararýmýz bir þeyleri çok deðiþtirebilir.
+
+Ölen silüetler nesnelere kalýcý olarak dönüþüyor ya da bir parçasý oluyorve bu onlarýn mirasý oluyor.
+
+Hayatýn akýþýna kapýlmýþ silüetler dýþýndaki silüetler ile etkileþime girebiliyoruz. Etkileþime girdiðimiz zaman dialoglar çýkýyor. Dialog seçme sistemi, ana karakterin yanýnda çýkan minik kutucuklar ile saðlanýyor. 
+
+Oyunun bir kenarýndan çýkarsak diðer kenarýndan geri dönüyoruz. Çünkü bizim hayatýmýzýn ulaþabileceði sýnýrlar var. Her nesneyi göremiyoruz.
+
+Karanlýðýn ortasýndaki zayýf bir ýþýðýn yanýnda toplanmýþ, oturan silüetler olsun.
+
+Hafif kýrýlmýþ kaldýrým taþlarý olabilir. Ölen bütün silüetler aslýnda yepyeni bir nesneye dönüþmeyip var olaný da güçlendirebiliyorlar.
+
+Sandýk, ayna, çit gibi nesneler, her oyunda farklý bir yerde rastgele oluþsun.
+
+
+------Kodlar ------
+
+Kameraya ara sýra minik hareketler verebiliriz.
+
+Partikül efektleri eklenebilir.
+
+
+------ Çizimler ------
+
+Arrows to Move
+<E> to Sit // Down to Stand Up
+Seçim kutularý (parlak ve koyu iki tane)
+Karanlýkta oturan silüetler ve sandýk, ayna gibi nesnelerin altýna koymak için elips bir gölge alaný gerekiyor.
+Menü ekraný (Resume, Quit)
+Gece lambasýnýn ýþýðý
+
+
+
+------ Benim Yapacaklarým ------
+
+Seçim kutularý
+Yeni nesne eklenebilir
+
