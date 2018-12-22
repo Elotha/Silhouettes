@@ -157,15 +157,15 @@
         obj_Camera.x =256
         x =256
     }
-    if y&gt;192
+    if y&lt;192
     {
-        obj_Camera.y =room_height+192
-        y =room_width+192
+        obj_Camera.y =room_height-192
+        y =room_height-192
     }
-    if y&lt;room_height-192
+    if y&gt;room_height-192
     {
         obj_Camera.y =192
-        x =192
+        y =192
     }
 }
 </string>
