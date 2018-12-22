@@ -1,0 +1,47 @@
+------ Kodlar ------
+
+Ana karakterin odanýn bir yerinden çýktýðý zaman tersinden geri gelmesi kodlanacak (wrap diye geçiyor).
+
+Dialog kutusunda mesaj çýkmasý, bu mesajlarýn E tuþu ile geçilebilmesi, mesaj henüz tamamlanmamýþken E tuþuna basýldýðý zaman tam haline geçmesi kodlanacak. (string_length, string_copy, string_width gibi þeylere ihtiyacýn olacak bi strings kýsmýný oku helpten)
+
+Dialoglar esnasýnda ara sýra seçeneklerin çýkabilmesi ve seçenek seçebilme kodlanacak. Çizimler gelene kadar þimdilik dikdörtgen kutularla idare ediver.
+
+Çeþitli silüetler çizildikten sonra sonra bunlarýn ana karakterin yürüme efektinde olduðu gibi yürümesi kodlanacak. Ama sadece saða doðru gidecekler ve sadece yol üstünde bulunacaklar. Yolun baþýndayken alpha deðerleri 0'dan 0.8'e artacak. Yolun sonuna geldiklerinde de 0'a geri düþecek.
+
+Onur müziði hallettiði zaman müzik oyuna konulacak.
+
+Bankýn önüne geldiðimiz zaman E tuþuna bastýðýmýzda karakterin banka oturmasý kodlanacak.
+
+Pause menüsü çizimi geldiði zaman, <Esc> tuþuna bastýðýmzda ekranýn yarým kararmasý ve bunun üzerine pause menüsünün çýkmasý kodlanacak. <Esc> tuþuna tekrar basarsak oyuna geri dönücez.
+
+
+------ Çizimler ------
+
+Gece lambasýnýn etrafýna, dibine düþecek þekilde, üç katmanlý, çapý toplamda 32 birime yaklaþýk olarak denk gelecek þekilde ýþýk çizilecek. Referans görselde nasýl bir þey olmasý gerektiði bulunuyor. Üç katmandan kastým, ilk katman en parlak, ikincisi orta parlak, üçüncüsü en az parlak olacak þekilde üç dairesel ýþýk.
+
+Boy aynasý çizilecek. Ayna bize doðru bakacak. Aynanýn sadece kendisi 32x48 boyutunda olacak, çerçevesi ve ayaklarý hariç. Ayaklý ve çerçeveli olacak, onlarýn boyutu çok önemli deðil.
+
+"Game Arts" içindeki sandýk, renkleri ve görselliði oyunun sanat dizaynýna uygun olacak þekilde düzenlenecek.
+
+Renkler düzenlenecek, þuanda renkler birbiriyle hiç uyuþmuyor.
+
+Silüetler çeþitlendirilecek. (Kadýn da çizmeyi unutmayýn)
+
+Çöp kutusu yeterince silindir hissettirmiyor. Gölgelendirmesi güçlendirilecek o his yaratýlacak. Bir de çöp kutusunun içi çok daha karanlýk olmalý. Þuanki haliyle oyunda yeterince çöp kutusuna benzemiyor.
+
+Ana karakterimizin yanýna oturacak olan karakterin yürümesi ve oturmasý çizilecek.
+
+Çeþme çizilecek. Çeþme sadece musluktan oluþmayacak. Musluðun arkasýnda taþ bir yapý ve musluðun aktýðý yerde de taþ bir yapý olacak (L þeklinde gibi düþünün ama bize doðru bakacak). Boyutlarý banka yakýn bir þey olabilir, ancak nasýl en güzel görüneceðini düþünüyorsanýz ona siz karar verin. 
+
+16x16 ya da ona yakýn boyutlarda bir "klavye tuþu" çizilecek (UI amaçlý kullanýcaz).
+
+Dialog kutusu ile tamamen ayný konseptte bir pause menüsü ekraný çizilecek. Etrafýna dialog kutusunda olduðu gibi þekilleri koyun, hatta kopyala yapýþtýr yapýp onun üstüne de çalýþabilirsiniz. 192x224 boyutunda olacak. Üstüne þimdilik "Resume, Exit" gibi þeyler koymayýn, onlarý ayrýyetten çizicez.
+
+Gece lambasýna dayanarak oturmuþ silüetler çizilecek. Sanki aðaca yaslanmýþ gibi duracaklar. Vakit olursa üç tane çizilsin, bir tanesi önüne, iki tanesi yanlara gelecek þekilde. Ama çok dizilmiþ gibi durmasýnlar, doðal görünsün.
+
+Sandýk, bank, çöp kutusu gibi nesnelerin altýna koyu gri gölgeler çizilecek. Sandýk ve çöp kutusu için yuvarlak çizilsin. Bu gölgeler direkt nesnenin kendi gölgesi deðil de, daha çok üstünde durduklarý yüzey gibi olacak. Yoksa þuanda havada duruyor gibi gözüküyor sandýk falan.
+
+
+------ Diðer Ýþler ------
+
+Onur'un müziði takip edilecek.

@@ -52,19 +52,23 @@
   </views>
   <instances>
     <instance objName="obj_Bank" x="480" y="256" name="inst_3916BAF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Character" x="416" y="256" name="inst_46442259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Lamp" x="608" y="288" name="inst_7B1D284B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Character" x="352" y="256" name="inst_46442259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Lamp" x="448" y="224" name="inst_7B1D284B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="672" y="288" name="inst_4835C6BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_D14148A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Camera" x="32" y="0" name="inst_8BE81935" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_TileCreator" x="-32" y="288" name="inst_30DDA1BF" locked="0" code="" scaleX="34" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="obj_TileCreator" x="0" y="288" name="inst_30DDA1BF" locked="0" code="" scaleX="32" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_Editor" x="0" y="0" name="inst_D5F1C8CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_System" x="64" y="0" name="inst_FF9E3260" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Particles" x="0" y="0" name="inst_94AAE4A2" locked="0" code="image_xscale = room_width/32;&#xA;image_yscale = room_height/32;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hedge" x="672" y="288" name="inst_C05FBDD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hedge" x="736" y="288" name="inst_FDC8CA74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hedge2" x="800" y="288" name="inst_264D9691" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Chest" x="192" y="224" name="inst_D1B818BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_TrashCan" x="576" y="224" name="inst_B742518C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_DialogBox" x="800" y="64" name="inst_5D342113" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles>
-    <tile bgName="tileset_1" x="672" y="256" w="32" h="32" xo="0" yo="0" id="10000048" name="inst_4C5BB3A8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-  </tiles>
+  <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>

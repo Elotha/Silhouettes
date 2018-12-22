@@ -24,7 +24,7 @@ Silüetlerin rengine göre sona ne kadar yakýn olduklarýný görebiliyoruz. Bazýlarý
 
 Biz sistemi deðiþtirebilecek güce sahibiz. Bizim kararýmýz bir þeyleri çok deðiþtirebilir.
 
-Ölen silüetler nesnelere kalýcý olarak dönüþüyor ya da bir parçasý oluyorve bu onlarýn mirasý oluyor.
+Ölen silüetler nesnelere kalýcý olarak dönüþüyor ya da bir parçasý oluyor ve bu onlarýn mirasý oluyor.
 
 Hayatýn akýþýna kapýlmýþ silüetler dýþýndaki silüetler ile etkileþime girebiliyoruz. Etkileþime girdiðimiz zaman dialoglar çýkýyor. Dialog seçme sistemi, ana karakterin yanýnda çýkan minik kutucuklar ile saðlanýyor. 
 
@@ -39,9 +39,7 @@ Sandýk, ayna, çit gibi nesneler, her oyunda farklý bir yerde rastgele oluþsun.
 
 ------Kodlar ------
 
-Kameraya ara sýra minik hareketler verebiliriz.
 
-Partikül efektleri eklenebilir.
 
 
 ------ Çizimler ------
