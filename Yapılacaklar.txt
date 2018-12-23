@@ -10,9 +10,9 @@ Bankýn önüne geldiðimiz zaman E tuþuna bastýðýmýzda karakterin banka oturmasý ko
 
 Pause menüsü için <Esc> tuþuna bastýðýmzda ekranýn yarým kararmasý ve bunun üzerine pause menüsünün çýkmasý kodlanacak. <Esc> tuþuna tekrar basarsak oyuna geri dönücez.
 
+Iþýk efektleri eklenecek.
+
 
 ------ Çizimler ------
-
-Renkler düzenlenecek, þuanda renkler birbiriyle hiç uyuþmuyor.
 
 Dialog kutusu aþaðý doðru kararabilir.
