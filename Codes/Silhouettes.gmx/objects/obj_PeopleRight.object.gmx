@@ -86,7 +86,7 @@
             <kind>1</kind>
             <string>///x += 16
 
-x += last_hor
+    x += last_hor
     image_alpha = 1;
 
 </string>

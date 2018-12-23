@@ -29,6 +29,14 @@
 
 {
     //audio_play_sound(snd_Music,1,true);
+    /*global.audio_emitter = audio_emitter_create();
+    audio_falloff_set_model(audio_falloff_linear_distance);
+    audio_emitter_falloff(global.audio_emitter,40,450,1);
+    audio_play_sound_on(global.audio_emitter,snd_Fountain,true,0);
+    audio_emitter_position(global.audio_emitter,obj_Fountain.x,obj_Fountain.y,0);*/
+    
+    //sound_volume(snd_Fountain,0.1);
+    //with obj_Fountain alarm[5] = 1;
 }
 </string>
           </argument>

@@ -77,17 +77,7 @@ depth=-y;
             <string>///Interaction
 
 {
-    if active
-        {
-        global.dialog_time = true;
-        global.dialog_type = MIRROR;
-        scr_create_dialog(MIRROR,0);
-        with(global.key)with(global.key) 
-            {
-            alarm[2] = 1;
-            alarm[0] = -1;
-            }
-        }
+    scr_create_dialog(MIRROR,0);
 }
 </string>
           </argument>

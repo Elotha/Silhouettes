@@ -90,7 +90,8 @@
 
 {
     global.interaction = -1;
-    global.dialog_time = -1;
+    global.dialog_time = false;
+    global.option_time = false;
     global.key = -1;
     global.dialog_type = -1;
     global.count = 0;
@@ -220,7 +221,7 @@
         {
         count++;
         dialog = string_copy(dialog_full,0,count);
-        alarm[0] = 3;
+        alarm[0] = 2;
         }
 }
 </string>
@@ -318,8 +319,7 @@
             <string>///Down
 
 {
-    if !control then exit;
-    if !global.dialog_time then exit;
+    if !global.option_time then exit;
     with(obj_DialogReplyBox) if image_index = 1
         {
         if array_length_1d(global.option_id) &gt; number
@@ -357,8 +357,7 @@
             <string>///Up
 
 {
-    if !control then exit;
-    if !global.dialog_time then exit;
+    if !global.option_time then exit;
     with(obj_DialogReplyBox) 
         {
         if image_index = 1
@@ -399,36 +398,46 @@
             <kind>1</kind>
             <string>///Press Space
 
-{
+{   
     if !control then exit;
+    if global.option_time then exit;
     if string_length(dialog) != string_length(dialog_full)
         {
         dialog = dialog_full;
+        image_alpha = 1;
         exit;
         }
         
     with(obj_DialogCreator) 
         {
-        if array_length_2d(dialog,global.dialog_type)+1 != global.count
+        if array_length_2d(dialog,global.dialog_type) &gt; global.count+1
             {
-            var str = string_copy(dialog[global.dialog_type,global.count+1],1,7);
+            var str = string_copy(obj_DialogCreator.dialog[global.dialog_type,global.count+1],1,7);
             if str = "Options"
                 {
-                global.dialog_time = true;
-                var opt = string_copy(dialog[global.count+1],8,8);
-                for(var i = 0; i &lt; real(opt); i++)
+                if instance_number(obj_DialogReplyBox) = 0
                     {
-                    global.option_id[i] = instance_create(view_xview[0]+(view_wview[0]*4)/7,view_yview[0]+view_hview[0]/3+(i*32),obj_DialogReplyBox);     
-                    if i = 0 then with(global.option_id[i]) image_index = 1;
-                    global.option_id[i].number = i+1;
-                    global.option_id[i].option = options[global.dialog_type,i];
+                    global.dialog_time = true;
+                    var opt = string_copy(dialog[global.count+1],8,8);
+                    for(var i = 0; i &lt; real(opt); i++)
+                        {
+                        global.option_id[i] = instance_create(view_xview[0]+(view_wview[0]*4)/7,view_yview[0]+view_hview[0]/3+(i*32),obj_DialogReplyBox);     
+                        if i = 0 then with(global.option_id[i]) image_index = 1;
+                        global.option_id[i].number = i+1;
+                        global.option_id[i].option = options[global.dialog_type,i];
+                        }
+                    exit;
                     }
-                exit;
                 }
             }
+        else
         global.count++;
-        if array_length_2d(global.dialog_type,global.count) != global.count then event_user(0);
-        else destroy(other);
+        if array_length_2d(dialog,global.dialog_type) &gt; global.count then event_user(0);
+        else with(other) 
+            {
+            alarm[2] = 1;
+            control = false;
+            }
         }
     
 }

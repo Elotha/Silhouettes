@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create
+            <string>///Create
 {
     ver_mov = 1;
     hor_mov = 1;
@@ -35,7 +35,7 @@
     last_ver = 0;
     silhouette = 0;
     image_speed = 0;
-    instance_create(x-24,y-88,obj_KeyboardArrows);
+    instance_create(x-24,y-94,obj_KeyboardArrows);
     event_inherited();
 }
 </string>
@@ -123,7 +123,7 @@
     hor_mov = keyboard_check(vk_right) - keyboard_check(vk_left);
     ver_mov =  keyboard_check(vk_down) - keyboard_check(vk_up);
         
-    if global.dialog_time
+    if global.dialog_time || global.option_time
         {
         hor_mov = 0;
         ver_mov = 0;
@@ -193,6 +193,31 @@
             <kind>1</kind>
             <string>///Depth
 depth=-y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Audio
+
+{
+    audio_listener_position(x,y,0);
+}
 </string>
           </argument>
         </arguments>

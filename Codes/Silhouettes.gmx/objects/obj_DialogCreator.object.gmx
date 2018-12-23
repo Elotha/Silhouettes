@@ -64,15 +64,25 @@
 {
     global.count = 0;
     global.dialog_type = -1;
+    global.option_time = false;
     
     dialog[MIRROR,0] = "What do you see?";
     dialog[MIRROR,1] = "Options 4";
+    dialog[MIRROR,2] = "I see.";
+    
+    dialog[CHEST,0] = "What do you see in the bottom of the chest?";
+    dialog[CHEST,1] = "Options 4";
+    dialog[CHEST,2] = "It seems so.";
     
     options[MIRROR,0] = "A passenger";
     options[MIRROR,1] = "A player";
     options[MIRROR,2] = "A god";
     options[MIRROR,3] = "Nothing";
     
+    options[CHEST,0] = "A dream";
+    options[CHEST,1] = "A depression";
+    options[CHEST,2] = "A regret";
+    options[CHEST,3] = "Nothing";
     
     /*dialog[0] = "Hi, there!";
     dialog[1] = "Options " +string(3);

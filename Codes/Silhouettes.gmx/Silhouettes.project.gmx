@@ -8,6 +8,9 @@
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_Music</sound>
+    <sound>sound\snd_Fountain</sound>
+    <sound>sound\snd_Creak1</sound>
+    <sound>sound\snd_Creak2</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Silhouettes">
@@ -108,8 +111,9 @@
     <room>rooms\rm_Main</room>
     <room>rooms\rm_test</room>
   </rooms>
-  <constants number="1">
+  <constants number="2">
     <constant name="MIRROR">0</constant>
+    <constant name="CHEST">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

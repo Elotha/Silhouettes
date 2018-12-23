@@ -34,6 +34,8 @@
     global.interaction = -1;
     global.key = -1;
     global.first_move = false;
+    global.item_interaction[MIRROR] = true;
+    global.item_interaction[CHEST] = true;
 }
 </string>
           </argument>
