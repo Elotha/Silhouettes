@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Room Start
+            <string>///Next Dialog
 
 {
     with(obj_DialogBox)
         {
-        dialog_full = other.dialog[global.count];
+        dialog_full = other.dialog[global.dialog_type,global.count];
         dialog = string_copy(dialog_full,0,1);
-        alarm[0] = 2;
+        alarm[0] = 3;
         count = 1;
         }
 
@@ -63,19 +63,24 @@
 
 {
     global.count = 0;
-    dialog[0] = "Hi, there!";
-    dialog[1] = "Options " +string(3);
-    dialog[2] = "You choose the right one, my friend.";
+    global.dialog_type = -1;
     
-    options[0,0] = "First";
+    dialog[MIRROR,0] = "What do you see?";
+    dialog[MIRROR,1] = "Options 4";
+    
+    options[MIRROR,0] = "A passenger";
+    options[MIRROR,1] = "A player";
+    options[MIRROR,2] = "A god";
+    options[MIRROR,3] = "Nothing";
+    
+    
+    /*dialog[0] = "Hi, there!";
+    dialog[1] = "Options " +string(3);
+    dialog[2] = "You choose the right one, my friend.";*/
+    
+    /*options[0,0] = "First";
     options[0,1] = "Second";
-    options[0,2] = "Third";
-
-    instance_create(x,y,obj_DialogBox);
-    with(obj_DialogBox) 
-        {
-        dialog_full = other.dialog[global.count];
-        }
+    options[0,2] = "Third";*/
 
 }
 </string>

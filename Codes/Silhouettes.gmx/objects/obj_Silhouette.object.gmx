@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Effect</parentName>
+  <parentName>obj_Block</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -30,7 +30,126 @@
 {
     sprite_index = choose(spr_Silhouette1,spr_Silhouette2);
     image_xscale = choose(1,-1);
+    move_snap(32,32);
+    depth = -y;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///X and Y Coordinates
+
+{
+    active = false;
+    switch(sprite_index)
+        {
+            
+        default:
+            xx = -32;
+            yy = -64;
+            
+        }
     event_inherited();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    switch(obj_Character.sprite_index)
+        {
+        case spr_CharacterRight:
+            dir = 180;
+            break;
+            
+        case spr_CharacterUp:
+            dir = 270;
+            break;
+            
+        case spr_CharacterLeft:
+            dir = 0;
+            break;
+            
+        case spr_CharacterDown:
+            dir = 90;
+            break;
+            
+            
+            
+        }
+    if (place_meeting(x+lengthdir_x(24,dir),y+lengthdir_y(24,dir),obj_Character) || place_meeting(x+lengthdir_x(16,dir),y+lengthdir_y(16,dir),obj_Character))
+        {
+        if global.interaction = -1
+            {
+            if !active
+                {
+                if global.key != -1
+                    {
+                    if global.key.id = id then with(global.key)
+                        {
+                        other.active = true;
+                        global.interaction = id;
+                        alarm[2] = -1;
+                        alarm[0] = 1;
+                        exit;
+                        }
+                    }
+                if instance_number(obj_KeyboardKey) = 0
+                    {
+                    global.key = instance_create(x+xx,y+yy,obj_KeyboardKey);
+                    global.key.block_id = id;
+                    global.interaction = global.key;
+                    active = true;
+                    }
+                }
+            }
+        }
+    else if active
+        {
+        with(global.key) 
+            {
+            alarm[2] = 1;
+            alarm[0] = -1;
+            }
+        active = false;
+        global.interaction = -1;
+        }
 }
 </string>
           </argument>

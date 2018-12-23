@@ -53,13 +53,13 @@
             break;
             
         case spr_Chest:
-            xx = 0;
-            yy = -48;
+            xx = -8;
+            yy = -56;
             break;
             
         case spr_Fountain:
-            xx = 0;
-            yy = -86;
+            xx = 4;
+            yy = -90;
             break;
             
         case spr_Mirror:
@@ -68,6 +68,8 @@
             break;
             
         }
+        
+    event_inherited();
 }
 </string>
           </argument>
@@ -102,23 +104,34 @@
             {
             if !active
                 {
-                if instance_number(obj_KeyboardKey) != 0 &amp;&amp; key != noone then with(key) 
+                if global.key != -1
                     {
-                    active = true;
-                    global.interaction = key;
-                    alarm[2] = -1;
-                    alarm[0] = 1;
-                    exit;
+                    if global.key.id = id then with(global.key)
+                        {
+                        other.active = true;
+                        global.interaction = id;
+                        alarm[2] = -1;
+                        alarm[0] = 1;
+                        exit;
+                        }
                     }
-                key = instance_create(x+xx,y+yy,obj_KeyboardKey);
-                global.interaction = key;
-                active = true;
+                if instance_number(obj_KeyboardKey) = 0
+                    {
+                    global.key = instance_create(x+xx,y+yy,obj_KeyboardKey);
+                    global.key.block_id = id;
+                    global.interaction = global.key;
+                    active = true;
+                    }
                 }
             }
         }
     else if active
         {
-        with(key) alarm[2] = 1;
+        with(global.key) 
+            {
+            alarm[2] = 1;
+            alarm[0] = -1;
+            }
         active = false;
         global.interaction = -1;
         }

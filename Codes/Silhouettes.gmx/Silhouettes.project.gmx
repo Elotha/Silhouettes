@@ -58,6 +58,7 @@
       <script>scripts\scr_integer.gml</script>
       <script>scripts\scr_light.gml</script>
     </scripts>
+    <script>scripts\scr_create_dialog.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_Dialog20</font>
@@ -96,9 +97,9 @@
       <object>objects\obj_LampShadow</object>
     </objects>
     <objects name="Dialog System">
+      <object>objects\obj_DialogCreator</object>
       <object>objects\obj_DialogReplyBox</object>
       <object>objects\obj_DialogBox</object>
-      <object>objects\obj_DialogCreator</object>
       <object>objects\obj_KeyboardKey</object>
       <object>objects\obj_KeyboardArrows</object>
     </objects>
@@ -107,6 +108,9 @@
     <room>rooms\rm_Main</room>
     <room>rooms\rm_test</room>
   </rooms>
+  <constants number="1">
+    <constant name="MIRROR">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

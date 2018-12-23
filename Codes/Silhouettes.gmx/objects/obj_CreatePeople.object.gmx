@@ -28,9 +28,7 @@
             <string>///random
 {
 
-    rand[0]=irandom(2)
-    rand[1]=irandom(5)
-    rand[2]=irandom(5)
+    rand[0]=irandom_range(1,2)
 
 }
 </string>
@@ -84,9 +82,9 @@
    //rnd_People = choose(obj_People) 
    people = instance_create(x,y+32*irandom_range(1,4),obj_PeopleRight)
    with(people)
-   {
-   direction = 0
-   }
+       {
+       direction = 0
+       }
    alarm[1] = 30*rand[0]
 }
 </string>

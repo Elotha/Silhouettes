@@ -30,7 +30,9 @@
 {
     depth = -y-1000;
     image_speed = 0;
-    option = "Optionabello";
+    option = "";
+    image_alpha = 0.1;
+    alarm[3] = 1;
 }
 </string>
           </argument>
@@ -58,6 +60,78 @@
     rnd[0] = irandom(360);
     rnd[1] = irandom(360);
     rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alpha+
+
+{
+    if image_alpha &lt; 1
+        {
+        image_alpha += 0.04;
+        alarm[3] = 1;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alarm
+
+{
+    global.count += 2;
+    global.dialog_time = false;
+    if array_length_2d(obj_DialogCreator.dialog,global.dialog_type) &gt;= global.count
+        {
+        with(obj_DialogBox)
+            {
+            control = false;
+            alarm[2] = 1;
+            }
+        instance_destroy();
+        exit;
+        }
+    with(obj_DialogBox) control = true;
+    with(obj_DialogCreator) event_user(0);
+    instance_destroy();
 }
 </string>
           </argument>
@@ -93,6 +167,38 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alpha-
+
+{
+    if image_alpha &gt; 0
+        {
+        image_alpha -= 0.04;
+        alarm[0] = 1;
+        }
+    else alarm[2] = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -117,14 +223,14 @@
     draw_set_font(fnt_Dialog48);
     
     display_set_gui_size(1024,768);
-    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2,y-(view_yview[0])-64,2,2,0,c_white,1);
+    draw_sprite_ext(sprite_index,image_index,(x-view_xview[0])*2,(y-view_yview[0])*2-64,2,2,0,c_white,1);
     
-    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(4,rnd[0]),y-(view_yview[0])-64+lengthdir_y(4,rnd[0]),2,2,0,c_white,0.15);
-    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(6,rnd[1]),y-(view_yview[0])-64+lengthdir_y(6,rnd[1]),2,2,0,c_white,0.1);
-    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(8,rnd[2]),y-(view_yview[0])-64+lengthdir_y(8,rnd[2]),2,2,0,c_white,0.1);
-    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(10,rnd[2]),y-(view_yview[0])-64+lengthdir_y(10,rnd[2]),2,2,0,c_white,0.05);
+    draw_sprite_ext(sprite_index,image_index,(x-view_xview[0])*2+lengthdir_x(4,rnd[0]),(y-view_yview[0])*2-64+lengthdir_y(4,rnd[0]),2,2,0,c_white,0.15);
+    draw_sprite_ext(sprite_index,image_index,(x-view_xview[0])*2+lengthdir_x(6,rnd[1]),(y-view_yview[0])*2-64+lengthdir_y(6,rnd[1]),2,2,0,c_white,0.1);
+    draw_sprite_ext(sprite_index,image_index,(x-view_xview[0])*2+lengthdir_x(8,rnd[2]),(y-view_yview[0])*2-64+lengthdir_y(8,rnd[2]),2,2,0,c_white,0.1);
+    draw_sprite_ext(sprite_index,image_index,(x-view_xview[0])*2+lengthdir_x(10,rnd[2]),(y-view_yview[0])*2-64+lengthdir_y(10,rnd[2]),2,2,0,c_white,0.05);
     
-    draw_text(x-view_xview[0]/2+44,y-view_yview[0]-6-64,option);
+    draw_text((x-view_xview[0])*2+44,(y-view_yview[0])*2-6-64,option);
     display_set_gui_size(512,384);
     
     if alarm[1] = -1 then alarm[1] = 10;
@@ -171,17 +277,11 @@
             <string>///Enter
 
 {
-    global.count += 2;
-    global.option_time = false;
-    if array_length_1d(obj_DialogCreator.dialog) &gt; global.count
+    if image_alpha = 1
         {
-        destroy(obj_DialogBox);
-        instance_destroy();
-        exit;
+        alarm[0] = 1;
+        with(obj_DialogBox) control = false;
         }
-    with(obj_DialogCreator) event_user(0);
-    global.option_time = false;
-    instance_destroy();
 }
 </string>
           </argument>
