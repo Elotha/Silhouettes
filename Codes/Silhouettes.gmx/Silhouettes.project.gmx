@@ -29,9 +29,12 @@
     <sprite>sprites\spr_FallenAngelDown</sprite>
     <sprite>sprites\spr_FallenAngelRight</sprite>
     <sprite>sprites\spr_FallenAngelLeft</sprite>
-    <sprite>sprites\spr_Button</sprite>
+    <sprite>sprites\spr_ButtonReturn</sprite>
+    <sprite>sprites\spr_ButtonExit</sprite>
     <sprite>sprites\spr_LampShadow</sprite>
     <sprite>sprites\spr_DialogReplyBox</sprite>
+    <sprite>sprites\spr_People2Right</sprite>
+    <sprite>sprites\spr_People3Right</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -49,8 +52,14 @@
     <font>fonts\fnt_Dialog</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_Character</object>
-    <object>objects\obj_PeopleRight</object>
+    <objects name="Characters">
+      <object>objects\obj_Character</object>
+      <object>objects\obj_PeopleRight</object>
+      <object>objects\obj_People2Right</object>
+      <object>objects\obj_People3Right</object>
+      <object>objects\obj_People4Right</object>
+    </objects>
+    <object>objects\obj_DialogReplyBox</object>
     <objects name="System">
       <object>objects\obj_CreatePeople</object>
       <object>objects\obj_Editor</object>
@@ -77,7 +86,6 @@
       <object>objects\obj_Fountain</object>
       <object>objects\obj_LampShadow</object>
     </objects>
-    <object>objects\obj_DialogReplyBox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>

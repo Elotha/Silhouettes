@@ -55,12 +55,18 @@
             <kind>1</kind>
             <string>///create
 
-{
-     last_hor = irandom_range(16,32);
+{    colour = make_colour_hsv(130,irandom_range(0,30),irandom_range(100,200));
+
+     last_hor = 16 //irandom_range(16,32);
      last_ver = 16;
      silhouette = 0;
-     image_blend = c_dkgray
-     spwn_spd = irandom_range(5,20)
+     image_blend = colour
+     spwn_spd = 10
+     line_1 = 292
+     line_2 = 496
+     line_3 = room_width-594
+     line_4 = room_width-384
+     line_5 = room_width-292
 }
 </string>
           </argument>
@@ -87,7 +93,7 @@
             <string>///x += 16
 
 x += last_hor
-    image_alpha = 1;
+image_alpha = alpha_max;
 
 </string>
           </argument>
@@ -141,24 +147,29 @@ x += last_hor
           <argument>
             <kind>1</kind>
             <string>///movement
-{
-    if obj_CreatePeople.x+32 &gt; x then image_alpha = 0.3
-    if obj_CreatePeople.x+64 &gt; x then image_alpha = 0.5
-    if obj_CreatePeople.x+128 &gt; x then image_alpha = 0.8
-    if obj_CreatePeople.x+292 &gt; x then image_alpha = 1
-    if obj_CreatePeople.x+room_width-32 &lt; x then image_alpha = 0.3
-    if obj_CreatePeople.x+room_width-64 &lt; x then image_alpha = 0.5
-    if obj_CreatePeople.x+room_width-128 &lt; x then image_alpha = 0.8
+{/*
+    if 544+32 &gt; x &amp;&amp; 544+128 &lt; x then image_alpha = 1-(silhouette/10)-0.7 //0.3
+    if 544+128 &gt; x &amp;&amp; 544+292 &lt; x then image_alpha = 1-(silhouette/10)-0.5 // 0.5
+    if 544+292 &gt; x &amp;&amp; 544+406 &lt; x then image_alpha = 1-(silhouette/10)-0.2 // 0.8
+    if 544+406 &gt; x then image_alpha = 1
+    if 1536-64 &lt; x &amp;&amp; 1536-128 &gt; x then image_alpha = 0.3
+    if 1536-128 &lt; x &amp;&amp; 1536-292 &gt; x then image_alpha = 0.5
+    if 1536-292 &lt; x  then image_alpha = 0.8
 
 
-
+*/
     if alarm[2]=-1
        {
-            silhouette=spwn_spd
+            silhouette=10
             alarm[2] = spwn_spd
        }
    
-
+    if line_1&gt;x then alpha_max = 0.2
+    if line_1&lt;x &amp;&amp; line_2&gt;x then alpha_max = 0.25
+    if line_2&lt;x &amp;&amp; line_3&gt;x then alpha_max = 1
+    if line_3&lt;x &amp;&amp; line_4&gt;x then alpha_max = 0.5
+    if line_4&lt;x &amp;&amp; line_5&gt;x then alpha_max = 0.25
+    if line_5&lt;x then alpha_max = 0.2
 }
 </string>
           </argument>
@@ -183,14 +194,115 @@ x += last_hor
           <argument>
             <kind>1</kind>
             <string>{
-if silhouette != 0
-        {
-        draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,1-(silhouette/spwn_spd));
-        silhouette--;
-        image_alpha -= 0.1;
-        }
-        draw_self();
+    
+     
+       if silhouette != 0        
+       {
+        if line_1 &gt; x
+           {
+           draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,0.2-(silhouette/(10*5)))//(1+spwn_spd));
+           silhouette--;
+           image_alpha -= 0.2-(10/(silhouette*50));
+           }
+        else if line_1 &lt; x &amp;&amp; line_2 &gt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,0.25-(silhouette/(10*4)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.25-(10/(silhouette*25));
+             }
+        else if line_2 &lt; x &amp;&amp; line_3 &gt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,1-(silhouette/10))                                //0.5-(silhouette/(10*2)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.1 //0.5-(10/silhouette*100);             
+             }
+        else if line_3 &lt; x &amp;&amp; line_4 &gt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,0.5-(silhouette/(10*2)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.5-(10/(silhouette*100));             
+             }
+        else if line_4 &lt; x &amp;&amp; line_5 &gt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,0.25-(silhouette/(10*4)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.25-(10/(silhouette*25));             
+             }
+        else if line_5 &lt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,0.2-(silhouette/(10*5)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.2-(10/(silhouette*50));             
+             }            
+       }                    
+       draw_self();
+
         
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///save
+/*{
+           draw_self();    
+   
+    
+     
+       if silhouette != 0        
+        if 544+32 &gt; x &amp;&amp; 544+128 &lt; x
+           {
+           draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,0.2-(silhouette/(10*5)))//(1+spwn_spd));
+           silhouette--;
+           image_alpha -= 0.1;
+           }
+        else if 544+128 &gt; x &amp;&amp; 544+292 &lt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,0.25-(silhouette/(10*4)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.1;
+             }
+        else if 544+292 &gt; x &amp;&amp; 544+406 &lt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,0.5-(silhouette/(10*2)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.1;             
+             }
+        else if 544+406 &gt; x &amp;&amp; 1536-292 &lt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,0.5-(silhouette/(10*2)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.1;             
+             }
+        else if 1536-128 &lt; x &amp;&amp; 1536-292 &gt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,0.25-(silhouette/(10*4)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.1;             
+             }
+        else if 1536-292 &lt; x
+             {
+                draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,c_dkgray,0.2-(silhouette/(10*5)))//(1+spwn_spd));
+                silhouette--;
+                image_alpha -= 0.1;             
+             }                          
+
         
 }
 </string>

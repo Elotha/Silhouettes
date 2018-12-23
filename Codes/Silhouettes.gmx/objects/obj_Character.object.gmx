@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>///create
 {
+    darkness_up = 0
+    darkness_down = 0
+    darkness_left=0
+    darkness_right=0
+    darkness_x=0
     ver_mov = 1;
     hor_mov = 1;
     mov_cd = true;
@@ -37,8 +42,8 @@
     silhouette = 0;
     image_speed = 0;
     image_blend = c_dkgray
-    event_inherited();
     instance_create(x,y,obj_DialogReplyBox)
+    event_inherited();
 }
 </string>
           </argument>
@@ -132,7 +137,7 @@
     if hor_mov = 1 then sprite_index = spr_CharacterRight; else if hor_mov = -1 then sprite_index = spr_CharacterLeft;
     if ver_mov = 1 then sprite_index = spr_CharacterUp; else if ver_mov = -1 then sprite_index = spr_CharacterDown;
      
-    if mov_cd &amp;&amp; alarm[0] = -1 &amp;&amp; (hor_mov != 0 || ver_mov != 0)
+    if mov_cd &amp;&amp; alarm[0] = -1 &amp;&amp; (hor_mov != 0 || ver_mov != 0) &amp;&amp; global.pause = false
         {
         
         var obstacle = collision_line(x,y,x+hor_mov*gap,y-ver_mov*gap,obj_Block,false,true)
@@ -145,6 +150,8 @@
             silhouette = 10;
             }
     }
+    
+    
     
     //move_wrap(true, false, -256);  //odadan çıktıktan sonra kamera takip ettiği için bütün haritayı dolanıyor 
     //move_wrap(false,true,-192);
@@ -195,6 +202,92 @@ depth=-y
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///tp
+{
+
+    if x &lt; 256
+        {
+         x = room_width - 256
+        obj_Camera.x =  room_width - 256
+        }
+    if room_width - 256 &lt; x
+        {
+        x = 256
+        obj_Camera.x = 256
+        }
+    if y &lt; 192
+        {
+        y = room_height - 192
+        obj_Camera.y = room_height - 192                  
+        }
+    if y &gt; room_height - 192
+        {
+        y = 192
+        obj_Camera.y = 192
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///darkness
+
+{
+    darkness_up = (384-obj_Camera.y)/192;
+    clamp(darkness_up,0,100);
+
+
+    darkness_x = clamp(obj_Camera.x,room_width-512,room_width-256)
+    darkness_right = ((darkness_x-room_width+512)/256);
+
+    
+    darkness_left = (512- obj_Camera.x)/256;
+    clamp(darkness_left,0,100);
+    
+    darkness_y = clamp(obj_Camera.y,room_height-384,room_width-192)
+    darkness_down = ((darkness_y-room_height+384)/192);
+    
+    
+    if keyboard_check_pressed(vk_space) show_message(darkness_right)
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -231,6 +324,49 @@ depth=-y
     draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(10,rnd[2]),y+lengthdir_y(10,rnd[2]),1,1,0,c_dkgray,0.1);
     
     if alarm[1] = -1 then alarm[1] = 10;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///darkness
+{
+
+    draw_set_colour(c_black)
+    if x &lt; room_width/2 
+        {
+        draw_set_alpha(darkness_left)
+        }
+    else  if x &gt; room_width/2 
+        {
+        draw_set_alpha(darkness_right);
+        }
+    draw_rectangle(0,0,room_width,room_height,false);
+    if y &lt; room_height/2 
+       {
+            draw_set_alpha(darkness_up);
+       }
+    else if y &gt; room_height/2
+        {
+            draw_set_alpha(darkness_down);
+        }
+    draw_rectangle(0,0,room_width,room_height,false);
 }
 </string>
           </argument>
