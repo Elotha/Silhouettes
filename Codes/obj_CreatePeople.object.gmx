@@ -31,7 +31,7 @@
     rand[0]=irandom(2)
     rand[1]=irandom(5)
     rand[2]=irandom(5)
-    rnd_c = irandom_range(1,4)
+    rnd_c = irandom_range(0,4)
     colour = make_colour_hsv(130,irandom_range(0,30),irandom_range(100,200));
 }
 </string>
@@ -82,14 +82,14 @@
             <kind>1</kind>
             <string>///people
 {
-   rnd_People = choose(obj_PeopleRight) ;
+   rnd_People = choose(obj_PeopleRight,obj_People2Right,obj_People3Right,obj_People4Right,obj_People5Right) 
    people = instance_create(x+32*irandom_range(1,4),y-16+32*irandom_range(1,4),rnd_People)
    with(people)
-       {
-       colour = make_colour_hsv(150,irandom_range(0,100),irandom_range(100,200));
-       image_blend = colour
-       direction = 0
-       }
+   {
+   colour = make_colour_hsv(150,irandom_range(0,100),irandom_range(100,200));
+   image_blend = colour
+   direction = 0
+   }
    alarm[1] = 30*rand[0]
 }
 </string>

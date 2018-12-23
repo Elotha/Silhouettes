@@ -96,6 +96,7 @@
             <string>///Collision Check
 
 {
+    if instance_number(obj_Character) = 0 then exit;
     if (object_index = obj_Hedge || object_index = obj_Hedge2 || object_index = obj_Lamp) then exit;
     
     switch(object_index)
@@ -144,7 +145,6 @@
             alarm[0] = -1;
             }
         active = false;
-        global.interaction = -1;
         if object_index = obj_Chest
             {
             if image_index = 0 then exit;

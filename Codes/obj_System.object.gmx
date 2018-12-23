@@ -8,6 +8,46 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Create
+
+{
+    choise = 1
+    resumex = 1
+    resumey = 1
+    resumec = c_white
+    exitx = 1
+    exity = 1
+    exitc = c_white
+    resume_w = view_wview[0]/2-32
+    resume_h = view_hview[0]/2-45
+    exit_w = view_wview[0]/2-16
+    exit_h = view_hview[0]/2+33
+    global.pause=false;
+    randomize();
+    display_set_gui_size(512,384);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -63,79 +103,6 @@
         else if choise = "down" &amp;&amp; keyboard_check_pressed(vk_enter) then game_end();
     }
 
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Create
-
-{
-    randomize();
-    display_set_gui_size(512,384);
-    global.dialog_time = false;
-    global.interaction = -1;
-    global.key = -1;
-    global.first_move = false;
-    global.item_interaction[MIRROR] = true;
-    global.item_interaction[CHEST] = true;
-    global.item_interaction[BENCH] = true;
-    global.item_interaction[SILHOUETTES] = true;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Cre
-
-{
-    choise = 1
-    resumex = 1
-    resumey = 1
-    resumec = c_white
-    exitx = 1
-    exity = 1
-    exitc = c_white
-    resume_w = view_wview[0]/2-32
-    resume_h = view_hview[0]/2-45
-    exit_w = view_wview[0]/2-16
-    exit_h = view_hview[0]/2+33
-    global.pause=false;
-    display_set_gui_size(512,384);
 }
 </string>
           </argument>

@@ -25,6 +25,10 @@
       <sprite>sprites\spr_Silhouette1</sprite>
       <sprite>sprites\spr_Silhouette2</sprite>
       <sprite>sprites\spr_SilhouetteMask</sprite>
+      <sprite>sprites\spr_CharacterBench</sprite>
+      <sprite>sprites\spr_People2Right</sprite>
+      <sprite>sprites\spr_People3Right</sprite>
+      <sprite>sprites\spr_People5Right</sprite>
     </sprites>
     <sprites name="System">
       <sprite>sprites\spr_Particles</sprite>
@@ -70,9 +74,10 @@
   <objects name="objects">
     <objects name="Silhouettes">
       <object>objects\obj_Character</object>
-      <object>objects\obj_PeopleRight</object>
-      <object>objects\obj_CreatePeople</object>
+      <object>objects\obj_CharacterBench</object>
       <object>objects\obj_Silhouette</object>
+      <object>objects\obj_CreatePeople</object>
+      <object>objects\obj_PeopleRight</object>
     </objects>
     <objects name="System">
       <object>objects\obj_Editor</object>
@@ -89,7 +94,7 @@
       <object>objects\obj_Button</object>
     </objects>
     <objects name="Environmental Objects">
-      <object>objects\obj_Bank</object>
+      <object>objects\obj_Bench</object>
       <object>objects\obj_Lamp</object>
       <object>objects\obj_Hedge</object>
       <object>objects\obj_Hedge2</object>
@@ -104,6 +109,7 @@
       <object>objects\obj_DialogReplyBox</object>
       <object>objects\obj_DialogBox</object>
       <object>objects\obj_KeyboardKey</object>
+      <object>objects\obj_KeyboardSit</object>
       <object>objects\obj_KeyboardArrows</object>
     </objects>
   </objects>
@@ -111,9 +117,11 @@
     <room>rooms\rm_Main</room>
     <room>rooms\rm_test</room>
   </rooms>
-  <constants number="2">
+  <constants number="4">
     <constant name="MIRROR">0</constant>
     <constant name="CHEST">1</constant>
+    <constant name="BENCH">2</constant>
+    <constant name="SILHOUETTES">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

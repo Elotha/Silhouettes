@@ -2,8 +2,6 @@
 
 Ana karakterin odanýn bir yerinden çýktýðý zaman tersinden geri gelmesi kodlanacak (wrap diye geçiyor).
 
-Dialoglar esnasýnda ara sýra seçeneklerin çýkabilmesi ve seçenek seçebilme kodlanacak. Çizimler gelene kadar þimdilik dikdörtgen kutularla idare ediver.
-
 Silüetlerin hayat akýþýnda giderken farklý renklerde olmasý kodlanacak. (Grinin tonlarý ve çok hafif mavilik. Ama bazýlarý bir týk daha koyu mavi olacak.)
 
 Bankýn önüne geldiðimiz zaman E tuþuna bastýðýmýzda karakterin banka oturmasý kodlanacak.

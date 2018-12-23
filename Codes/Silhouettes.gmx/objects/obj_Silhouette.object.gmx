@@ -3,7 +3,7 @@
   <spriteName>spr_Silhouette1</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>obj_Block</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -30,8 +30,9 @@
 {
     sprite_index = choose(spr_Silhouette1,spr_Silhouette2);
     image_xscale = choose(1,-1);
-    move_snap(32,32);
+    //move_snap(32,32);
     depth = -y;
+    image_blend = make_colour_hsv(130,irandom_range(0,20),irandom_range(100,200));
 }
 </string>
           </argument>
@@ -92,6 +93,7 @@
             <string>///Collision Check
 
 {
+    if instance_number(obj_Character) = 0 then exit;
     switch(obj_Character.sprite_index)
         {
         case spr_CharacterRight:

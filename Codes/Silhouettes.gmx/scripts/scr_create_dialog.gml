@@ -8,7 +8,7 @@
         {
         global.dialog_time = true;
         global.dialog_type = argument0;
-        with(global.key)with(global.key) 
+        with(global.key)
             {
             alarm[2] = 1;
             alarm[0] = -1;
