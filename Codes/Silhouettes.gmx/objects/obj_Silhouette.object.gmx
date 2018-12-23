@@ -123,7 +123,7 @@
                 {
                 if global.key != -1
                     {
-                    if global.key.id = id then with(global.key)
+                    if global.block_id = id then with(global.key)
                         {
                         other.active = true;
                         global.interaction = id;
@@ -150,8 +150,35 @@
             alarm[0] = -1;
             }
         active = false;
-        global.interaction = -1;
         }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="69">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Interaction
+
+{
+    scr_create_dialog(SILHOUETTES,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTES)));
+    global.item_interaction[SILHOUETTES] = true;
 }
 </string>
           </argument>
