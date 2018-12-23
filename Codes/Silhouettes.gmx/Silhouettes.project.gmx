@@ -35,6 +35,7 @@
     <sprite>sprites\spr_DialogReplyBox</sprite>
     <sprite>sprites\spr_People2Right</sprite>
     <sprite>sprites\spr_People3Right</sprite>
+    <sprite>sprites\spr_People5Right</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -58,6 +59,7 @@
       <object>objects\obj_People2Right</object>
       <object>objects\obj_People3Right</object>
       <object>objects\obj_People4Right</object>
+      <object>objects\obj_People5Right</object>
     </objects>
     <object>objects\obj_DialogReplyBox</object>
     <objects name="System">
