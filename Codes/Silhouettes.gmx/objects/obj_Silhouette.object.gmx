@@ -177,7 +177,7 @@
             <string>///Interaction
 
 {
-    scr_create_dialog(SILHOUETTES,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTES)));
+    scr_create_dialog(SILHOUETTES,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTES)-1));
     global.item_interaction[SILHOUETTES] = true;
 }
 </string>
