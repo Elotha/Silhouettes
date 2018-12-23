@@ -10,28 +10,42 @@
     <sound>sound\snd_Music</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_CharacterDown</sprite>
-    <sprite>sprites\spr_CharacterUp</sprite>
-    <sprite>sprites\spr_CharacterLeft</sprite>
-    <sprite>sprites\spr_CharacterRight</sprite>
-    <sprite>sprites\spr_TileCreator</sprite>
-    <sprite>sprites\spr_Particles</sprite>
-    <sprite>sprites\spr_Bank</sprite>
-    <sprite>sprites\spr_Lamp</sprite>
-    <sprite>sprites\spr_TrashCan</sprite>
-    <sprite>sprites\spr_Hedge</sprite>
-    <sprite>sprites\spr_Hedge2</sprite>
-    <sprite>sprites\spr_Chest</sprite>
-    <sprite>sprites\spr_DialogBox</sprite>
-    <sprite>sprites\spr_PauseMenu</sprite>
-    <sprite>sprites\spr_fountain</sprite>
-    <sprite>sprites\spr_FallenAngelUp</sprite>
-    <sprite>sprites\spr_FallenAngelDown</sprite>
-    <sprite>sprites\spr_FallenAngelRight</sprite>
-    <sprite>sprites\spr_FallenAngelLeft</sprite>
-    <sprite>sprites\spr_Button</sprite>
-    <sprite>sprites\spr_LampShadow</sprite>
-    <sprite>sprites\spr_DialogReplyBox</sprite>
+    <sprites name="Silhouettes">
+      <sprite>sprites\spr_CharacterDown</sprite>
+      <sprite>sprites\spr_CharacterUp</sprite>
+      <sprite>sprites\spr_CharacterLeft</sprite>
+      <sprite>sprites\spr_CharacterRight</sprite>
+      <sprite>sprites\spr_FallenAngelUp</sprite>
+      <sprite>sprites\spr_FallenAngelDown</sprite>
+      <sprite>sprites\spr_FallenAngelRight</sprite>
+      <sprite>sprites\spr_FallenAngelLeft</sprite>
+      <sprite>sprites\spr_Silhouette1</sprite>
+      <sprite>sprites\spr_Silhouette2</sprite>
+      <sprite>sprites\spr_SilhouetteMask</sprite>
+    </sprites>
+    <sprites name="System">
+      <sprite>sprites\spr_Particles</sprite>
+      <sprite>sprites\spr_TileCreator</sprite>
+    </sprites>
+    <sprites name="Dialog &amp; HUD">
+      <sprite>sprites\spr_PauseMenu</sprite>
+      <sprite>sprites\spr_Button</sprite>
+      <sprite>sprites\spr_KeyboardArrows</sprite>
+      <sprite>sprites\spr_KeyboardKey</sprite>
+      <sprite>sprites\spr_DialogReplyBox</sprite>
+      <sprite>sprites\spr_DialogBox</sprite>
+    </sprites>
+    <sprites name="Environmental Objects">
+      <sprite>sprites\spr_Bank</sprite>
+      <sprite>sprites\spr_Lamp</sprite>
+      <sprite>sprites\spr_TrashCan</sprite>
+      <sprite>sprites\spr_Hedge</sprite>
+      <sprite>sprites\spr_Hedge2</sprite>
+      <sprite>sprites\spr_Chest</sprite>
+      <sprite>sprites\spr_Fountain</sprite>
+      <sprite>sprites\spr_Mirror</sprite>
+      <sprite>sprites\spr_LampShadow</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -46,13 +60,17 @@
     </scripts>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fnt_Dialog</font>
+    <font>fonts\fnt_Dialog20</font>
+    <font>fonts\fnt_Dialog48</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_Character</object>
-    <object>objects\obj_PeopleRight</object>
-    <objects name="System">
+    <objects name="Silhouettes">
+      <object>objects\obj_Character</object>
+      <object>objects\obj_PeopleRight</object>
       <object>objects\obj_CreatePeople</object>
+      <object>objects\obj_Silhouette</object>
+    </objects>
+    <objects name="System">
       <object>objects\obj_Editor</object>
       <object>objects\obj_Camera</object>
       <object>objects\obj_System</object>
@@ -63,7 +81,6 @@
       <object>objects\obj_Lighter1</object>
       <object>objects\obj_Light</object>
       <object>objects\obj_Effect</object>
-      <object>objects\obj_DialogBox</object>
       <object>objects\obj_PauseMenu</object>
       <object>objects\obj_Button</object>
     </objects>
@@ -75,9 +92,16 @@
       <object>objects\obj_TrashCan</object>
       <object>objects\obj_Chest</object>
       <object>objects\obj_Fountain</object>
+      <object>objects\obj_Mirror</object>
       <object>objects\obj_LampShadow</object>
     </objects>
-    <object>objects\obj_DialogReplyBox</object>
+    <objects name="Dialog System">
+      <object>objects\obj_DialogReplyBox</object>
+      <object>objects\obj_DialogBox</object>
+      <object>objects\obj_DialogCreator</object>
+      <object>objects\obj_KeyboardKey</object>
+      <object>objects\obj_KeyboardArrows</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>

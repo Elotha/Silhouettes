@@ -7,7 +7,128 @@
   <persistent>0</persistent>
   <parentName>obj_Effect</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Create
+
+{
+    active = false;
+    switch(sprite_index)
+        {
+        case spr_Bank:
+            xx = 32;
+            yy = -64;
+            break;
+            
+        case spr_Lamp:
+            xx = -48;
+            yy = -64;
+            break;
+            
+        case spr_Hedge:
+            break;
+            
+        case spr_Hedge2:
+            break;
+            
+        case spr_TrashCan:
+            xx = -16;
+            yy = -64;
+            break;
+            
+        case spr_Chest:
+            xx = 0;
+            yy = -48;
+            break;
+            
+        case spr_Fountain:
+            xx = 0;
+            yy = -86;
+            break;
+            
+        case spr_Mirror:
+            xx = 0;
+            yy = -80;
+            break;
+            
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    if (object_index = obj_Hedge || object_index = obj_Hedge2 || object_index = obj_Lamp) then exit;
+
+    if ((place_meeting(x,y+40,obj_Character) || place_meeting(x,y+16,obj_Character)) &amp;&amp; obj_Character.sprite_index = spr_CharacterUp)
+        {
+        if global.interaction = -1
+            {
+            if !active
+                {
+                if instance_number(obj_KeyboardKey) != 0 &amp;&amp; key != noone then with(key) 
+                    {
+                    active = true;
+                    global.interaction = key;
+                    alarm[2] = -1;
+                    alarm[0] = 1;
+                    exit;
+                    }
+                key = instance_create(x+xx,y+yy,obj_KeyboardKey);
+                global.interaction = key;
+                active = true;
+                }
+            }
+        }
+    else if active
+        {
+        with(key) alarm[2] = 1;
+        active = false;
+        global.interaction = -1;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

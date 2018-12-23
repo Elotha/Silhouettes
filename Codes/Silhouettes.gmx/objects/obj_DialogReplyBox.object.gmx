@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,25 +25,167 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x= obj_Character.x+48
-y= obj_Character.y-96
+            <string>///Create
+
+{
+    depth = -y-1000;
+    image_speed = 0;
+    option = "Optionabello";
+}
 </string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring>draw_self();</codestring>
+        <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Randomize
+
+{
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Randomize
+
+{
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw
+
+{
+    draw_set_colour(c_ltgray);
+    draw_set_font(fnt_Dialog48);
+    
+    display_set_gui_size(1024,768);
+    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2,y-(view_yview[0])-64,2,2,0,c_white,1);
+    
+    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(4,rnd[0]),y-(view_yview[0])-64+lengthdir_y(4,rnd[0]),2,2,0,c_white,0.15);
+    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(6,rnd[1]),y-(view_yview[0])-64+lengthdir_y(6,rnd[1]),2,2,0,c_white,0.1);
+    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(8,rnd[2]),y-(view_yview[0])-64+lengthdir_y(8,rnd[2]),2,2,0,c_white,0.1);
+    draw_sprite_ext(sprite_index,image_index,x-view_xview[0]/2+lengthdir_x(10,rnd[2]),y-(view_yview[0])-64+lengthdir_y(10,rnd[2]),2,2,0,c_white,0.05);
+    
+    draw_text(x-view_xview[0]/2+44,y-view_yview[0]-6-64,option);
+    display_set_gui_size(512,384);
+    
+    if alarm[1] = -1 then alarm[1] = 10;
+    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>425</id>
+        <kind>4</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Enter
+
+{
+    global.count += 2;
+    global.option_time = false;
+    if array_length_1d(obj_DialogCreator.dialog) &gt; global.count
+        {
+        destroy(obj_DialogBox);
+        instance_destroy();
+        exit;
+        }
+    with(obj_DialogCreator) event_user(0);
+    global.option_time = false;
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

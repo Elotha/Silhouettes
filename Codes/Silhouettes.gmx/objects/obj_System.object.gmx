@@ -30,6 +30,8 @@
 {
     randomize();
     display_set_gui_size(512,384);
+    global.option_time = false;
+    global.interaction = -1;
 }
 </string>
           </argument>

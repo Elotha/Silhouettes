@@ -93,7 +93,7 @@
     part_type_gravity(particle_light,0,270);
     part_type_colour_hsv(particle_light,140,160,0,50,60,80);
     part_type_life(particle_light,120,200);
-    part_type_alpha3(particle_light,0,0.5,0);
+    part_type_alpha3(particle_light,0,0.6,0);
     part_system_position(tile_effect,x,y);
     
     tile_emitter = part_emitter_create(tile_effect);

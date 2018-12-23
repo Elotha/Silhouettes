@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Effect</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,103 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = spr_DialogBox;
+            <string>///Create
+
+{
+    dialog = "";
+    dialog_full = "Denemedenemedeneme";
+    count = 1;
+    alarm[0] = 2;
+    spr_w = sprite_get_width(spr_DialogBox);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Randomize
+
+{
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Randomize
+
+{
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Dialog Speed
+
+{
+    if string_length(dialog) != string_length(dialog_full)
+        {
+        count++;
+        dialog = string_copy(dialog_full,0,count);
+        alarm[0] = 3;
+        }
+}
 </string>
           </argument>
         </arguments>
@@ -48,20 +144,183 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw GUI
+            <string>///Effect
 
 {
-    draw_sprite_ext(sprite_index,0,view_wview[0]/2,view_hview[0]-64,1,1,0,c_white,0.8);
-    draw_sprite_ext(sprite_index,0,view_wview[0]/2+lengthdir_x(2,rnd[0]),view_hview[0]-64+lengthdir_y(2,rnd[0]),1,1,0,c_white,0.15);
-    draw_sprite_ext(sprite_index,0,view_wview[0]/2+lengthdir_x(3,rnd[1]),view_hview[0]-64+lengthdir_y(3,rnd[1]),1,1,0,c_white,0.1);
-    draw_sprite_ext(sprite_index,0,view_wview[0]/2+lengthdir_x(4,rnd[2]),view_hview[0]-64+lengthdir_y(4,rnd[2]),1,1,0,c_white,0.1);
-    draw_sprite_ext(sprite_index,0,view_wview[0]/2+lengthdir_x(5,rnd[2]),view_hview[0]-64+lengthdir_y(5,rnd[2]),1,1,0,c_white,0.05);
+    draw_sprite_ext(spr_DialogBox,0,view_wview[0]/2,view_hview[0]-64,1,1,0,c_white,0.8);
+    draw_sprite_ext(spr_DialogBox,0,view_wview[0]/2+lengthdir_x(2,rnd[0]),view_hview[0]-64+lengthdir_y(2,rnd[0]),1,1,0,c_white,0.15);
+    draw_sprite_ext(spr_DialogBox,0,view_wview[0]/2+lengthdir_x(3,rnd[1]),view_hview[0]-64+lengthdir_y(3,rnd[1]),1,1,0,c_white,0.1);
+    draw_sprite_ext(spr_DialogBox,0,view_wview[0]/2+lengthdir_x(4,rnd[2]),view_hview[0]-64+lengthdir_y(4,rnd[2]),1,1,0,c_white,0.1);
+    draw_sprite_ext(spr_DialogBox,0,view_wview[0]/2+lengthdir_x(5,rnd[2]),view_hview[0]-64+lengthdir_y(5,rnd[2]),1,1,0,c_white,0.05);
     
-    draw_set_font(fnt_Dialog);
-    draw_set_color(c_white);
-    draw_text(view_wview[0]/2-sprite_get_width(sprite_index)/2+32,view_hview[0]-64-sprite_get_height(sprite_index)/2+30,"What are you doing here? #Is everything alright in your life?");
+    if alarm[1] = -1 then alarm[1] = 10;
+    
+
     
     //draw_sprite(spr_PauseMenu,0,view_wview[0]/2,view_hview[0]/2);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Dialog
+
+{
+    draw_set_color(c_ltgray);
+    draw_set_font(fnt_Dialog48);
+    display_set_gui_size(1024,768);
+    draw_text_ext(view_wview[0]-spr_w+64,view_hview[0]*2-68-sprite_get_height(spr_DialogBox),dialog,24,(spr_w*2-128));
+    display_set_gui_size(512,384);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="40">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Down
+
+{
+    if !global.option_time then exit;
+    with(obj_DialogReplyBox) if image_index = 1
+        {
+        if array_length_1d(global.option_id) &gt; number
+            {
+            image_index = 0;
+            with(global.option_id[number])
+                {
+                image_index = 1;
+                }
+            }
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Up
+
+{
+    if !global.option_time then exit;
+    with(obj_DialogReplyBox) 
+        {
+        if image_index = 1
+            {
+            if number &gt; 1
+                {
+                image_index = 0;
+                with(global.option_id[number-2])
+                    {
+                    image_index = 1;
+                    }
+                }
+            exit;
+            }
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Press Space
+
+{
+    if string_length(dialog) != string_length(dialog_full)
+        {
+        dialog = dialog_full;
+        exit;
+        }
+    with(obj_DialogCreator) 
+        {
+        if array_length_1d(dialog)+1 != global.count
+            {
+            var str = string_copy(dialog[global.count+1],1,7);
+            if str = "Options"
+                {
+                global.option_time = true;
+                var opt = string_copy(dialog[global.count+1],8,8);
+                for(var i = 0; i &lt; real(opt); i++)
+                    {
+                    global.option_id[i] = instance_create(view_xview[0]+(view_wview[0]*2)/3,view_yview[0]+view_hview[0]/3+(i*64),obj_DialogReplyBox);     
+                    if i = 0 then with(global.option_id[i]) image_index = 1;
+                    global.option_id[i].number = i+1;
+                    }
+                exit;
+                }
+            }
+        global.count++;
+        if array_length_1d(dialog) != global.count then event_user(0);
+        else destroy(other);
+        }
+    
 }
 </string>
           </argument>

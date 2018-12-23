@@ -36,9 +36,8 @@
     last_ver = 0;
     silhouette = 0;
     image_speed = 0;
-    image_blend = c_dkgray
+    instance_create(x-24,y-88,obj_KeyboardArrows);
     event_inherited();
-    instance_create(x,y,obj_DialogReplyBox)
 }
 </string>
           </argument>
@@ -119,14 +118,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///movement
+            <string>///Movement
 {
     
-    hor_mov = keyboard_check(ord('D')) - keyboard_check(ord('A'));
-    ver_mov = keyboard_check(ord("W")) - keyboard_check(ord("S")) ;
+    hor_mov = keyboard_check(vk_right) - keyboard_check(vk_left);
+    ver_mov = keyboard_check(vk_up) - keyboard_check(vk_down) ;
     
-    //if hor_mov = 1 then sprite_index = spr_FallenAngelRight; else if hor_mov = -1 then sprite_index = spr_FallenAngelLeft;
-    //if ver_mov = 1 then sprite_index = spr_FallenAngelUp; else if ver_mov = -1 then sprite_index = spr_FallenAngelDown;
+    if global.option_time
+        {
+        hor_mov = 0;
+        ver_mov = 0;
+        }
 
     
     if hor_mov = 1 then sprite_index = spr_CharacterRight; else if hor_mov = -1 then sprite_index = spr_CharacterLeft;
@@ -135,7 +137,7 @@
     if mov_cd &amp;&amp; alarm[0] = -1 &amp;&amp; (hor_mov != 0 || ver_mov != 0)
         {
         
-        var obstacle = collision_line(x,y,x+hor_mov*gap,y-ver_mov*gap,obj_Block,false,true)
+        var obstacle = collision_line(x,y,x+(hor_mov*gap+sign(hor_mov)*8),y-ver_mov*gap+sign(ver_mov)*24,obj_Block,false,true)
         if obstacle = noone
             {
             mov_cd = false;
@@ -189,8 +191,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///depth
-depth=-y
+            <string>///Depth
+depth=-y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Interaction
+
+{
+    
+}
 </string>
           </argument>
         </arguments>
@@ -218,17 +245,17 @@ depth=-y
 {
     if silhouette != 0
         {
-        draw_sprite_ext(sprite_index,image_index,x+last_hor,y-last_ver,1,1,0,c_dkgray,1-(silhouette/10));
+        draw_sprite_ext(sprite_index,image_index,x+last_hor,y-last_ver,1,1,0,image_blend,1-(silhouette/10));
         silhouette--;
         image_alpha -= 0.1;
         }
         
     
     draw_self();
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(2,rnd[0]),y+lengthdir_y(2,rnd[0]),1,1,0,c_dkgray,0.3);
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(3,rnd[1]),y+lengthdir_y(3,rnd[1]),1,1,0,c_dkgray,0.25);
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),1,1,0,c_dkgray,0.2);
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(10,rnd[2]),y+lengthdir_y(10,rnd[2]),1,1,0,c_dkgray,0.1);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(2,rnd[0]),y+lengthdir_y(2,rnd[0]),1,1,0,image_blend,0.3);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(3,rnd[1]),y+lengthdir_y(3,rnd[1]),1,1,0,image_blend,0.25);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),1,1,0,image_blend,0.2);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(10,rnd[2]),y+lengthdir_y(10,rnd[2]),1,1,0,image_blend,0.1);
     
     if alarm[1] = -1 then alarm[1] = 10;
 }

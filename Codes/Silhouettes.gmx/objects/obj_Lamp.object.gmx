@@ -47,7 +47,8 @@ depth=-y+10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 1/10
+            <string>///lightShadow
+instance_create(x,y,obj_LampShadow)
 </string>
           </argument>
         </arguments>
@@ -68,8 +69,11 @@ depth=-y+10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///lightShadow
-instance_create(x,y,obj_LampShadow)
+            <string>///Event Inherit
+
+{
+    event_inherited();
+}
 </string>
           </argument>
         </arguments>

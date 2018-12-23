@@ -28,7 +28,7 @@
             <string>///Music
 
 {
-    audio_play_sound(snd_Music,1,true);
+    //audio_play_sound(snd_Music,1,true);
 }
 </string>
           </argument>
