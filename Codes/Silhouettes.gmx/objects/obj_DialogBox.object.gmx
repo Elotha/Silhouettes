@@ -89,6 +89,11 @@
             <string>///Destroy
 
 {
+    with(global.interaction) 
+        {
+        if amount &gt; 0 then amount--;
+        active = false;
+        }
     global.interaction = -1;
     global.dialog_time = false;
     global.option_time = false;
@@ -428,7 +433,7 @@
             }
         
         global.count++;
-        if array_length_2d(dialog,global.dialog_type) &gt; global.count &amp;&amp; global.dialog_type != SILHOUETTES then event_user(0);
+        if array_length_2d(dialog,global.dialog_type) &gt; global.count &amp;&amp; global.dialog_type != SILHOUETTES then event_user(0); //Sıradaki dialoğa geç.
         else with(other) 
             {
             alarm[2] = 1;

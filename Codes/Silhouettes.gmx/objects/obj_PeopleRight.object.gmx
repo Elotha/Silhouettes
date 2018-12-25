@@ -69,6 +69,7 @@
      line_5 = room_width-292
      sprite_index = choose(spr_FallenAngelRight,spr_People2Right,spr_People3Right,spr_People5Right);
      depth = -y;
+     alpha_max = 0;
 }
 </string>
           </argument>
@@ -94,8 +95,8 @@
             <kind>1</kind>
             <string>///x += 16
 
-x += last_hor
-image_alpha = alpha_max;
+x += 16;
+image_alpha = 1;
 
 </string>
           </argument>
@@ -160,18 +161,18 @@ image_alpha = alpha_max;
 
 
 */
-    if alarm[2]=-1
+    if alarm[2] = -1
        {
-            silhouette=10
-            alarm[2] = spwn_spd
+       silhouette = 10;
+       alarm[2] = 10;
        }
-   
+   /*
     if line_1&gt;x then alpha_max = 0.2
     if line_1&lt;x &amp;&amp; line_2&gt;x then alpha_max = 0.25
     if line_2&lt;x &amp;&amp; line_3&gt;x then alpha_max = 1
     if line_3&lt;x &amp;&amp; line_4&gt;x then alpha_max = 0.5
     if line_4&lt;x &amp;&amp; line_5&gt;x then alpha_max = 0.25
-    if line_5&lt;x then alpha_max = 0.2
+    if line_5&lt;x then alpha_max = 0.2 */
 }
 </string>
           </argument>
@@ -195,17 +196,16 @@ image_alpha = alpha_max;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-    
-     
-       if silhouette != 0        
-       {
-           draw_sprite_ext(sprite_index,image_index,x+last_hor,y,1,1,0,colour,1-(silhouette/(10)))
-           silhouette--;
-           image_alpha -= 0.1;
-           }     
-       draw_self();
+            <string>///Effect
 
+{     
+   if silhouette != 0        
+       {
+       draw_sprite_ext(sprite_index,image_index,x+16,y,1,1,0,colour,1-(silhouette/(10)))
+       silhouette--;
+       image_alpha -= 0.1;
+       }     
+   draw_self();
         
 }
 </string>

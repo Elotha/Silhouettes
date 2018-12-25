@@ -3,12 +3,26 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000000</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>425</id>
+        <kind>4</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -99,10 +113,26 @@
     global.item_interaction[CHEST] = true;
     global.item_interaction[BENCH] = true;
     global.item_interaction[SILHOUETTES] = true;
+    global.room_start = true;
+    //globalvar tile_effect;
 }
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>425</id>
+        <kind>4</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -120,7 +150,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Cre
+            <string>///Create2
 
 {
     choise = 1
@@ -134,8 +164,7 @@
     resume_h = view_hview[0]/2-45
     exit_w = view_wview[0]/2-16
     exit_h = view_hview[0]/2+33
-    global.pause=false;
-    display_set_gui_size(512,384);
+    global.pause = false;
 }
 </string>
           </argument>
@@ -143,6 +172,20 @@
       </action>
     </event>
     <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>425</id>
+        <kind>4</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -161,9 +204,8 @@
             <kind>1</kind>
             <string>///UI
 {
-
-    if global.pause = true
-    {
+     if global.pause = true
+        {
         draw_set_colour(c_black);
         draw_set_alpha(0.5);
         draw_rectangle(0,0,view_wview[0],view_hview[0],false);
@@ -179,7 +221,7 @@
         draw_text_ext_transformed_colour(exit_w,exit_h,"EXIT",3,20,exitx,exity,0,exitc,exitc,exitc,exitc,1);
         
 
-    }
+        }
 
 }
 </string>

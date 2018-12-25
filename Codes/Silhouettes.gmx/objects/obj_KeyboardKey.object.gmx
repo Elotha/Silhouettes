@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_Everything</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -59,7 +59,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Alpha
+            <string>///Alpha-
 
 {
     if image_alpha &gt; 0
@@ -70,8 +70,8 @@
         }
     else 
         {
-        global.interaction = -1;
-        global.key = -1;
+        if instance_number(obj_CharacterBench) = 1 then instance_create(x,y,obj_KeyboardGetUp);
+        else global.key = -1;
         instance_destroy();
         }
 }
@@ -128,7 +128,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Alpha
+            <string>///Alpha+
 
 {
     if image_alpha &lt; 1

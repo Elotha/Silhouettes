@@ -28,33 +28,13 @@
             <string>///Create
 
 {
-    image_speed = 4/15;
+    image_speed = 4/15;///depth
+    depth = -y;
+    amount = 3;
     //audio_play_sound_at(snd_Fountain, x, y, 0, 20, 40, 0, true, 1);
 
 }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///depth
-depth=-y-83
 </string>
           </argument>
         </arguments>

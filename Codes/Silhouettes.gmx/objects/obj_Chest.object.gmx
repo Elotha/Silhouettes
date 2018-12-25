@@ -31,6 +31,7 @@
     image_speed = 0;
     depth = -y;
     silhouette = 0;
+    amount = 1;
 
 }
 </string>
@@ -169,7 +170,6 @@
             <string>///Interaction
 
 {
-    if global.dialog_time then exit;
     if !scr_create_dialog(CHEST,0) then exit;
     if image_index = 0
         {

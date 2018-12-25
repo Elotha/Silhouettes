@@ -4,8 +4,11 @@
 //argument1: kaçıncı dialog olduğu
 
 {
-    if active && global.item_interaction[argument0]
+    if global.dialog_time then exit;
+    if global.option_time then exit;
+    if active
         {
+        global.interaction = id;
         global.dialog_time = true;
         global.dialog_type = argument0;
         with(global.key)
@@ -18,7 +21,6 @@
             {
             dialog_full = obj_DialogCreator.dialog[argument0,argument1];
             }
-        global.item_interaction[argument0] = false;
         return true;
         }
     else return false;

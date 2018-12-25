@@ -71,7 +71,6 @@
     else 
         {
         global.key = -1;
-        global.interaction = -1;
         instance_destroy();
         }
 }

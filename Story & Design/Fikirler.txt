@@ -34,6 +34,8 @@ Hafif kýrýlmýþ kaldýrým taþlarý olabilir. Ölen bütün silüetler aslýnda yepyeni b
 
 Sandýk, ayna, çit gibi nesneler, her oyunda farklý bir yerde rastgele oluþsun.
 
+Oyunculara belki yukarýdan gidilen gizli bir mekanda intihar edebilme seçeneði sunulabilir. Gizli oyun sonu olur.
+
 
 ------Kodlar ------
 

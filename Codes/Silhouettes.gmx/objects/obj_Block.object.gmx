@@ -31,7 +31,7 @@
     active = false;
     switch(sprite_index)
         {
-        case spr_Bank:
+        case spr_Bench:
             xx = 32;
             yy = -64;
             break;
@@ -96,65 +96,7 @@
             <string>///Collision Check
 
 {
-    if instance_number(obj_Character) = 0 then exit;
-    if (object_index = obj_Hedge || object_index = obj_Hedge2 || object_index = obj_Lamp) then exit;
-    
-    switch(object_index)
-        {
-        case obj_Chest:
-            if !global.item_interaction[CHEST] then exit;
-            break;
-            
-        case obj_Mirror:
-            if !global.item_interaction[MIRROR] then exit;
-            break;
-        }
-
-    if ((place_meeting(x,y+40,obj_Character) || place_meeting(x,y+16,obj_Character)) &amp;&amp; obj_Character.sprite_index = spr_CharacterUp)
-        {
-        if global.interaction = -1
-            {
-            if !active
-                {
-                if global.key != -1
-                    {
-                    if global.block_id = id then with(global.key)
-                        {
-                        other.active = true;
-                        global.interaction = id;
-                        alarm[2] = -1;
-                        alarm[0] = 1;
-                        exit;
-                        }
-                    }
-                if instance_number(obj_KeyboardKey) = 0
-                    {
-                    global.key = instance_create(x+xx,y+yy,obj_KeyboardKey);
-                    global.key.block_id = id;
-                    global.interaction = global.key;
-                    active = true;
-                    }
-                }
-            }
-        }
-    else if active
-        {
-        with(global.key) 
-            {
-            alarm[2] = 1;
-            alarm[0] = -1;
-            }
-        active = false;
-        if object_index = obj_Chest
-            {
-            if image_index = 0 then exit;
-            image_index = 0;
-            audio_play_sound(snd_Creak2,0,false);
-            silhouette = 10;
-            alarm[0] = silhouette;
-            global.item_interaction[CHEST] = false;
-            }
-        }
+    scr_collision_check(true);
 }
 </string>
           </argument>
