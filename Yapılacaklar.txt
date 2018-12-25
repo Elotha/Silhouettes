@@ -10,6 +10,8 @@ Oyun bitmeyen bir haritaya oturtulacak.
 
 UI elementleri eklenecek. (Dialog geçme, dialog seçme, banka oturma, banktan kalkma)
 
+Hedgelerin otomatik Hedge2 yaratmasý saðlanacak.
+
 
 ------ Çizimler ------
 
