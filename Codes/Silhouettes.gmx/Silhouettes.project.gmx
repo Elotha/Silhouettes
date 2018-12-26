@@ -22,7 +22,6 @@
       <sprite>sprites\spr_CharacterUp</sprite>
       <sprite>sprites\spr_CharacterLeft</sprite>
       <sprite>sprites\spr_CharacterRight</sprite>
-      <sprite>sprites\spr_SilhouetteRight</sprite>
       <sprite>sprites\spr_CharacterBench</sprite>
       <sprite>sprites\spr_FallenAngelUp</sprite>
       <sprite>sprites\spr_FallenAngelDown</sprite>
@@ -32,6 +31,7 @@
       <sprite>sprites\spr_SilhouetteSitting2</sprite>
       <sprite>sprites\spr_SilhouetteMask</sprite>
       <sprite>sprites\spr_SilhouetteWoman</sprite>
+      <sprite>sprites\spr_SilhouetteRight</sprite>
     </sprites>
     <sprites name="Dialog &amp; HUD">
       <sprite>sprites\spr_PauseMenu</sprite>

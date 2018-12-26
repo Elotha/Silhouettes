@@ -6,7 +6,24 @@ Oyun bitmeyen bir haritaya oturtulacak.
 
 Tilesetteki bug çözülecek.
 
+Dialoglar kodlanacak.
+
+
 
 ------ Çizimler ------
 
-Dialog kutusu aþaðý doðru kararabilir.
+Dialog kutusu aþaðý doðru kararabilir. Dialog kutusunun yenisi çizilecek.
+
+
+
+------ Dizayn ------
+
+Dialoglar yazýlacak.
+
+
+
+------ Diðer ------
+
+Yazý tipinin lisansý satýn alýnacak.
+
+Yeni müzik yapýlacak.

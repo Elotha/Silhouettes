@@ -361,7 +361,6 @@
         else with(other) 
             {
             alarm[2] = 1;
-            control = false;
             with(global.advance) alarm[2] = 1;
             }
         }

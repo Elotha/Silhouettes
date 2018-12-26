@@ -117,8 +117,6 @@
         silhouette--;
         image_alpha -= 0.1;
         }
-    draw_self();
-    event_inherited();
 }
 </string>
           </argument>

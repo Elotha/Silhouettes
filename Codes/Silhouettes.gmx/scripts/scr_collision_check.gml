@@ -67,16 +67,5 @@
         active = false;
         }
         
-    if argument0 //Sandık için özel durum
-        {
-        if object_index = obj_Chest
-            {
-            if image_index = 0 then exit;
-            image_index = 0;
-            audio_play_sound(snd_Creak2,0,false);
-            silhouette = 10;
-            alarm[0] = silhouette;
-            global.item_interaction[CHEST] = false;
-            }
-        }
+    
 }
