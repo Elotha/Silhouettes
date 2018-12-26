@@ -39,7 +39,7 @@
                 {
                 if global.key != -1
                     {
-                    if global.block_id = id then with(global.key)
+                    if global.block_id = id then with(global.key) if object_index != obj_KeyboardGetUp
                         {
                         other.active = true;
                         alarm[2] = -1;
@@ -49,7 +49,8 @@
                     }
                 if instance_number(obj_KeyboardKey) = 0
                     {
-                    global.key = instance_create(x+xx,y+yy,obj_KeyboardKey);
+                    if id.object_index = obj_Bench then global.key = instance_create(x+xx,y+yy,obj_KeyboardSit);
+                    else global.key = instance_create(x+xx,y+yy,obj_KeyboardKey);
                     global.block_id = id;
                     active = true;
                     }

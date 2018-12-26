@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>1280</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1768</w>
-    <h>1003</h>
+    <w>1936</w>
+    <h>1066</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>5850</xoffset>
-    <yoffset>2223</yoffset>
+    <xoffset>-392</xoffset>
+    <yoffset>-106</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_Character" x="1344" y="576" name="inst_46442259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Character" x="1080" y="544" name="inst_46442259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Camera" x="128" y="0" name="inst_8BE81935" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_System" x="32" y="0" name="inst_781E6E94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Music" x="64" y="0" name="inst_6475A0F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -62,13 +62,12 @@
     <instance objName="obj_TrashCan" x="1440" y="512" name="inst_0A85C584" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Mirror" x="1056" y="512" name="inst_D25E4D1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Chest" x="1152" y="480" name="inst_2C7B49B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Hedge" x="1088" y="576" name="inst_358656A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Hedge" x="1152" y="576" name="inst_03F5370C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Hedge" x="1024" y="576" name="inst_CD1B6BB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Hedge2" x="1216" y="576" name="inst_ADEC38A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Silhouette" x="928" y="352" name="inst_8CD2D2E6" locked="0" code="sprite_index = spr_Silhouette2;&#xA;image_xscale = -1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Silhouette" x="960" y="384" name="inst_C3947CEA" locked="0" code="sprite_index = spr_Silhouette1;&#xA;image_xscale = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Silhouette" x="992" y="352" name="inst_C3B51224" locked="0" code="sprite_index = spr_Silhouette2;&#xA;image_xscale = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hedge" x="1120" y="576" name="inst_358656A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hedge" x="1184" y="576" name="inst_03F5370C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hedge" x="1008" y="576" name="inst_CD1B6BB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Silhouette" x="936" y="352" name="inst_8CD2D2E6" locked="0" code="sprite_index = spr_SilhouetteSitting2;&#xA;image_xscale = -1;&#xA;" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Silhouette" x="968" y="376" name="inst_C3947CEA" locked="0" code="sprite_index = spr_SilhouetteSitting1;&#xA;image_xscale = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Silhouette" x="1000" y="352" name="inst_C3B51224" locked="0" code="sprite_index = spr_SilhouetteSitting2;&#xA;image_xscale = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Lamp" x="960" y="320" name="inst_F20A9A47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Silhouette" x="992" y="112" name="inst_0F48DE37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Silhouette" x="1328" y="112" name="inst_B6623708" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,16 +87,17 @@
     <instance objName="obj_Silhouette" x="912" y="944" name="inst_6453B9CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Silhouette" x="1584" y="880" name="inst_9DB685C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Silhouette" x="1584" y="1200" name="inst_DCD238AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_CreatePeople" x="224" y="0" name="inst_E3C29DC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_CreatePeople" x="0" y="576" name="inst_E3C29DC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Fountain" x="832" y="512" name="inst_72CBB8C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_TileCreator" x="-32" y="576" name="inst_840C5BBE" locked="0" code="" scaleX="62" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_TileCreator" x="-24" y="576" name="inst_840C5BBE" locked="0" code="" scaleX="62" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_SilhouetteLight" x="192" y="0" name="inst_104BDAF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Silhouette" x="352" y="384" name="inst_CE3CC95E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Silhouette" x="384" y="416" name="inst_0CB81688" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Particles" x="864" y="544" name="inst_176E5015" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Light" x="160" y="0" name="inst_B074B320" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Mirror" x="992" y="512" name="inst_CC235418" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Chest" x="1184" y="480" name="inst_A1117755" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Lamp" x="1408" y="512" name="inst_C50EB8CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Light" x="160" y="0" name="inst_B074B320" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -30,6 +30,10 @@
 {
     depth = -y;
     amount = -1;
+    if !collision_line(x,y-8,x+sprite_get_width(sprite_index)+4,y-8,obj_Hedge,false,true)
+        {
+        instance_create(x+sprite_get_width(sprite_index),y,obj_Hedge2);
+        }
 }
 </string>
           </argument>

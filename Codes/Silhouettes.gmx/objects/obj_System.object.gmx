@@ -113,7 +113,7 @@
     global.item_interaction[CHEST] = true;
     global.item_interaction[BENCH] = true;
     global.item_interaction[SILHOUETTES] = true;
-    global.room_start = true;
+    global.start = true;
     //globalvar tile_effect;
 }
 </string>

@@ -38,6 +38,34 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Light Fix
+
+{
+    global.light_xfix = 0;
+    global.light_yfix = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -58,10 +86,10 @@
             <string>///Step
 
 {
-    if !surface_exists(light) then light = surface_create(view_wview,view_hview);
+    if !surface_exists(light) then light = surface_create(view_wview[0],view_hview[0]);
     surface_set_target(light);
     draw_set_colour(c_white);
-    draw_rectangle(0,0,view_wview,view_hview,false);
+    draw_rectangle(0,0,view_wview[0],view_hview[0],false);
     surface_reset_target();
 }
 </string>
@@ -90,7 +118,7 @@
 
 {
     draw_set_blend_mode(bm_subtract);
-    draw_surface(light,view_xview,view_yview);
+    draw_surface(light,view_xview[0],view_yview[0]);
     draw_set_blend_mode(bm_normal);
 }
 </string>

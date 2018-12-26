@@ -32,7 +32,7 @@
     switch(sprite_index)
         {
         case spr_Bench:
-            xx = 32;
+            xx = 48;
             yy = -64;
             break;
             

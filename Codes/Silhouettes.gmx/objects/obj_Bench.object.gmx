@@ -83,6 +83,7 @@
 {
     if global.dialog_time then exit;
     if global.option_time then exit;
+    if instance_number(obj_CharacterBench) != 0 then exit;
     if active
         {
         with(global.key)

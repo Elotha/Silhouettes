@@ -63,8 +63,8 @@
         }
     else 
         {
-        instance_create(obj_Character.x-24,obj_Character.y-94,obj_KeyboardArrows);
-        global.room_start = false;
+        instance_create(obj_CharacterParent.x-24,obj_CharacterParent.y-94,obj_KeyboardArrows);
+        global.start = false;
         }
 }
 </string>
@@ -92,8 +92,8 @@
             <string>///Light
 
 {
-    create_light(light_size,col,view_wview[0]/2,view_hview[0]/2);
-    if global.room_start then alarm[0] = 1;
+    create_light(light_size,col,obj_Camera.x,obj_Camera.y);
+    if global.start then alarm[0] = 1;
 }
 </string>
           </argument>

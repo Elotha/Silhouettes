@@ -1,16 +1,10 @@
 ------ Kodlar ------
 
-Silüet renkleri düzenlenecek.
-
 Pause menüsü için <Esc> tuþuna bastýðýmzda ekranýn yarým kararmasý ve bunun üzerine pause menüsünün çýkmasý kodlanacak. <Esc> tuþuna tekrar basarsak oyuna geri dönücez.
-
-Iþýk kodlarý eklenecek.
 
 Oyun bitmeyen bir haritaya oturtulacak.
 
-UI elementleri eklenecek. (Dialog geçme, dialog seçme, banka oturma, banktan kalkma)
-
-Hedgelerin otomatik Hedge2 yaratmasý saðlanacak.
+Tilesetteki bug çözülecek.
 
 
 ------ Çizimler ------

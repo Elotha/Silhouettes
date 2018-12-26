@@ -275,7 +275,7 @@
             <string>///Draw
 
 {
-    if global.room_start then exit;
+    if global.start then exit;
     
     draw_set_colour(c_ltgray);
     draw_set_font(fnt_Dialog48);

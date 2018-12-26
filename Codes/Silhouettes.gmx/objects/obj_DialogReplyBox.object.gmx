@@ -253,7 +253,9 @@
         if image_alpha &gt; 0.5
             {
             alarm[0] = 1;
-            //with(obj_DialogBox) if control then control = false;
+            with(obj_DialogBox) if control then control = false;
+            with(global.keyboard_up) alarm[2] = 1;
+            with(global.keyboard_down) alarm[2] = 1;
             }
         }
 }
