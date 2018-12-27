@@ -8,6 +8,7 @@
 
 
 {
+    exit;
     draw_set_blend_mode(bm_subtract);
     surface_set_target(light);
     draw_circle_colour(argument2-view_xview+global.light_xfix,argument3-view_yview+global.light_yfix,argument0,argument1,c_black,false);

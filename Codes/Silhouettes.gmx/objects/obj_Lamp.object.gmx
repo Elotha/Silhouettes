@@ -29,6 +29,7 @@
 
 {
     depth = -y;
+    first_depth = depth;
     amount = -1;
     light_size = 0;
     col = make_colour_hsv(0,0,0);
@@ -57,6 +58,33 @@
 
 {
     instance_create(x,y,obj_LampLight);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Mask
+
+{
+    mask = instance_create(x,y,obj_Mask);
+    mask_name = asset_get_index(sprite_get_name(sprite_index)+ "Mask")
+    with(mask) sprite_index = other.mask_name;
 }
 </string>
           </argument>
@@ -108,14 +136,10 @@
             <string>///Light
 
 {
-    if light_size &lt; 270
+    if light_size &lt; 66
         {
         light_size += 3;
-        col = make_colour_hsv(0,0,min(colour_get_value(col)+3,255));
-        }
-    else 
-        {
-        instance_create(obj_CharacterParent.x-24,obj_CharacterParent.y-94,obj_KeyboardArrows);
+        col = make_colour_hsv(0,0,min(colour_get_value(col)+12,255));
         }
 }
 </string>
@@ -143,33 +167,12 @@
             <string>///Light
 
 {
-    create_light(64,col,x+9,y-64);
+    if global.alpha != 0
+        {
+        col = make_colour_hsv(0,0,(1-global.alpha)*255);
+        }
+    create_light(light_size,col,x+9,y-64);
     if global.start then alarm[0] = 1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Event Inherit
-
-{
-    event_inherited();
 }
 </string>
           </argument>

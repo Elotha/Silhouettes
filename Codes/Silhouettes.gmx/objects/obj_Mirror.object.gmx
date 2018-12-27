@@ -51,17 +51,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Event Inherit
+            <string>///Mask
 
 {
-    event_inherited();
+    mask = instance_create(x,y,obj_Mask);
+    mask_name = asset_get_index(sprite_get_name(sprite_index)+ "Mask")
+    with(mask) sprite_index = other.mask_name;
 }
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -78,10 +78,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Interaction
+            <string>///Event Inherit
 
 {
-    scr_create_dialog(MIRROR,0);
+    event_inherited();
 }
 </string>
           </argument>

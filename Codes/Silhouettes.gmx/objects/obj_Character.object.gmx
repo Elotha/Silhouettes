@@ -41,14 +41,14 @@
     silhouette = 0;
     //image_blend = make_colour_hsv(150,100,220);
     image_speed = 0;
+    depth = -y;
     
-    step_y = 0;
+    global.step_y = 0;
     global.max_y = false;
     global.last_hor = 16;
     global.last_ver = 0;
     global.light_xfix = 0;
     global.light_yfix = 0;
-    
     
     event_inherited();
 }
@@ -101,7 +101,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Alpha
+            <string>///Alpha-
 
 {
     if image_alpha &gt; 0
@@ -167,42 +167,28 @@
 {
     global.light_xfix = global.last_hor;
     global.light_yfix = global.last_ver;
-    step_y += global.last_ver;
+    global.step_y += global.last_ver;
     image_index = (image_index+1) mod 4;
     
     if global.last_hor != 0
         {
-        with(obj_TileCreator) x -= global.last_hor;
-        }
-    
-    hor_total += global.last_hor;
-    if abs(hor_total) = 32
-        {
-        if global.last_hor != 0 then with(obj_TileCreator)
+        with(obj_TileCreator) 
             {
-            if global.last_hor &gt; 0
-                {
-                tile_code = string_copy(tile_code,5,156)+string_copy(tile_code,1,4);
-                x += 32;
-                }
-            else if global.last_hor &lt; 0
-                {
-                tile_code = string_copy(tile_code,string_length(tile_code)-3,4)+string_copy(tile_code,1,156);
-                x -= 32;
-                }
+            x -= global.last_hor;
+            if x &gt;= 1408+256 then x -= room_width+256;
+            else if x &lt;= -512-256 then x += room_width+256;
             }
-        hor_total = 0;
         }
     
         
-    if abs(step_y) &gt; 30*32 &amp;&amp; global.last_ver != 0
+    if abs(global.step_y) &gt; 30*32 &amp;&amp; global.last_ver != 0
         {
         global.max_y = true;
         }
         
     with(obj_Everything)
         {
-        depth = -y;
+        if object_index != obj_LampLight &amp;&amp; object_index != obj_Camera then depth = -y;
         if object_index != obj_Character
             {
             x -= global.last_hor;
@@ -216,13 +202,14 @@
     if !global.max_y then with(obj_TileCreator) y -= global.last_ver;
     if global.max_y
         {
-        step_y -= global.last_ver;
+        global.step_y -= global.last_ver;
         global.max_y = false;
         with(obj_Camera)
             {
             y -= global.last_ver;
             }
         }
+    with(obj_CreatePeople) y = obj_TileCreator.y;
     
     mov_cd = true;
     image_alpha = 1;
@@ -250,11 +237,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Depth
+            <string>///First Move
 
 {
-    
-    depth = -y;
+    if global.pause then exit;
+    if !global.first_move
+        {
+        if (keyboard_check(vk_left) || keyboard_check(vk_right) || keyboard_check(vk_up) || keyboard_check(vk_down) ||
+            keyboard_check(ord('A')) || keyboard_check(ord('D')) || keyboard_check(ord('W'))|| keyboard_check(ord('S')))
+            {
+            global.first_move = true;
+            }
+        }
 }
 </string>
           </argument>
@@ -359,29 +353,6 @@
     
     if alarm[1] = -1 then alarm[1] = 10;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="67">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>show_message(depth);
 </string>
           </argument>
         </arguments>

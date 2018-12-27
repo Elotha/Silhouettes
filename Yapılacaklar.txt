@@ -1,18 +1,22 @@
 ------ Kodlar ------
 
-Pause menüsü için <Esc> tuþuna bastýðýmzda ekranýn yarým kararmasý ve bunun üzerine pause menüsünün çýkmasý kodlanacak. <Esc> tuþuna tekrar basarsak oyuna geri dönücez.
+Nesnelerin ve silüetlerin rastgele çýkmasý saðlanacak.
 
-Oyun bitmeyen bir haritaya oturtulacak.
-
-Tilesetteki bug çözülecek.
+Ara sýra bankta birilerinin spawn olmasý kodlanacak. Bankta biri spawn olduðu zaman "<E> TALK" seçeneði çýkacak. Ancak bazen biz konuþmasak bile onlar konuþmaya baþlayabilecek. 
 
 Dialoglar kodlanacak.
+
+Oyunun bitiþi ve bitiþ ekraný kodlanacak.
+
+Derinlikler düzenlenecek.
 
 
 
 ------ Çizimler ------
 
 Dialog kutusu aþaðý doðru kararabilir. Dialog kutusunun yenisi çizilecek.
+
+Gölgeler düzenlenecek.
 
 
 

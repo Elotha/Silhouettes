@@ -30,6 +30,7 @@
       <sprite>sprites\spr_SilhouetteSitting1</sprite>
       <sprite>sprites\spr_SilhouetteSitting2</sprite>
       <sprite>sprites\spr_SilhouetteMask</sprite>
+      <sprite>sprites\spr_SilhouetteMask2</sprite>
       <sprite>sprites\spr_SilhouetteWoman</sprite>
       <sprite>sprites\spr_SilhouetteRight</sprite>
     </sprites>
@@ -46,6 +47,15 @@
     </sprites>
     <sprites name="Environmental Objects">
       <sprite>sprites\spr_Tileset</sprite>
+      <sprites name="Masks">
+        <sprite>sprites\spr_BenchMask</sprite>
+        <sprite>sprites\spr_LampMask</sprite>
+        <sprite>sprites\spr_TrashCanMask</sprite>
+        <sprite>sprites\spr_HedgeMask</sprite>
+        <sprite>sprites\spr_ChestMask</sprite>
+        <sprite>sprites\spr_FountainMask</sprite>
+        <sprite>sprites\spr_MirrorMask</sprite>
+      </sprites>
       <sprite>sprites\spr_Bench</sprite>
       <sprite>sprites\spr_Lamp</sprite>
       <sprite>sprites\spr_TrashCan</sprite>
@@ -66,8 +76,11 @@
       <script>scripts\scr_integer.gml</script>
       <script>scripts\scr_light.gml</script>
     </scripts>
-    <script>scripts\scr_create_dialog.gml</script>
-    <script>scripts\scr_collision_check.gml</script>
+    <scripts name="System">
+      <script>scripts\scr_collision_check.gml</script>
+      <script>scripts\scr_create_dialog.gml</script>
+      <script>scripts\scr_random_object.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_Dialog20</font>
@@ -85,8 +98,9 @@
       <object>objects\obj_TileCreator</object>
       <object>objects\obj_SilhouetteLight</object>
       <object>objects\obj_Effect</object>
-      <object>objects\obj_Effect2</object>
+      <object>objects\obj_CreatePeople</object>
       <object>objects\obj_Particles</object>
+      <object>objects\obj_Objects</object>
     </objects>
     <objects name="Silhouettes">
       <object>objects\obj_CharacterParent</object>
@@ -94,7 +108,6 @@
       <object>objects\obj_CharacterBench</object>
       <object>objects\obj_Silhouette</object>
       <object>objects\obj_PeopleRight</object>
-      <object>objects\obj_CreatePeople</object>
     </objects>
     <objects name="Environmental Objects">
       <object>objects\obj_Bench</object>
@@ -106,6 +119,7 @@
       <object>objects\obj_Fountain</object>
       <object>objects\obj_Mirror</object>
       <object>objects\obj_LampLight</object>
+      <object>objects\obj_Mask</object>
     </objects>
     <objects name="Dialog System">
       <object>objects\obj_DialogCreator</object>
@@ -128,11 +142,17 @@
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
   </rooms>
-  <constants number="4">
+  <constants number="10">
     <constant name="MIRROR">0</constant>
     <constant name="CHEST">1</constant>
     <constant name="BENCH">2</constant>
     <constant name="SILHOUETTES">3</constant>
+    <constant name="TRASHCAN">4</constant>
+    <constant name="LAMP">5</constant>
+    <constant name="HEDGE">6</constant>
+    <constant name="FOUNTAIN">7</constant>
+    <constant name="BENCH_LAMP">8</constant>
+    <constant name="BENCH_LAMP_TRASH">9</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

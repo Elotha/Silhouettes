@@ -56,12 +56,12 @@
             <string>///Light
 
 {
-    if light_size &lt; 270
+    if light_size &lt; 300
         {
         light_size += 3;
         col = make_colour_hsv(0,0,min(colour_get_value(col)+3,255));
         }
-    else 
+    else if global.start
         {
         instance_create(obj_CharacterParent.x-24,obj_CharacterParent.y-94,obj_KeyboardArrows);
         global.start = false;

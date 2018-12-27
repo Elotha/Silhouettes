@@ -3,39 +3,11 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>100</depth>
   <persistent>-1</persistent>
   <parentName>obj_Everything</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Create
-
-{
-    x = obj_Character.x;
-    y = obj_Character.y;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -86,39 +58,11 @@
             <string>///Camera
 
 {
-    //Buaradaki clampin amacı, kamera objesinin odanın sınırlarına ulaşmasını engellemektir.
-    //x = clamp(x,0+view_wview[0]/2,room_width-view_wview[0]/2);
-    //y = clamp(y,0+view_hview[0]/2,room_height-view_hview[0]/2);
-        
-    if instance_number(obj_Character) != 0 //Odada bir karakter var mı? Karakter yoksa hata verir çünkü.
+    if instance_number(obj_Character) != 0
         {
         y += ((clamp(obj_Character.y,0+view_hview[0]/2,room_height-view_hview[0]/2) - y) * .1)+camera_y;
-        x += ((obj_Character.x - x) * .1)+camera_x; //.1 ile 0.1 aynı şeydir. Burada kameranın gecikmeli gelmesi sağlanıyor.
-        }      
-      /*  if obj_Character.x&gt;280 or obj_Character.x&lt;room_width-280
-           {
-           x += ((obj_Character.x - x) * .1)+camera_x; //.1 ile 0.1 aynı şeydir. Burada kameranın gecikmeli gelmesi sağlanıyor.
-           }
-        if obj_Character.x&lt;280 or obj_Character.x&gt;room_width - 280
-           {
-           x +=(obj_Character.x - x);
-           }
-           //x +=(obj_Character.x - x);
-
-        if obj_Character.y&gt;384 || obj_Character.y&lt;room_height-384
-           {
-           y += ((clamp(obj_Character.y,0+view_hview[0]/2,room_height-view_hview[0]/2) - y) * .1)+camera_y;
-           }
-           else
-           {
-           y +=(obj_Character.y - y)+camera_y;
-           }
-           */
-    
-        
-        
-    x = clamp(x,0+view_wview[0]/2,room_width-view_wview[0]/2);
-    y = clamp(y,0+view_hview[0]/2,room_height-view_hview[0]/2);
+        x += ((obj_Character.x - x) * .1)+camera_x;
+        }
     
     if alarm[0] = -1 then alarm[0] = 30;
 }
@@ -149,6 +93,62 @@
 {
     camera_x = 0;
     camera_y = 0;
+    x = obj_Character.x;
+    y = obj_Character.y;
+    //depth = obj_Character.depth+1;
+    global.alpha = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw
+
+{
+    if global.pause then exit;
+    if global.step_y &gt; 15*32 
+        {
+        global.alpha = abs((global.step_y)-(obj_Character.y-y)-480)/480;
+        draw_set_colour(c_black);
+        draw_set_alpha(min(1,global.alpha));
+        draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0],false);
+        draw_set_alpha(1);
+        }
+    else if global.step_y &lt; -15*32 
+        {
+        global.alpha = abs((global.step_y)-(obj_Character.y-y)+480)/480;
+        draw_set_colour(c_black);
+        draw_set_alpha(min(1,global.alpha));
+        draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0],false);
+        draw_set_alpha(1);
+        }
+    else if global.alpha &gt; 0
+        {
+        global.alpha = max(global.alpha-0.0025,0);
+        draw_set_colour(c_black);
+        draw_set_alpha(global.alpha);
+        draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0],false);
+        draw_set_alpha(1);
+        }
+    else draw_set_alpha(1);
 }
 </string>
           </argument>

@@ -209,6 +209,11 @@
             <string>///Image Alpha
 
 {
+    if global.pause
+        {
+        alarm[0] = 5;
+        exit;
+        }
     if image_alpha &lt; 1
         {
         image_alpha += 0.02;
@@ -243,12 +248,6 @@
 {
     x += ((obj_Camera.x - x) * 0.5)-12;
     y += ((obj_Camera.y - y) * 0.5)-48;;
-    if global.first_move then exit;
-    if (keyboard_check(vk_left) || keyboard_check(vk_right) || keyboard_check(vk_up) || keyboard_check(vk_down) ||
-        keyboard_check(ord('A')) || keyboard_check(ord('D')) || keyboard_check(ord('W'))|| keyboard_check(ord('S')))
-        {
-        global.first_move = true;
-        }
 }
 </string>
           </argument>

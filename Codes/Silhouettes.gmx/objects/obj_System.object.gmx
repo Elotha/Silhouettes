@@ -8,21 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>425</id>
-        <kind>4</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
+    <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,44 +25,77 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///choises
+            <string>///Randomize
+
 {
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alpha-
 
-    if global.pause = true
-    {
-        if keyboard_check_pressed(vk_up)
+{
+    if alpha &gt; 0
         {
-            choise = "up"
-            resumex = 1.5
-            resumey = 1.5
-            resumec = c_teal
-            resume_w = view_wview[0]/2-48
-            resume_h = view_hview[0]/2-53
-            exitx = 1
-            exity = 1
-            exitc = c_white
-            exit_w = view_wview[0]/2-16
-            exit_h = view_hview[0]/2+33
+        alpha -= 0.04;
+        global.alpha = alpha/4;
+        alarm[1] = 1;
         }
-        else if keyboard_check_pressed(vk_down)
-        {
-            choise = "down"
-            resumex = 1
-            resumey = 1
-            resumec = c_white
-            resume_w = view_wview[0]/2-32
-            resume_h = view_hview[0]/2-45
-            exitx = 1.5
-            exity = 1.5
-            exitc = c_teal
-            exit_w = view_wview[0]/2-23
-            exit_h = view_hview[0]/2+26
-        }
-    
-        if choise = "up" &amp;&amp; keyboard_check_pressed(vk_enter) then global.pause = false
-        else if choise = "down" &amp;&amp; keyboard_check_pressed(vk_enter) then game_end();
-    }
+    else global.pause = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alpha+
 
+{
+    if alpha &lt; 1
+        {
+        alpha += 0.04;
+        global.alpha = alpha/4;
+        alarm[0] = 1;
+        }
 }
 </string>
           </argument>
@@ -114,25 +133,14 @@
     global.item_interaction[BENCH] = true;
     global.item_interaction[SILHOUETTES] = true;
     global.start = true;
-    //globalvar tile_effect;
+    global.pause = false;
+    alpha = 0;
+    resume = true;
+    quit = false;
 }
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>425</id>
-        <kind>4</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -150,21 +158,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create2
+            <string>///Randomize
 
 {
-    choise = 1
-    resumex = 1
-    resumey = 1
-    resumec = c_white
-    exitx = 1
-    exity = 1
-    exitc = c_white
-    resume_w = view_wview[0]/2-32
-    resume_h = view_hview[0]/2-45
-    exit_w = view_wview[0]/2-16
-    exit_h = view_hview[0]/2+33
-    global.pause = false;
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
 }
 </string>
           </argument>
@@ -174,18 +173,57 @@
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
-        <id>425</id>
-        <kind>4</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Pause Menu
+
+{
+    if alpha &gt; 0
+        {
+        if alpha = 1
+            {
+            draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2+lengthdir_x(2,rnd[0]),view_hview[0]/2+lengthdir_y(2,rnd[0]),1,1,0,c_white,0.15);
+            draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2+lengthdir_x(3,rnd[1]),view_hview[0]/2+lengthdir_y(3,rnd[1]),1,1,0,c_white,0.1);
+            draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2+lengthdir_x(4,rnd[2]),view_hview[0]/2+lengthdir_y(4,rnd[2]),1,1,0,c_white,0.1);
+            draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2+lengthdir_x(5,rnd[2]),view_hview[0]/2+lengthdir_y(5,rnd[2]),1,1,0,c_white,0.05);
+            
+            if alarm[2] = -1 then alarm[2] = 10;
+            }
+        draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2,view_hview[0]/2,1,1,0,c_white,alpha); //Pause Menü
+        draw_sprite_ext(spr_Button,resume,view_wview[0]/2,view_hview[0]/2-32,1,1,0,c_white,alpha); //Resume
+        draw_sprite_ext(spr_Button,quit,view_wview[0]/2,view_hview[0]/2+32,1,1,0,c_white,alpha); //Quit
+        
+        draw_set_colour(c_ltgray);
+        draw_set_font(fnt_Dialog48);
+        
+        display_set_gui_size(1024,768);
+        draw_set_valign(fa_center);
+        draw_set_halign(fa_center);
+        draw_text_colour((view_wview[0]),(view_hview[0])-64,"Resume",c_ltgray,c_ltgray,c_ltgray,c_ltgray,alpha);
+        draw_text_colour((view_wview[0]),(view_hview[0])+64,"Quit",c_ltgray,c_ltgray,c_ltgray,c_ltgray,alpha);
+        display_set_gui_size(512,384);
+        draw_set_valign(fa_top);
+        draw_set_halign(fa_left);
+        }
+}
+</string>
+          </argument>
+        </arguments>
       </action>
+    </event>
+    <event eventtype="9" enumb="40">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -202,27 +240,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///UI
+            <string>///Down
+
 {
-     if global.pause = true
-        {
-        draw_set_colour(c_black);
-        draw_set_alpha(0.5);
-        draw_rectangle(0,0,view_wview[0],view_hview[0],false);
-        
-        draw_set_colour(c_white);
-        draw_set_alpha(1);
-        draw_sprite(spr_PauseMenu,0,view_wview[0]/2,view_hview[0]/2);
-        
-        //draw_sprite(spr_ButtonReturn,0,view_wview[0]/2,view_hview[0]/2-32);
-        draw_text_ext_transformed_colour(resume_w,resume_h,"RESUME",3,20,resumex,resumey,0,resumec,resumec,resumec,resumec,1);
-        
-        //draw_sprite(spr_ButtonReturn,0,view_wview[0]/2,view_hview[0]/2+48)
-        draw_text_ext_transformed_colour(exit_w,exit_h,"EXIT",3,20,exitx,exity,0,exitc,exitc,exitc,exitc,1);
-        
+    resume = false;
+    quit = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Up
 
-        }
-
+{
+    resume = true;
+    quit = false;
 }
 </string>
           </argument>
@@ -246,25 +296,60 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create menu
+            <string>///Pause Menu
 {
 
     if global.pause = false
-    {
-    global.pause = true;
-    
-    //resume = instance_create(obj_Camera.x,obj_Camera.y-48,obj_Button);
-    //ext = instance_create(obj_Camera.x,obj_Camera.y+48,obj_Button);
-    //menu = instance_create(obj_Camera.x,obj_Camera.y,obj_PauseMenu)
-    }
-    else
-    {
-    global.pause = false
-    
-    //instance_destroy(global.resume)
-    //instance_destroy(ext)
-    //instance_destroy(menu)
-    }
+        {
+        global.pause = true;
+        alarm[0] = 1;
+        alarm[1] = -1;
+        resume = true;
+        quit = false;
+        }
+    else if alpha &gt; 0
+        {
+        alarm[0] = -1;
+        alarm[1] = 1;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Enter
+
+{
+    if resume
+        {
+        if alpha &gt; 0
+            {
+            alarm[0] = -1;
+            alarm[1] = 1;
+            }
+        }
+    else if quit
+        {
+        game_end();
+        }
 }
 </string>
           </argument>

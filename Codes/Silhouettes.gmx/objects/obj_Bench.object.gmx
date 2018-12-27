@@ -60,8 +60,6 @@
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -78,25 +76,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Interaction
+            <string>///Mask
 
 {
-    if global.dialog_time then exit;
-    if global.option_time then exit;
-    if instance_number(obj_CharacterBench) != 0 then exit;
-    if active
-        {
-        with(global.key)
-            {
-            alarm[2] = 1;
-            alarm[0] = -1;
-            }
-        bench_sil = instance_create(x,y-16,obj_CharacterBench);
-        with(obj_Character)
-            {
-            alarm[2] = 1;
-            }
-        }
+    mask = instance_create(x,y,obj_Mask);
+    mask_name = asset_get_index(sprite_get_name(sprite_index)+ "Mask")
+    with(mask) sprite_index = other.mask_name;
 }
 </string>
           </argument>
