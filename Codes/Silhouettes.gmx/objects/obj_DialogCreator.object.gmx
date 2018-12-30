@@ -94,12 +94,12 @@
     dialog[CHEST,1] = "Options 4";
     dialog[CHEST,2] = "It seems so.";
     
-    dialog[SILHOUETTES,0] = "I am lost.";
-    dialog[SILHOUETTES,1] = "You should go back to the road.";
-    dialog[SILHOUETTES,2] = "Is this your last day? You look so bluish.";
-    dialog[SILHOUETTES,3] = "I have still hope.";
-    dialog[SILHOUETTES,4] = "I didn't choose this path. But I don't regret it.";
-    dialog[SILHOUETTES,5] = "I have still time to become a permanent piece of the system. I don't know what I will turn into.";
+    dialog[SILHOUETTE,0] = "I am lost.";
+    dialog[SILHOUETTE,1] = "You should go back to the road.";
+    dialog[SILHOUETTE,2] = "Is this your last day? You look so bluish.";
+    dialog[SILHOUETTE,3] = "I have still hope.";
+    dialog[SILHOUETTE,4] = "I didn't choose this path. But I don't regret it.";
+    dialog[SILHOUETTE,5] = "I have still time to become a permanent piece of the system. I don't know what I will turn into.";
     
     
     options[MIRROR,0] = "A passenger";

@@ -45,7 +45,7 @@
     part_type_speed(particle_light,0,0,0,0);
     part_type_direction(particle_light,0,0,0,0);
     part_type_gravity(particle_light,0,270);
-    part_type_colour_hsv(particle_light,145,160,0,50,60,100);
+    part_type_colour_hsv(particle_light,152,160,30,60,70,90);
     part_type_life(particle_light,120,200);
     part_type_alpha3(particle_light,0,0.55,0);
     part_system_position(tile_effect,xx,yy);

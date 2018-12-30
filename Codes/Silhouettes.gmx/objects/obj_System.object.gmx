@@ -131,7 +131,7 @@
     global.item_interaction[MIRROR] = true;
     global.item_interaction[CHEST] = true;
     global.item_interaction[BENCH] = true;
-    global.item_interaction[SILHOUETTES] = true;
+    global.item_interaction[SILHOUETTE] = true;
     global.start = true;
     global.pause = false;
     alpha = 0;

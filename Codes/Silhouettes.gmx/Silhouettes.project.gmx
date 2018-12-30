@@ -18,10 +18,12 @@
       <sprite>sprites\spr_TileCreator</sprite>
     </sprites>
     <sprites name="Silhouettes">
+      <sprite>sprites\spr_SilhouetteMask</sprite>
       <sprite>sprites\spr_CharacterDown</sprite>
       <sprite>sprites\spr_CharacterUp</sprite>
       <sprite>sprites\spr_CharacterLeft</sprite>
       <sprite>sprites\spr_CharacterRight</sprite>
+      <sprite>sprites\spr_Character315</sprite>
       <sprite>sprites\spr_CharacterBench</sprite>
       <sprite>sprites\spr_FallenAngelUp</sprite>
       <sprite>sprites\spr_FallenAngelDown</sprite>
@@ -29,8 +31,6 @@
       <sprite>sprites\spr_FallenAngelLeft</sprite>
       <sprite>sprites\spr_SilhouetteSitting1</sprite>
       <sprite>sprites\spr_SilhouetteSitting2</sprite>
-      <sprite>sprites\spr_SilhouetteMask</sprite>
-      <sprite>sprites\spr_SilhouetteMask2</sprite>
       <sprite>sprites\spr_SilhouetteWoman</sprite>
       <sprite>sprites\spr_SilhouetteRight</sprite>
     </sprites>
@@ -46,16 +46,31 @@
       <sprite>sprites\spr_DialogBox</sprite>
     </sprites>
     <sprites name="Environmental Objects">
-      <sprite>sprites\spr_Tileset</sprite>
-      <sprites name="Masks">
+      <sprites name="Randomness Masks">
         <sprite>sprites\spr_BenchMask</sprite>
         <sprite>sprites\spr_LampMask</sprite>
+        <sprite>sprites\spr_LampBenchMask</sprite>
+        <sprite>sprites\spr_LampBenchTrashMask</sprite>
         <sprite>sprites\spr_TrashCanMask</sprite>
         <sprite>sprites\spr_HedgeMask</sprite>
+        <sprite>sprites\spr_Hedge2Mask</sprite>
         <sprite>sprites\spr_ChestMask</sprite>
         <sprite>sprites\spr_FountainMask</sprite>
         <sprite>sprites\spr_MirrorMask</sprite>
+        <sprite>sprites\spr_OneSilhouetteMask</sprite>
+        <sprite>sprites\spr_ThreeSilhouettesMask</sprite>
       </sprites>
+      <sprites name="Masks">
+        <sprite>sprites\spr_Bench_Mask</sprite>
+        <sprite>sprites\spr_Lamp_Mask</sprite>
+        <sprite>sprites\spr_TrashCan_Mask</sprite>
+        <sprite>sprites\spr_Hedge_Mask</sprite>
+        <sprite>sprites\spr_Hedge2_Mask</sprite>
+        <sprite>sprites\spr_Chest_Mask</sprite>
+        <sprite>sprites\spr_Fountain_Mask</sprite>
+        <sprite>sprites\spr_Mirror_Mask</sprite>
+      </sprites>
+      <sprite>sprites\spr_Tileset</sprite>
       <sprite>sprites\spr_Bench</sprite>
       <sprite>sprites\spr_Lamp</sprite>
       <sprite>sprites\spr_TrashCan</sprite>
@@ -138,21 +153,26 @@
       <object>objects\obj_KeyboardDown</object>
       <object>objects\obj_KeyboardArrows</object>
     </objects>
+    <object>objects\obj_Temp</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
+    <room>rooms\rm_Temp</room>
   </rooms>
-  <constants number="10">
+  <constants number="13">
     <constant name="MIRROR">0</constant>
     <constant name="CHEST">1</constant>
     <constant name="BENCH">2</constant>
-    <constant name="SILHOUETTES">3</constant>
+    <constant name="SILHOUETTE">3</constant>
     <constant name="TRASHCAN">4</constant>
     <constant name="LAMP">5</constant>
     <constant name="HEDGE">6</constant>
     <constant name="FOUNTAIN">7</constant>
     <constant name="BENCH_LAMP">8</constant>
     <constant name="BENCH_LAMP_TRASH">9</constant>
+    <constant name="SILHOUETTES_THREE">10</constant>
+    <constant name="LAMP_SILHOUETTE_ONE">11</constant>
+    <constant name="LAMP_SILHOUETTES_THREE">12</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -197,7 +197,7 @@
 {
     if !global.editor_mode then exit;
     //visible değeri bir objenin görünür olup olmadığını belirten değerdir.
-    with(obj_Range) visible = reverse(visible);
+    with(obj_Mask) visible = reverse(visible);
 }
 </string>
           </argument>

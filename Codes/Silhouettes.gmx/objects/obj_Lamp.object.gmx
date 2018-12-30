@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_Block</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_Lamp_Mask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -57,34 +57,7 @@
             <string>///Lamp Light
 
 {
-    instance_create(x,y,obj_LampLight);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Mask
-
-{
-    mask = instance_create(x,y,obj_Mask);
-    mask_name = asset_get_index(sprite_get_name(sprite_index)+ "Mask")
-    with(mask) sprite_index = other.mask_name;
+    instance_create(x,y+12,obj_LampLight);
 }
 </string>
           </argument>
@@ -138,8 +111,8 @@
 {
     if light_size &lt; 66
         {
-        light_size += 3;
-        col = make_colour_hsv(0,0,min(colour_get_value(col)+12,255));
+        light_size += 1;
+        col = make_colour_hsv(0,0,min(colour_get_value(col)+3,255));
         }
 }
 </string>

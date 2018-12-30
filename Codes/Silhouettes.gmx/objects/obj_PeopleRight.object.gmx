@@ -36,7 +36,7 @@
     depth = -(y-8);
     image_speed = 0;
     alarm[1] = movement_speed-1;
-    image_blend = make_colour_hsv(150,irandom_range(0,50),irandom_range(180,240));
+    image_blend = make_colour_hsv(irandom_range(158,165),irandom_range(50,160),irandom_range(200,250));
     image_alpha = 0;
     alarm[2] = 1;
 }

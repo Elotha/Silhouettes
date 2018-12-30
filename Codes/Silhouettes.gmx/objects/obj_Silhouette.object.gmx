@@ -31,7 +31,7 @@
     sprite_index = choose(spr_SilhouetteSitting1,spr_SilhouetteSitting2);
     image_xscale = choose(1,-1);
     depth = -y;
-    image_blend = make_colour_hsv(150,irandom_range(0,50),irandom_range(180,240));
+    image_blend = make_colour_hsv(irandom_range(158,165),irandom_range(70,160),irandom_range(200,250));
     amount = -2;
 }
 </string>
@@ -57,9 +57,6 @@
             <string>///Mask
 
 {
-    mask = instance_create(x,y,obj_Mask);
-    mask_name = asset_get_index(sprite_get_name(sprite_index)+ "Mask2")
-    with(mask) sprite_index = other.mask_name;
 }
 </string>
           </argument>
@@ -126,22 +123,6 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
     <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
@@ -162,8 +143,8 @@
             <string>///Interaction
 
 {
-    scr_create_dialog(SILHOUETTES,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTES)-1));
-    global.item_interaction[SILHOUETTES] = true;
+    scr_create_dialog(SILHOUETTE,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTE)-1));
+    global.item_interaction[SILHOUETTE] = true;
 }
 </string>
           </argument>

@@ -63,7 +63,7 @@
         }
     else if global.start
         {
-        instance_create(obj_CharacterParent.x-24,obj_CharacterParent.y-94,obj_KeyboardArrows);
+        if !global.first_move then instance_create(obj_CharacterParent.x-24,obj_CharacterParent.y-94,obj_KeyboardArrows);
         global.start = false;
         }
 }

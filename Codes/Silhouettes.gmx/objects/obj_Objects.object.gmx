@@ -25,24 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create
+            <string>///Create Objects
 
-{
+{   
+    //,SILHOUETTES_THREE,LAMP_SILHOUETTE_ONE,LAMP_SILHOUETTES_THREE
+    //BENCH_LAMP,BENCH_LAMP_TRASH,
     count = 0;
-    
-    packs[0] = "Lamp, Bench";
-    packs[1] = "Lamp";
-    packs[2] = "TrashCan";
-    packs[3] = "Hedge";
-    packs[4] = "Mirror";
-    packs[5] = "Fountain";
-    packs[6] = "Chest";
-    packs[7] = "Silhouette";
-    packs[8] = "Lamp, 3 Silhouettes";
-    packs[9] = "Lamp, 1 Silhouette";
-    packs[10] = "Lamp, Bench, TrashCan";
-    packs[11] = "3 Silhouette";
-    
     alarm[0] = 1;
     
 }
@@ -68,15 +56,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create Objects
+            <string>///Alarm 0
 
 {
-    if count &lt; 40
+    /*if count &gt;= 30 then exit;
+    count++;
+    alarm[0] = 1;*/
+    repeat(40)
         {
-        count++;
-        alarm[0] = 1;
-        }
-    pack_number = choose(BENCH_LAMP,BENCH_LAMP_TRASH,LAMP,HEDGE,MIRROR,CHEST,TRASHCAN,SILHOUETTES,FOUNTAIN);
+    pack_number = choose(LAMP,TRASHCAN,CHEST,MIRROR,FOUNTAIN,BENCH_LAMP,BENCH_LAMP_TRASH,SILHOUETTES_THREE, HEDGE);
+
     var spr = 0;
     var obj = 0;
     switch(pack_number)
@@ -101,8 +90,12 @@
             obj = obj_Mirror;
             break;
             
-        case SILHOUETTES:
-            spr = spr_SilhouetteMask2;
+        case HEDGE:
+            spr = spr_HedgeMask;
+            obj = obj_Hedge;
+            
+        case SILHOUETTE:
+            spr = spr_OneSilhouetteMask;
             obj = obj_Silhouette;
             break;
             
@@ -111,9 +104,25 @@
             obj = obj_Fountain;
             break;
             
+        case BENCH_LAMP:
+            spr = spr_LampBenchMask;
+            obj = obj_Lamp;
+            break;
+            
+        case BENCH_LAMP_TRASH:
+            spr = spr_LampBenchTrashMask;
+            obj = obj_Lamp;
+            break;
+            
+        case SILHOUETTES_THREE:
+            spr = spr_ThreeSilhouettesMask;
+            obj = obj_Silhouette;
+            break;
+            
+            
         }    
     scr_random_object(pack_number,spr,obj);
-    
+    }
 }
 </string>
           </argument>

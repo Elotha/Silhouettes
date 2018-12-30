@@ -2,9 +2,11 @@
 
 Nesnelerin ve silüetlerin rastgele çýkmasý saðlanacak.
 
+Karakterin çapraz gitmesi kodlanacak.
+
 Ara sýra bankta birilerinin spawn olmasý kodlanacak. Bankta biri spawn olduðu zaman "<E> TALK" seçeneði çýkacak. Ancak bazen biz konuþmasak bile onlar konuþmaya baþlayabilecek. 
 
-Dialoglar kodlanacak.
+Diyaloglar kodlanacak.
 
 Oyunun bitiþi ve bitiþ ekraný kodlanacak.
 
@@ -14,7 +16,7 @@ Derinlikler düzenlenecek.
 
 ------ Çizimler ------
 
-Dialog kutusu aþaðý doðru kararabilir. Dialog kutusunun yenisi çizilecek.
+Diyalog kutusu düzenlenecek.
 
 Gölgeler düzenlenecek.
 
@@ -22,12 +24,18 @@ Gölgeler düzenlenecek.
 
 ------ Dizayn ------
 
-Dialoglar yazýlacak.
+Diyaloglar yazýlacak.
+
+
+
+------ Müzik ------
+
+Yeni müzik üretilecek.
+
+Bankta oturma müziði bestelenecek.
 
 
 
 ------ Diðer ------
 
 Yazý tipinin lisansý satýn alýnacak.
-
-Yeni müzik yapýlacak.

@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_Block</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_Chest_Mask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -33,33 +33,6 @@
     silhouette = 0;
     amount = 1;
 
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Mask
-
-{
-    mask = instance_create(x,y,obj_Mask);
-    mask_name = asset_get_index(sprite_get_name(sprite_index)+ "Mask")
-    with(mask) sprite_index = other.mask_name;
 }
 </string>
           </argument>
