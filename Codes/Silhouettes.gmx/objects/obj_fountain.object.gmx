@@ -30,6 +30,7 @@
 {
     image_speed = 4/15;///depth
     depth = -y;
+    dep = 0;
     amount = 3;
     //audio_play_sound_at(snd_Fountain, x, y, 0, 20, 40, 0, true, 1);
 

@@ -56,6 +56,32 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Mask
+
+{
+    var mask = instance_create(x,y,obj_Mask);
+    mask.sprite_index = spr_OneSilhouetteMask;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="3">
       <action>
@@ -188,7 +214,6 @@
         
     with(obj_Everything)
         {
-        if object_index != obj_LampLight &amp;&amp; object_index != obj_Camera then depth = -y;
         if object_index != obj_Character
             {
             x -= global.last_hor;
@@ -196,6 +221,10 @@
             }
             
         if object_index = obj_Particles then event_user(0);
+        }
+    with(obj_Wrap)
+        {
+        if object_index != obj_LampLight then depth = -y+dep;
         }
 
     
@@ -295,22 +324,67 @@
             global.last_hor = hor_mov*16;
             global.last_ver = ver_mov*16;
             silhouette = 10;
+            if alarm[1] = -1 then alarm[1] = 10;;
             }
     }
     
         
-    if hor_mov = 1
+    switch(hor_mov)
         {
-        sprite_index = spr_CharacterRight; 
-        if alarm[1] = -1 then alarm[1] = 10;;
+        case -1:
+            switch(ver_mov)
+                {
+                case -1:
+                    sprite_index = spr_Character135;
+                    break;
+                    
+                case 0:
+                    sprite_index = spr_CharacterLeft;
+                    break;
+                    
+                case 1:
+                    sprite_index = spr_Character225;
+                    break;
+                    
+                }
+            break;
+            
+        case 0:
+            switch(ver_mov)
+                {
+                case -1:
+                    sprite_index = spr_CharacterUp;
+                    break;
+                    
+                case 0:
+                    image_index = 0;
+                    break;
+                    
+                case 1:
+                    sprite_index = spr_CharacterDown;
+                    break;
+                    
+                }
+            break;
+            
+        case 1:
+            switch(ver_mov)
+                {
+                case -1:
+                    sprite_index = spr_Character45;
+                    break;
+                    
+                case 0:
+                    sprite_index = spr_CharacterRight;
+                    break;
+                    
+                case 1:
+                    sprite_index = spr_Character315;
+                    break;
+                    
+                }
+            break;
         }
-    else if hor_mov = -1 
-        {
-        sprite_index = spr_CharacterLeft; 
-        if alarm[1] = -1 then alarm[1] = 10;;
-        }
-    if ver_mov = 1 then sprite_index = spr_CharacterDown; else if ver_mov = -1 then sprite_index = spr_CharacterUp;
-    if ver_mov = 0 &amp;&amp; hor_mov = 0 then image_index = 0;
 }
 </string>
           </argument>

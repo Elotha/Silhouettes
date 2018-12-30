@@ -120,10 +120,10 @@
     //if (object_index != obj_Character &amp;&amp; object_index != obj_CharacterBench) then 
     draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,(1-global.alpha*2)*image_alpha);
     //else draw_self();
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(2,rnd[0]),y+lengthdir_y(2,rnd[0]),image_xscale,image_yscale,0,c_white,(1-global.alpha*2)*0.2);
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(3,rnd[1]),y+lengthdir_y(3,rnd[1]),image_xscale,image_yscale,0,c_white,(1-global.alpha*2)*0.15);
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(3,rnd[2]),y+lengthdir_y(3,rnd[2]),image_xscale,image_yscale,0,c_white,(1-global.alpha*2)*0.1);
-    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),image_xscale,image_yscale,0,c_white,(1-global.alpha*2)*0.1);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(2,rnd[0]),y+lengthdir_y(2,rnd[0]),image_xscale,image_yscale,0,image_blend,(1-global.alpha*2)*0.2);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(3,rnd[1]),y+lengthdir_y(3,rnd[1]),image_xscale,image_yscale,0,image_blend,(1-global.alpha*2)*0.15);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(3,rnd[2]),y+lengthdir_y(3,rnd[2]),image_xscale,image_yscale,0,image_blend,(1-global.alpha*2)*0.1);
+    draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),image_xscale,image_yscale,0,image_blend,(1-global.alpha*2)*0.1);
     //draw_set_alpha(1);
     
     if alarm[11] = -1 then alarm[11] = 10;

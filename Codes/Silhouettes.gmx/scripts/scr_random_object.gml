@@ -1,19 +1,91 @@
 ///Create Random Objects
 //
 //argument0 = hangi obje?
-//argument1 = sprite_index
-//argument2 = object_index
 
 {
     i = 1;
-    var mask, rnd, rnd_x, rnd_y, rnd_dir, obj;
+    var mask, rnd, rnd_x, rnd_y, rnd_dir, inst;
+    switch(argument0)
+            {
+            case LAMP:
+                spr = spr_LampMask;
+                obj = obj_Lamp;
+                break;
+                
+            case TRASHCAN:
+                spr = spr_TrashCanMask;
+                obj = obj_TrashCan;
+                break;
+                
+            case CHEST:
+                spr = spr_ChestMask;
+                obj = obj_Chest;
+                break;
+                
+            case MIRROR:
+                spr = spr_MirrorMask;
+                obj = obj_Mirror;
+                break;
+                
+            case HEDGE:
+                spr = spr_HedgeMask;
+                obj = obj_Hedge;
+                
+            case FOUNTAIN:
+                spr = spr_FountainMask;
+                obj = obj_Fountain;
+                break;
+                
+            case BENCH_LAMP:
+                spr = spr_LampBenchMask;
+                obj = obj_Lamp;
+                break;
+                
+            case BENCH_LAMP_TRASH:
+                spr = spr_LampBenchTrashMask;
+                obj = obj_Lamp;
+                break;
+                
+            case SILHOUETTE:
+                spr = spr_OneSilhouetteMask;
+                obj = obj_Silhouette;
+                break;
+                
+            case SILHOUETTES_TWO:
+                spr = spr_TwoSilhouettesMask;
+                obj = obj_Silhouette;
+                break;
+                break;
+                
+            case SILHOUETTES_THREE:
+                spr = spr_ThreeSilhouettesMask;
+                obj = obj_Silhouette;
+                break;
+                
+            case LAMP_SILHOUETTE_ONE:
+                spr = spr_LampOneSilhouetteMask;
+                obj = obj_Lamp;
+                break;
+                
+            case LAMP_SILHOUETTES_TWO:
+                spr = spr_LampTwoSilhouettesMask;
+                obj = obj_Lamp;
+                break;
+                
+            case LAMP_SILHOUETTES_THREE:
+                spr = spr_LampThreeSilhouettesMask;
+                obj = obj_Lamp;
+                break;
+                
+                
+            }    
     switch(argument0)
         {
         case BENCH_LAMP:
             x1 = (irandom(room_width/32)*32);
-            y1 = room_height/2-32*3;
+            y1 = room_height/2-32*4;
             mask = instance_create(x1,y1,obj_Mask);
-            mask.sprite_index = argument1;
+            mask.sprite_index = spr;
             with(mask) 
                 {
                 while place_meeting(x,y,obj_Mask)
@@ -24,21 +96,21 @@
                     }
                 other.x1 = x;
                 }
-            if i <= 10
+            if i <= 30
                 {
-                obj = instance_create(x1,y1,argument2);
-                instance_create(obj.x+32,obj.y+32,obj_Bench);
+                inst = instance_create(x1,y1,obj);
+                instance_create(inst.x+32,inst.y+32,obj_Bench);
                 }
             exit;
             break;
             
         case BENCH_LAMP_TRASH:
             x1 = (irandom(room_width/32)*32);
-            y1 = room_height/2-32*3;
+            y1 = room_height/2-32*4;
             mask = instance_create(x1,y1,obj_Mask);
+            mask.sprite_index = spr;
             with(mask) 
                 {
-                sprite_index = argument1;
                 while place_meeting(x,y,obj_Mask)
                     {
                     x = (irandom(room_width/32)*32);
@@ -47,11 +119,11 @@
                     }
                 other.x1 = x;
                 }
-            if i <= 10
+            if i <= 30
                 {
-                obj = instance_create(x1,y1,argument2);
-                instance_create(obj.x+32,obj.y+32,obj_Bench);
-                instance_create(obj.x+160,obj.y,obj_TrashCan);
+                inst = instance_create(x1,y1,obj);
+                instance_create(inst.x+32,inst.y+32,obj_Bench);
+                instance_create(inst.x+160,inst.y,obj_TrashCan);
                 }
             exit;
             break;
@@ -109,69 +181,6 @@
             exit;
             break;
             
-        case LAMP_SILHOUETTE_ONE:
-            rnd_x = (irandom(room_width/32)*32);
-            rnd_y = irandom(12)*32;
-            rnd_dir = choose(-1,1);
-            mask_x = sprite_get_width(spr_LampMask);
-            mask_y = sprite_get_height(spr_LampMask);
-            x1 = rnd_x;
-            y1 = room_height/2+(rnd_dir*(rnd_y+96));
-            if rnd_dir = 1 then y1 += 32;
-            x2 = rnd_x+mask_x;
-            y2 = room_height/2+rnd_dir*(rnd_y+96)-mask_y;       
-            if rnd_dir = 1 then y2 += 32; 
-            while collision_rectangle(x1,y1,x2,y2,obj_Mask,false,true)
-                {
-                rnd_x = (irandom(room_width/32)*32);
-                rnd_y = irandom(12)*32;
-                rnd_dir = choose(-1,1);
-                x1 = rnd_x;
-                x2 = rnd_x+mask_x;
-                i++;
-                if i > 10 then break;
-                }
-            if i <= 10
-                {
-                lamp = instance_create(x1,y1,obj_Lamp);
-                instance_create(lamp.x+(irandom_range(-6,26)),lamp.y+32,obj_Silhouette);
-                }
-            exit;
-            break;
-            
-        case LAMP_SILHOUETTES_THREE:
-            rnd_x = (irandom(room_width/32)*32);
-            rnd_y = irandom(12)*32;
-            rnd_dir = choose(-1,1);
-            mask_x = 104;
-            mask_y = sprite_get_height(spr_LampMask)+64;
-            x1 = rnd_x;
-            y1 = room_height/2+(rnd_dir*(rnd_y+96));
-            if rnd_dir = 1 then y1 += 32;
-            x2 = rnd_x+mask_x;
-            y2 = room_height/2+rnd_dir*(rnd_y+96)-mask_y;       
-            if rnd_dir = 1 then y2 += 32; 
-            while collision_rectangle(x1,y1,x2,y2,obj_Mask,false,true)
-                {
-                rnd_x = (irandom(room_width/32)*32);
-                rnd_y = irandom(12)*32;
-                rnd_dir = choose(-1,1);
-                x1 = rnd_x;
-                x2 = rnd_x+mask_x;
-                i++;
-                if i > 10 then break;
-                }
-            if i <= 10
-                {
-                lamp = instance_create(x1,y1,obj_Lamp);
-                                
-                instance_create(lamp.x-16,lamp.y,obj_Silhouette);
-                instance_create(lamp.x+16,lamp.y+32,obj_Silhouette);
-                instance_create(lamp.x+56,lamp.y,obj_Silhouette);
-                }
-            exit;
-            break;
-            
         default:
             rnd_x = (irandom(room_width/32)*32);
             rnd_y = irandom(12)*32;
@@ -184,9 +193,9 @@
         }
         
     mask = instance_create(x1,y1,obj_Mask);
+    mask.sprite_index = spr;
     with(mask) 
         {
-        sprite_index = argument1;
         while place_meeting(x,y,obj_Mask)
             {
             x = (irandom(room_width/32)*32);
@@ -203,11 +212,32 @@
         }
     if i <= 10
         {
-        obj = instance_create(x1,y1,argument2);
+        inst = instance_create(x1,y1,obj);
+        if argument0 = SILHOUETTES_TWO
+            {
+            instance_create(inst.x+32,inst.y,obj_Silhouette);
+            }
         if argument0 = SILHOUETTES_THREE
             {
-            instance_create(obj.x+24,obj.y+32,obj_Silhouette);
-            instance_create(obj.x+48,obj.y,obj_Silhouette);
+            instance_create(inst.x+24,inst.y+32,obj_Silhouette);
+            instance_create(inst.x+48,inst.y,obj_Silhouette);
+            }
+        if argument0 = LAMP_SILHOUETTE_ONE
+            {
+            instance_create(inst.x+(irandom_range(-6,26)),inst.y+32,obj_Silhouette);
+            }
+        if argument0 = LAMP_SILHOUETTES_TWO
+            {
+            instance_create(inst.x,inst.y+32,obj_Silhouette);
+            instance_create(inst.x+32,inst.y+32,obj_Silhouette);
+            }
+        if argument0 = LAMP_SILHOUETTES_THREE
+            {
+            instance_create(inst.x-16,inst.y,obj_Silhouette);
+            instance_create(inst.x+16,inst.y+32,obj_Silhouette);
+            instance_create(inst.x+56,inst.y,obj_Silhouette);
+            
             }
         }
+    var spr, obj, inst;
 }

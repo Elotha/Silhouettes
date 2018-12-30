@@ -21,5 +21,6 @@
   <height>80</height>
   <frames>
     <frame index="0">images\spr_OneSilhouetteMask_0.png</frame>
+    <frame index="1">images\spr_OneSilhouetteMask_1.png</frame>
   </frames>
 </sprite>

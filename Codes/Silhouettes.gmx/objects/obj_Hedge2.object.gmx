@@ -29,6 +29,7 @@
 
 {
     depth = -y;
+    dep = 0;
     amount = -1;
 }
 </string>

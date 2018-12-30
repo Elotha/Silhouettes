@@ -29,7 +29,7 @@
 
 {
     depth = -y;
-    first_depth = depth;
+    dep = 0;
     amount = -1;
     light_size = 0;
     col = make_colour_hsv(0,0,0);

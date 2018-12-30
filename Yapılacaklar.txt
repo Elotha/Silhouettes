@@ -1,8 +1,6 @@
 ------ Kodlar ------
 
-Nesnelerin ve silüetlerin rastgele çýkmasý saðlanacak.
-
-Karakterin çapraz gitmesi kodlanacak.
+Ayný paketlerin birbirine çok yakýn olmamasý ve ekrandan çýktýklarýnda yenilerinin üretilmesi kodlanacak.
 
 Ara sýra bankta birilerinin spawn olmasý kodlanacak. Bankta biri spawn olduðu zaman "<E> TALK" seçeneði çýkacak. Ancak bazen biz konuþmasak bile onlar konuþmaya baþlayabilecek. 
 

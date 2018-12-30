@@ -29,6 +29,7 @@
 
 {
     depth = -y;
+    dep = 0;
     amount = -1;
     if !collision_line(x,y-8,x+sprite_get_width(sprite_index)+4,y-8,obj_Hedge,false,true)
         {

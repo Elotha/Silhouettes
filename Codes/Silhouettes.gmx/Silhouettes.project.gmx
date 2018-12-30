@@ -18,17 +18,17 @@
       <sprite>sprites\spr_TileCreator</sprite>
     </sprites>
     <sprites name="Silhouettes">
-      <sprite>sprites\spr_SilhouetteMask</sprite>
       <sprite>sprites\spr_CharacterDown</sprite>
       <sprite>sprites\spr_CharacterUp</sprite>
       <sprite>sprites\spr_CharacterLeft</sprite>
       <sprite>sprites\spr_CharacterRight</sprite>
+      <sprite>sprites\spr_Character45</sprite>
+      <sprite>sprites\spr_Character135</sprite>
+      <sprite>sprites\spr_Character225</sprite>
       <sprite>sprites\spr_Character315</sprite>
       <sprite>sprites\spr_CharacterBench</sprite>
-      <sprite>sprites\spr_FallenAngelUp</sprite>
-      <sprite>sprites\spr_FallenAngelDown</sprite>
-      <sprite>sprites\spr_FallenAngelRight</sprite>
-      <sprite>sprites\spr_FallenAngelLeft</sprite>
+      <sprite>sprites\spr_SilhouetteMask</sprite>
+      <sprite>sprites\spr_SilhouetteBench</sprite>
       <sprite>sprites\spr_SilhouetteSitting1</sprite>
       <sprite>sprites\spr_SilhouetteSitting2</sprite>
       <sprite>sprites\spr_SilhouetteWoman</sprite>
@@ -58,7 +58,11 @@
         <sprite>sprites\spr_FountainMask</sprite>
         <sprite>sprites\spr_MirrorMask</sprite>
         <sprite>sprites\spr_OneSilhouetteMask</sprite>
+        <sprite>sprites\spr_TwoSilhouettesMask</sprite>
         <sprite>sprites\spr_ThreeSilhouettesMask</sprite>
+        <sprite>sprites\spr_LampOneSilhouetteMask</sprite>
+        <sprite>sprites\spr_LampTwoSilhouettesMask</sprite>
+        <sprite>sprites\spr_LampThreeSilhouettesMask</sprite>
       </sprites>
       <sprites name="Masks">
         <sprite>sprites\spr_Bench_Mask</sprite>
@@ -95,6 +99,8 @@
       <script>scripts\scr_collision_check.gml</script>
       <script>scripts\scr_create_dialog.gml</script>
       <script>scripts\scr_random_object.gml</script>
+      <script>scripts\scr_wrap.gml</script>
+      <script>scripts\scr_blend.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -110,9 +116,10 @@
       <object>objects\obj_Light</object>
       <object>objects\obj_Everything</object>
       <object>objects\obj_Block</object>
+      <object>objects\obj_Wrap</object>
+      <object>objects\obj_Effect</object>
       <object>objects\obj_TileCreator</object>
       <object>objects\obj_SilhouetteLight</object>
-      <object>objects\obj_Effect</object>
       <object>objects\obj_CreatePeople</object>
       <object>objects\obj_Particles</object>
       <object>objects\obj_Objects</object>
@@ -122,6 +129,7 @@
       <object>objects\obj_Character</object>
       <object>objects\obj_CharacterBench</object>
       <object>objects\obj_Silhouette</object>
+      <object>objects\obj_SilhouetteBench</object>
       <object>objects\obj_PeopleRight</object>
     </objects>
     <objects name="Environmental Objects">
@@ -149,6 +157,7 @@
       <object>objects\obj_KeyboardSelect</object>
       <object>objects\obj_KeyboardSit</object>
       <object>objects\obj_KeyboardGetUp</object>
+      <object>objects\obj_KeyboardTalk</object>
       <object>objects\obj_KeyboardUp</object>
       <object>objects\obj_KeyboardDown</object>
       <object>objects\obj_KeyboardArrows</object>
@@ -159,7 +168,7 @@
     <room>rooms\rm_Main</room>
     <room>rooms\rm_Temp</room>
   </rooms>
-  <constants number="13">
+  <constants number="15">
     <constant name="MIRROR">0</constant>
     <constant name="CHEST">1</constant>
     <constant name="BENCH">2</constant>
@@ -173,6 +182,8 @@
     <constant name="SILHOUETTES_THREE">10</constant>
     <constant name="LAMP_SILHOUETTE_ONE">11</constant>
     <constant name="LAMP_SILHOUETTES_THREE">12</constant>
+    <constant name="LAMP_SILHOUETTES_TWO">13</constant>
+    <constant name="SILHOUETTES_TWO">14</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

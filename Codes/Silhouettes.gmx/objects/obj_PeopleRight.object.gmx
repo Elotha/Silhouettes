@@ -34,9 +34,10 @@
     silhouette = 0;
     movement_speed = irandom_range(24,40);
     depth = -(y-8);
+    dep = -8;
     image_speed = 0;
     alarm[1] = movement_speed-1;
-    image_blend = make_colour_hsv(irandom_range(158,165),irandom_range(50,160),irandom_range(200,250));
+    scr_blend();
     image_alpha = 0;
     alarm[2] = 1;
 }
@@ -97,7 +98,6 @@
 
 {
     image_index = (image_index+1) mod image_number;
-    //alarm[1] = movement_speed;
 }
 </string>
           </argument>

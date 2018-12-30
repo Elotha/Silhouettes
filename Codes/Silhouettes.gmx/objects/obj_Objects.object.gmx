@@ -25,104 +25,46 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create Objects
-
-{   
-    //,SILHOUETTES_THREE,LAMP_SILHOUETTE_ONE,LAMP_SILHOUETTES_THREE
-    //BENCH_LAMP,BENCH_LAMP_TRASH,
-    count = 0;
-    alarm[0] = 1;
-    
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Alarm 0
+            <string>///Objects
 
 {
-    /*if count &gt;= 30 then exit;
-    count++;
-    alarm[0] = 1;*/
-    repeat(40)
+    var lamp = irandom_range(1,2);
+    var trashcan = irandom_range(3,5);
+    var chest = irandom_range(3,5);
+    var mirror = irandom_range(3,5);
+    var hedge = irandom_range(2,4);
+    var fountain = irandom_range(2,3);
+    var bench = 1;
+    var silh = irandom_range(5,8);
+    var silh_two = irandom_range(2,4);
+    var silh_three = irandom_range(1,3);
+    var lamp_silh_one = irandom_range(1,2);
+    var lamp_silh_two = irandom_range(1,2);
+    var lamp_silh_three = 1;
+    
+    repeat(bench) scr_random_object(choose(BENCH_LAMP,BENCH_LAMP_TRASH));
+    repeat(lamp_silh_three) scr_random_object(LAMP_SILHOUETTES_THREE);
+    repeat(lamp_silh_two) scr_random_object(LAMP_SILHOUETTES_TWO);
+    repeat(lamp_silh_one) scr_random_object(LAMP_SILHOUETTE_ONE);
+    repeat(lamp) scr_random_object(LAMP);
+    repeat(trashcan) scr_random_object(TRASHCAN);
+    repeat(chest) scr_random_object(CHEST);
+    repeat(mirror) scr_random_object(MIRROR);
+    repeat(hedge) scr_random_object(HEDGE);
+    repeat(fountain) scr_random_object(FOUNTAIN);
+    repeat(silh) scr_random_object(SILHOUETTE);
+    repeat(silh_two) scr_random_object(SILHOUETTES_TWO);
+    repeat(silh_three) scr_random_object(SILHOUETTES_THREE);
+    
+    var num = (lamp + trashcan + chest + mirror + hedge + fountain + bench + silh + silh_two + silh_three + lamp_silh_one + lamp_silh_two + lamp_silh_three);
+    if  num &lt; 30
         {
-    pack_number = choose(LAMP,TRASHCAN,CHEST,MIRROR,FOUNTAIN,BENCH_LAMP,BENCH_LAMP_TRASH,SILHOUETTES_THREE, HEDGE);
-
-    var spr = 0;
-    var obj = 0;
-    switch(pack_number)
-        {
-        case LAMP:
-            spr = spr_LampMask;
-            obj = obj_Lamp;
-            break;
-            
-        case TRASHCAN:
-            spr = spr_TrashCanMask;
-            obj = obj_TrashCan;
-            break;
-            
-        case CHEST:
-            spr = spr_ChestMask;
-            obj = obj_Chest;
-            break;
-            
-        case MIRROR:
-            spr = spr_MirrorMask;
-            obj = obj_Mirror;
-            break;
-            
-        case HEDGE:
-            spr = spr_HedgeMask;
-            obj = obj_Hedge;
-            
-        case SILHOUETTE:
-            spr = spr_OneSilhouetteMask;
-            obj = obj_Silhouette;
-            break;
-            
-        case FOUNTAIN:
-            spr = spr_FountainMask;
-            obj = obj_Fountain;
-            break;
-            
-        case BENCH_LAMP:
-            spr = spr_LampBenchMask;
-            obj = obj_Lamp;
-            break;
-            
-        case BENCH_LAMP_TRASH:
-            spr = spr_LampBenchTrashMask;
-            obj = obj_Lamp;
-            break;
-            
-        case SILHOUETTES_THREE:
-            spr = spr_ThreeSilhouettesMask;
-            obj = obj_Silhouette;
-            break;
-            
-            
-        }    
-    scr_random_object(pack_number,spr,obj);
-    }
+        repeat(30-num)
+            {
+            scr_random_object(choose(LAMP,TRASHCAN,CHEST,MIRROR,FOUNTAIN,SILHOUETTE,SILHOUETTES_TWO,SILHOUETTES_THREE,LAMP_SILHOUETTE_ONE,LAMP_SILHOUETTES_TWO));
+            }
+        }
+    
 }
 </string>
           </argument>

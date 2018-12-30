@@ -31,7 +31,8 @@
     sprite_index = choose(spr_SilhouetteSitting1,spr_SilhouetteSitting2);
     image_xscale = choose(1,-1);
     depth = -y;
-    image_blend = make_colour_hsv(irandom_range(158,165),irandom_range(70,160),irandom_range(200,250));
+    dep = 0;
+    scr_blend();
     amount = -2;
 }
 </string>
@@ -54,41 +55,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Mask
-
-{
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///X and Y Coordinates
+            <string>///X and Y Coordinates &amp; Event Inherit
 
 {
     active = false;
-    switch(sprite_index)
-        {
-        default:
-            xx = -32;
-            yy = -64;
-            
-        }
+    xx = -32;
+    yy = -64;
     event_inherited();
 }
 </string>

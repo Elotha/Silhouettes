@@ -30,6 +30,7 @@
 {
     image_speed = 0;
     depth = -y;
+    dep = 0;
     silhouette = 0;
     amount = 1;
 

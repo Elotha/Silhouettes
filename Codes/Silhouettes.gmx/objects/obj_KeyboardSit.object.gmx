@@ -70,7 +70,7 @@
         }
     else 
         {
-        if instance_number(obj_CharacterBench) = 1 then instance_create(x,y,obj_KeyboardGetUp);
+        if instance_number(obj_CharacterBench) = 1 then instance_create(x+24,y-16,obj_KeyboardGetUp);
         else global.key = -1;
         instance_destroy();
         }
