@@ -1,0 +1,7 @@
+Diğerleri kadar parlak olmayan, farklı renklerde yanan lambalar eklenebilir.
+
+Bazı silüetlerin etrafına hafif bir ışık eklenebilir.
+
+Daha çok nesne sisteme dahil edilebilir.
+
+Çok uzun bir süre tek yöne gidilince haritanın karararak bitmesi sağlanabilir.

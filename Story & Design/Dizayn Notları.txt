@@ -11,3 +11,7 @@ Miras yýpranabilir.
 Silüetler, flux'tan ne kadar uzaklaþýrsa o kadar kararýyorlar.
 
 Her eylemde biraz daha sona yaklaþýyoruz.
+
+Belki nadiren dönüþüme tanýk olabiliriz.
+
+Belki de önceden birden fazla flux vardý, sonradan birleþtiler.
