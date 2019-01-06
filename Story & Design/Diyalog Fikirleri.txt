@@ -24,6 +24,14 @@ SILHOUETTES:
 
 "Everyone has a struggle inside them. A constant war between the what they want to be, and what the others want them to be. If you lose your ego, then you become a prisoner of the flux."
 
+"Everything is meaningful in this world. Every object says something about this world and those who live in it. I'm exploring their depths to find myself."
+
+"Just consume everything you can find here, death will nullify your search anyway."
+
+"They say there is a secret that lies in the furthest east of the road." (Yeterince yoldan saða doðru yürürsek 'Sheep' baþarýmý alýyoruz.)
+
+"Existence is pain."
+
 
 ------
 
@@ -192,5 +200,53 @@ SILHOUETTE:
 "What do you think it is the reason?"
 
 - A god's wish.
-- Cause-and-effects that led up to here.
-- Something else.
+- Causes-and-effects that led up to here.
+- A creator, created this system and us.
+- Our existence is based on our perception.
+
+------
+
+BENCH:
+
+<E> tuþuna basýp konuþmaya çalýþtýðýmýz zaman:
+
+"Leave me be, I am not in the mood to talk."
+
+------
+
+SILHOUETTE ONE:
+
+"Are you familliar with the concept of illusion of choices?"
+
+- Yes.
+- No.
+
+"Illusion of choices make you believe that you are making a choice, but actually outcome is either independent of your choice and always the same or you don't choose at all. Like the answer I just gave you. Because no matter what you choose, I was going to say the same sentence anyway. You believed that if you say no, then conversation would be going somewhere else and if you say yes then you would be hearing it. And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question. Thus, you didn't choose anything at all. That is the illusion of choices. Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not. "
+
+SILHOUETTE TWO:
+
+"Knowing there is such illusion of choces and there is no free will makes us scary. But I fear more of illusion of consequences, if such thing exists. In our world, everything exists with their contradistinctions. Where there is good, there is bad. Day becomes night, night becomes day. Shadows only exists when there is light as well. So, what if different consequences occured by different choices doesn't change the total? What if when someone chooses A instead of B, someone else chooses B over A, therefore world is going the same way overall? I hope this is not the truth."
+
+------
+
+SILHOUETTE:
+
+"If you are looking for a meaning, go left."
+
+Sola gidersek, tekrar karþýmýza çýktýðýnda:
+
+"If you are looking for a meaning, go right."
+
+Saða gidip kendisini tekrar bulup sorduðumuzda diyaloglar baþa sarar.
+
+------
+
+SILHOUETTE:
+
+"If someone finds great happiness in their life, they question if it is a dream or not. If someone else see that person's great happiness, they tend to think that person is actually broken inside, so he or she is pretending. Noone seems to believe there is great happiness, then how can we achieve it? There is always a conflict and coexistence of opposite situations. Maybe the acceptance of the fact that we will always search for it but we will never fully have it brings us peace."
+
+------
+
+SILHOUETTE:
+
+"There was once someone, that heard a rumor about a tree. He never saw a tree, nor he knows it exists in this world. He pursued the rumor, it gave him a purpose. He never find a tree, so he wanted to become a tree. When he died, still there wasn't a any, but he formed the 'Light of the Tree", for those who seek for a it."
