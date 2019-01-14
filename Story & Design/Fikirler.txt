@@ -44,17 +44,11 @@ Oyunculara belki yukarýdan gidilen gizli bir mekanda intihar edebilme seçeneði s
 
 ------ Çizimler ------
 
-Arrows to Move
-<E> to Sit // Down to Get Up
-Seçim kutularý (parlak ve koyu iki tane)
 Karanlýkta oturan silüetler ve sandýk, ayna gibi nesnelerin altýna koymak için elips bir gölge alaný gerekiyor.
-Menü ekraný (Resume, Quit)
-Gece lambasýnýn ýþýðý
 
 
 
 ------ Benim Yapacaklarým ------
 
-Seçim kutularý
 Yeni nesne eklenebilir
 

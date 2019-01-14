@@ -30,11 +30,13 @@ Diyaloglar yazýlacak.
 
 
 
------- Müzik ------
+------ Müzik ve Ses ------
 
 Yeni müzik üretilecek.
 
 Bankta oturma müziði bestelenecek.
+
+Yazýlarýn çýkmasý, seçeneklerin çýkmasý ve seçenek seçme sesleri üretilecek.
 
 
 

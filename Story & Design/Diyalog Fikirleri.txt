@@ -16,8 +16,6 @@ SILHOUETTES:
 
 "What you are doing, is it meaningful? Is it meaningless? Or is it about seeking the meaning itself?"
 
-"I won't feel my absence when my existence come to an end. But I still couldn't make peace with it." (sona yaklaþmýþ)
-
 "Everyone wants to feel strong. Therefore, some of them choose the easiest way. And they judge the others, those walking on a harder path. Only to justify themselves."
 
 "Mind is full of rooms. We choose which one to lock and which one to unlock. If you unlock them all, you unleash fear, and the truth about yourself."
@@ -197,7 +195,7 @@ SILHOUETTE:
 
 -> Yes, and I know why.
 
-"What do you think it is the reason?"
+"What do you think is the reason?"
 
 - A god's wish.
 - Causes-and-effects that led up to here.
@@ -216,16 +214,16 @@ BENCH:
 
 SILHOUETTE ONE:
 
-"Are you familliar with the concept of illusion of choices?"
+"Are you familliar with the concept of illusion of choice?"
 
 - Yes.
 - No.
 
-"Illusion of choices make you believe that you are making a choice, but actually outcome is either independent of your choice and always the same or you don't choose at all. Like the answer I just gave you. Because no matter what you choose, I was going to say the same sentence anyway. You believed that if you say no, then conversation would be going somewhere else and if you say yes then you would be hearing it. And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question. Thus, you didn't choose anything at all. That is the illusion of choices. Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not. "
+"Illusion of choice make you believe that you are making a choice, but actually outcome is either independent of your choice and always the same or you don't choose at all. Like the answer I just gave you. Because no matter what you choose, I was going to say the same sentence anyway. You believed that if you say no, then conversation would be going somewhere else and if you say yes then you would be hearing it. And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question. Thus, you didn't choose anything at all. That is the illusion of choice. Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not. "
 
 SILHOUETTE TWO:
 
-"Knowing there is such illusion of choces and there is no free will makes us scary. But I fear more of illusion of consequences, if such thing exists. In our world, everything exists with their contradistinctions. Where there is good, there is bad. Day becomes night, night becomes day. Shadows only exists when there is light as well. So, what if different consequences occured by different choices doesn't change the total? What if when someone chooses A instead of B, someone else chooses B over A, therefore world is going the same way overall? I hope this is not the truth."
+"Knowing there is such illusion of choice and there is no free will make us scary. But I fear more of illusion of consequence, if such thing exists. In our world, everything exists with their contradistinctions. Where there is good, there is bad. Day becomes night, night becomes day. Shadows only exists when there is light as well. So, what if different consequences occured by different choices doesn't change the total? What if when someone chooses A instead of B, someone else chooses B over A, therefore world is going the same way overall? I hope this is not the truth."
 
 ------
 
@@ -249,4 +247,24 @@ SILHOUETTE:
 
 SILHOUETTE:
 
-"There was once someone, that heard a rumor about a tree. He never saw a tree, nor he knows it exists in this world. He pursued the rumor, it gave him a purpose. He never find a tree, so he wanted to become a tree. When he died, still there wasn't a any, but he formed the 'Light of the Tree", for those who seek for a it."
+"There was once someone, heard a rumor about a tree. He never saw a tree before, nor he knew it exists in this world. He pursued the rumor, it gave him a purpose. He never find a tree, so he wanted to become a tree. When he died, still there wasn't any, but he formed the 'Light of the Tree", for those who seek for a it."
+
+------
+
+SILHOUETTE:
+
+"I won't feel my absence when my existence come to an end. But I still couldn't make peace with it. Are you afraid of dying?" (sona yaklaþmýþ)
+
+- No.
+"Have you decided what your legacy will be?"
+	- Not yet.
+	"Yet you aren't afraid of it. Even when this close. I envy you."
+
+	- Yes.
+	"What is it?"
+		- A reflection.
+		- A light.
+		- 
+		"I hope I can find myself too, before it is too late."
+- Yes.
+"Yeah, me too. Knowing death is nigh even more worrisome. I'm just waiting."
