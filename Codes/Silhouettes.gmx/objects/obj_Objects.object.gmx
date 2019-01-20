@@ -51,7 +51,7 @@
     repeat(chest) scr_random_object(CHEST);
     repeat(mirror) scr_random_object(MIRROR);
     repeat(hedge) scr_random_object(HEDGE);
-    repeat(fountain) scr_random_object(FOUNTAIN);
+    //repeat(fountain) scr_random_object(FOUNTAIN);
     repeat(silh) scr_random_object(SILHOUETTE);
     repeat(silh_two) scr_random_object(SILHOUETTES_TWO);
     repeat(silh_three) scr_random_object(SILHOUETTES_THREE);

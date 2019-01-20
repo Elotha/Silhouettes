@@ -116,7 +116,6 @@
 
 {
     scr_create_dialog(SILHOUETTE,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTE)-1));
-    global.item_interaction[SILHOUETTE] = true;
 }
 </string>
           </argument>

@@ -116,7 +116,7 @@
 {
     if image_alpha &lt; 1
         {
-        image_alpha += 0.04;
+        image_alpha += 0.02;
         alarm[3] = 1;
         }
 }
@@ -216,7 +216,7 @@
 {
     if image_alpha &gt; 0
         {
-        image_alpha -= 0.04;
+        image_alpha -= 0.02;
         alarm[0] = 1;
         }
     else if image_index = 1 then alarm[2] = 1;
@@ -302,7 +302,7 @@
     draw_text_colour((x-view_xview[0])*2+44,(y-view_yview[0])*2-6-64,option,c_ltgray,c_ltgray,c_ltgray,c_ltgray,image_alpha);
     display_set_gui_size(512,384);
     
-    if alarm[1] = -1 then alarm[1] = 10;
+    if alarm[1] = -1 then alarm[1] = global.silhouette_max;
     
 }
 </string>

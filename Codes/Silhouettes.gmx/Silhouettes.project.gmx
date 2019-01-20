@@ -74,6 +74,13 @@
         <sprite>sprites\spr_Fountain_Mask</sprite>
         <sprite>sprites\spr_Mirror_Mask</sprite>
       </sprites>
+      <sprites name="Faded">
+        <sprite>sprites\spr_LampBlue</sprite>
+        <sprite>sprites\spr_TrashCanBlue</sprite>
+        <sprite>sprites\spr_ChestBlue</sprite>
+        <sprite>sprites\spr_FountainBlue</sprite>
+        <sprite>sprites\spr_MirrorBlue</sprite>
+      </sprites>
       <sprite>sprites\spr_Tileset</sprite>
       <sprite>sprites\spr_Bench</sprite>
       <sprite>sprites\spr_Lamp</sprite>
@@ -162,13 +169,12 @@
       <object>objects\obj_KeyboardDown</object>
       <object>objects\obj_KeyboardArrows</object>
     </objects>
-    <object>objects\obj_Temp</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
     <room>rooms\rm_Temp</room>
   </rooms>
-  <constants number="15">
+  <constants number="18">
     <constant name="MIRROR">0</constant>
     <constant name="CHEST">1</constant>
     <constant name="BENCH">2</constant>
@@ -184,6 +190,9 @@
     <constant name="LAMP_SILHOUETTES_THREE">12</constant>
     <constant name="LAMP_SILHOUETTES_TWO">13</constant>
     <constant name="SILHOUETTES_TWO">14</constant>
+    <constant name="FOUNTAIN2">8</constant>
+    <constant name="FOUNTAIN3">9</constant>
+    <constant name="FOUNTAIN4">10</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

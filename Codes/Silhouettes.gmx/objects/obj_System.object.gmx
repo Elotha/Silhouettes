@@ -4,10 +4,79 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-1000000</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Create
+
+{
+    randomize();
+    display_set_gui_size(512,384);
+    global.dialog_time = false;
+    global.interaction = -1;
+    global.key = -1;
+    global.first_move = false;
+    global.item_interaction[MIRROR] = true;
+    global.item_interaction[CHEST] = true;
+    global.item_interaction[BENCH] = true;
+    global.item_interaction[SILHOUETTE] = true;
+    global.start = true;
+    global.pause = false;
+    global.silhouette_max = 20;
+    alpha = 0;
+    resume = true;
+    quit = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Randomize
+
+{
+    rnd[0] = irandom(360);
+    rnd[1] = irandom(360);
+    rnd[2] = irandom(360);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -59,8 +128,8 @@
 {
     if alpha &gt; 0
         {
-        alpha -= 0.04;
-        global.alpha = alpha/4;
+        alpha -= 0.02;
+        global.alpha = alpha/8;
         alarm[1] = 1;
         }
     else global.pause = false;
@@ -92,78 +161,10 @@
 {
     if alpha &lt; 1
         {
-        alpha += 0.04;
-        global.alpha = alpha/4;
+        alpha += 0.02;
+        global.alpha = alpha/8;
         alarm[0] = 1;
         }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Create
-
-{
-    randomize();
-    display_set_gui_size(512,384);
-    global.dialog_time = false;
-    global.interaction = -1;
-    global.key = -1;
-    global.first_move = false;
-    global.item_interaction[MIRROR] = true;
-    global.item_interaction[CHEST] = true;
-    global.item_interaction[BENCH] = true;
-    global.item_interaction[SILHOUETTE] = true;
-    global.start = true;
-    global.pause = false;
-    alpha = 0;
-    resume = true;
-    quit = false;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Randomize
-
-{
-    rnd[0] = irandom(360);
-    rnd[1] = irandom(360);
-    rnd[2] = irandom(360);
 }
 </string>
           </argument>
@@ -199,7 +200,7 @@
             draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2+lengthdir_x(4,rnd[2]),view_hview[0]/2+lengthdir_y(4,rnd[2]),1,1,0,c_white,0.1);
             draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2+lengthdir_x(5,rnd[2]),view_hview[0]/2+lengthdir_y(5,rnd[2]),1,1,0,c_white,0.05);
             
-            if alarm[2] = -1 then alarm[2] = 10;
+            if alarm[2] = -1 then alarm[2] = 20;
             }
         draw_sprite_ext(spr_PauseMenu,0,view_wview[0]/2,view_hview[0]/2,1,1,0,c_white,alpha); //Pause Menü
         draw_sprite_ext(spr_Button,resume,view_wview[0]/2,view_hview[0]/2-32,1,1,0,c_white,alpha); //Resume

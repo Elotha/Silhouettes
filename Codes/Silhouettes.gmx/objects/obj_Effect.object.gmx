@@ -126,7 +126,7 @@
     draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),image_xscale,image_yscale,0,image_blend,(1-global.alpha*2)*0.1);
     //draw_set_alpha(1);
     
-    if alarm[11] = -1 then alarm[11] = 10;
+    if alarm[11] = -1 then alarm[11] = 20;
 }
 </string>
           </argument>

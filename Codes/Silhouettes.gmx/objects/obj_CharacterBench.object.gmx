@@ -151,7 +151,7 @@
 {
     if image_alpha &lt; 1
         {
-        image_alpha += 0.1;
+        image_alpha += 0.05;
         alarm[0] = 1;
         }
 }
@@ -182,9 +182,9 @@
 {
     if silhouette != 0
         {
-        draw_sprite_ext(spr_CharacterDown,image_index,x+72,y+32,1,1,0,image_blend,1-(silhouette/10));
+        draw_sprite_ext(spr_CharacterDown,image_index,x+72,y+32,1,1,0,image_blend,1-(silhouette/global.silhouette_max));
         silhouette--;
-        image_alpha -= 0.1;
+        image_alpha -= 1/global.silhouette_max;
         if image_alpha = 0
             {
             instance_destroy();
@@ -200,7 +200,7 @@
     draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),1,1,0,image_blend,0.2);
     draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(10,rnd[2]),y+lengthdir_y(10,rnd[2]),1,1,0,image_blend,0.1);
     
-    if alarm[1] = -1 then alarm[1] = 10;
+    if alarm[1] = -1 then alarm[1] = global.silhouette_max;;
 }
 </string>
           </argument>
@@ -230,7 +230,7 @@
         
     if silhouette = 0
         {
-        silhouette = 10;
+        silhouette = global.silhouette_max;
         }
 }
 </string>

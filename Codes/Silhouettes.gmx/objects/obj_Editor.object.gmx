@@ -254,7 +254,7 @@
     if !global.editor_mode then exit;
     
     //room_speed değeri, odanın saniyede kaç step işlediğini belirten değerdir.
-    if room_speed = 30 then room_speed = 2; else room_speed = 30;
+    if room_speed = 2 then room_speed = 60; else room_speed = 2;
 }
 </string>
           </argument>

@@ -58,8 +58,8 @@
             break;
             
         case spr_Fountain:
-            xx = 4;
-            yy = -90;
+            xx = -2;
+            yy = -96;
             break;
             
         case spr_Mirror:
@@ -224,9 +224,8 @@
         if !scr_create_dialog(CHEST,0) then exit;
         if image_index = 0
             {
-            image_index = 1;
-            silhoutte = 10;
-            alarm[0] = silhouette;
+            silhouette2 = global.silhouette_max;
+            alarm[1] = silhouette2;
             audio_play_sound(snd_Creak1,1,false);
             }
         }
@@ -257,6 +256,70 @@
     if object_index = obj_Mirror
         {
         scr_create_dialog(MIRROR,0);
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///TrashCan
+
+{
+    if object_index = obj_TrashCan
+        {
+        scr_create_dialog(TRASHCAN,0);
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Fountain
+
+{
+    if object_index = obj_Fountain
+        {
+        var fnt, fnt2;
+        
+        if first_amount = 1 then fnt = choose(FOUNTAIN2,FOUNTAIN3,FOUNTAIN4);
+        else fnt = FOUNTAIN;
+        
+        if fnt = FOUNTAIN2 || fnt = FOUNTAIN3 then fnt2 = 0;
+        else fnt2 = irandom(array_length_2d(obj_DialogCreator.dialog,fnt)-1);
+        
+        scr_create_dialog(fnt,fnt2);
         }
 }
 </string>

@@ -95,14 +95,14 @@
     with(obj_KeyboardTalk) if alarm[2] = -1 then alarm[2] = 1;
     if image_alpha &gt; 0
         {
-        image_alpha -= 0.1;
+        image_alpha -= 0.05;
         alarm[1] = 1;
         }
     else
         {
         sitting = false;
         sit = -1;
-        bench.alarm[0] = irandom_range(160,272);
+        bench.alarm[0] = irandom_range(360,544);
         instance_destroy();
         }
 }
@@ -133,10 +133,10 @@
 {
     if image_alpha &lt; 1
         {
-        image_alpha += 0.1;
+        image_alpha += 0.05;
         alarm[0] = 1;
         }
-    else alarm[1] = 320;
+    else alarm[1] = 640;
 }
 </string>
           </argument>

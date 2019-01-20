@@ -35,7 +35,7 @@
         {
         if global.interaction = -1
             {
-            if !active
+            if !active && (amount != 0 && amount != -1)
                 {
                 if global.key != -1
                     {

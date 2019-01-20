@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>100</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>obj_Everything</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -64,7 +64,7 @@
         x += ((obj_Character.x - x) * .1)+camera_x;
         }
     
-    if alarm[0] = -1 then alarm[0] = 30;
+    if alarm[0] = -1 then alarm[0] = 60;
 }
 </string>
           </argument>
@@ -93,10 +93,15 @@
 {
     camera_x = 0;
     camera_y = 0;
+    global.alpha = 0;
+    if instance_number(obj_Character) = 0
+        {
+        x = room_width/2;
+        y = room_height/2;
+        exit;
+        }
     x = obj_Character.x;
     y = obj_Character.y;
-    //depth = obj_Character.depth+1;
-    global.alpha = 0;
 }
 </string>
           </argument>

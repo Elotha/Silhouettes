@@ -64,8 +64,8 @@
 {
     if image_alpha &gt; 0
         {
-        image_alpha -= 0.04;
-        text_alpha -= 0.04;
+        image_alpha -= 0.02;
+        text_alpha -= 0.02;
         alarm[2] = 1;
         }
     else 

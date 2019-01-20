@@ -132,7 +132,7 @@
 {
     if image_alpha &gt; 0
         {
-        image_alpha -= 0.1;
+        image_alpha -= 0.05;
         alarm[2] = 1;
         }
     else instance_destroy();
@@ -317,14 +317,14 @@
     
         dir = point_direction(x,y,x+hor_mov,y+ver_mov);
         var obstacle = collision_line(x,y,x+lengthdir_x(24,dir),y+lengthdir_y(24,dir),obj_Block,false,true);
-        if obstacle = noone 
+        if obstacle = noone
             {
             mov_cd = false;
-            alarm[0] = 10;
-            global.last_hor = hor_mov*16;
-            global.last_ver = ver_mov*16;
-            silhouette = 10;
-            if alarm[1] = -1 then alarm[1] = 10;;
+            alarm[0] = global.silhouette_max;
+            global.last_hor = lengthdir_x(16,point_direction(0,0,hor_mov,ver_mov));
+            global.last_ver = lengthdir_y(16,point_direction(0,0,hor_mov,ver_mov));
+            silhouette = global.silhouette_max;;
+            if alarm[1] = -1 then alarm[1] = global.silhouette_max;
             }
     }
     
@@ -413,9 +413,9 @@
 {
     if silhouette != 0
         {
-        draw_sprite_ext(sprite_index,(image_index+1) mod 4,x+global.last_hor,y+global.last_ver,1,1,0,image_blend,1-(silhouette/10));
+        draw_sprite_ext(sprite_index,(image_index+1) mod 4,x+global.last_hor,y+global.last_ver,1,1,0,image_blend,1-(silhouette/global.silhouette_max));
         silhouette--;
-        image_alpha -= 0.1;
+        image_alpha -= 1/global.silhouette_max;;
         }
         
     
@@ -425,7 +425,7 @@
     draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(5,rnd[2]),y+lengthdir_y(5,rnd[2]),1,1,0,image_blend,0.2);
     draw_sprite_ext(sprite_index,image_index,x+lengthdir_x(10,rnd[2]),y+lengthdir_y(10,rnd[2]),1,1,0,image_blend,0.1);
     
-    if alarm[1] = -1 then alarm[1] = 10;
+    if alarm[1] = -1 then alarm[1] = global.silhouette_max;;
 }
 </string>
           </argument>

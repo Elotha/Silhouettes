@@ -32,6 +32,7 @@
     depth = -y;
     dep = 0;
     silhouette = 0;
+    silhouette2 = 0;
     amount = 1;
 
 }
@@ -65,7 +66,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -86,6 +87,35 @@
 
 {
     image_alpha = 1;
+    image_index = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Sprite Change
+
+{
+    image_alpha = 1;
+    sprite_index = spr_ChestBlue;
 }
 </string>
           </argument>
@@ -112,11 +142,18 @@
             <string>///Draw
 
 {
+    draw_self();
     if silhouette != 0
         {
-        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,image_blend,1-(silhouette/10));
+        draw_sprite_ext(spr_ChestBlue,image_index,x,y,1,1,0,image_blend,(1-(silhouette/global.silhouette_max))*(1-global.alpha*2));
         silhouette--;
-        image_alpha -= 0.1;
+        image_alpha -= 1/global.silhouette_max;
+        }
+    if silhouette2 != 0
+        {
+        draw_sprite_ext(sprite_index,1,x,y,1,1,0,image_blend,1-(silhouette2/global.silhouette_max));
+        silhouette2--;
+        image_alpha -= 1/global.silhouette_max;
         }
 }
 </string>

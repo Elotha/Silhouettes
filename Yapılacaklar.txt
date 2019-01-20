@@ -8,19 +8,15 @@ Diyaloglar kodlanacak.
 
 Oyunun bitiþi ve bitiþ ekraný kodlanacak.
 
-Derinlikler düzenlenecek.
-
-Nesneler ile etkileþime geçildiði zaman renklerinin solmasý kodlanacak.
-
-Çapraz gidilmenin yavaþlamasý saðlanacak.
-
 
 
 ------ Çizimler ------
 
 Diyalog kutusu düzenlenecek.
 
-Gölgeler düzenlenecek.
+Çaprazlar için idle çizilecek.
+
+Oturan kadýn silüet çizilecek.
 
 
 
@@ -43,3 +39,4 @@ Yazýlarýn çýkmasý, seçeneklerin çýkmasý ve seçenek seçme sesleri üretilecek.
 ------ Diðer ------
 
 Yazý tipinin lisansý satýn alýnacak.
+https://www.creativefabrica.com/product/january-handwriting/ref/185/

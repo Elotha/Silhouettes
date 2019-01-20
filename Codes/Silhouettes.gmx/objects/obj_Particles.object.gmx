@@ -161,7 +161,7 @@
         {
         alpha_change += ((abs(global.step_y)/32-15)*0.035)/10;
         part_type_alpha3(particle_light,0,0.55-alpha_change,0);
-        alarm[0] = 1;
+        alarm[0] = 2;
         }
 }
 </string>

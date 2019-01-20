@@ -49,8 +49,6 @@ Flux'a yakýn olan çeþmelerde:
 
 "They all walk the same way but they never collide."
 
-"Everyone dies twice. First, when they are light blue, second, when their legacy fades."
-
 "You can get lost in a fog if you only trust your eyes."
 
 "You cannot see its value as long as you have it."
@@ -58,6 +56,8 @@ Flux'a yakýn olan çeþmelerde:
 "You cannot change the past, but it can change you."
 
 "If there is no change, there is no evolution."
+
+"Everyone dies twice. First, when they are light blue, second, when their legacy fades."
 
 
 Flux'a uzak olan çeþmelerde:
