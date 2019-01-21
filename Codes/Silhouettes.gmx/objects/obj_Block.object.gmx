@@ -313,11 +313,14 @@
         {
         var fnt, fnt2;
         
-        if first_amount = 1 then fnt = choose(FOUNTAIN2,FOUNTAIN3,FOUNTAIN4);
+        /*if first_amount = 1 then fnt = choose(FOUNTAIN2,FOUNTAIN3,FOUNTAIN4);
         else fnt = FOUNTAIN;
         
         if fnt = FOUNTAIN2 || fnt = FOUNTAIN3 then fnt2 = 0;
-        else fnt2 = irandom(array_length_2d(obj_DialogCreator.dialog,fnt)-1);
+        else fnt2 = irandom(array_length_2d(obj_DialogCreator.dialog,fnt)-1);*/
+        
+        fnt = FOUNTAIN2;
+        fnt2 = 0;
         
         scr_create_dialog(fnt,fnt2);
         }

@@ -229,7 +229,7 @@
         {
         count++;
         dialog = string_copy(dialog_full,0,count);
-        alarm[0] = 4;
+        alarm[0] = 3;
         }
 }
 </string>

@@ -56,7 +56,7 @@
 
 {
     if audio_is_playing(snd_Music) then audio_stop_sound(snd_Music); 
-    else audio_play_sound(snd_Music,1,true);
+    else audio_play_sound(snd_Music,0,true);
 }
 </string>
           </argument>

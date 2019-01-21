@@ -8,6 +8,8 @@ Diyaloglar kodlanacak.
 
 Oyunun bitiþi ve bitiþ ekraný kodlanacak.
 
+Arka arkaya ayný dialoglarýn çýkmamasý kodlanacak.
+
 
 
 ------ Çizimler ------
