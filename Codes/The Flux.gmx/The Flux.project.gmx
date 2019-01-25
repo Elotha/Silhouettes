@@ -174,7 +174,7 @@
     <room>rooms\rm_Temp</room>
     <room>rooms\rm_Main</room>
   </rooms>
-  <constants number="18">
+  <constants number="26">
     <constant name="MIRROR">0</constant>
     <constant name="CHEST">1</constant>
     <constant name="BENCH">2</constant>
@@ -193,6 +193,14 @@
     <constant name="FOUNTAIN2">8</constant>
     <constant name="FOUNTAIN3">9</constant>
     <constant name="FOUNTAIN4">10</constant>
+    <constant name="SILHOUETTE2">5</constant>
+    <constant name="SILHOUETTE3">6</constant>
+    <constant name="SILHOUETTE4">8</constant>
+    <constant name="SILHOUETTE5">9</constant>
+    <constant name="SILHOUETTE6">15</constant>
+    <constant name="SILHOUETTE7">16</constant>
+    <constant name="SILHOUETTE8">17</constant>
+    <constant name="SILHOUETTE9">18</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

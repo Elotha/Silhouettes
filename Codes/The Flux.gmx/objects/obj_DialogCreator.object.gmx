@@ -74,13 +74,52 @@
     dialog[CHEST,1] = "Options 4";
     dialog[CHEST,2] = "It seems so.";
     
-    dialog[SILHOUETTE,0] = "I am lost.";
-    dialog[SILHOUETTE,1] = "You should go back to the road.";
-    dialog[SILHOUETTE,2] = "Is this your last day? You look so bluish.";
-    dialog[SILHOUETTE,3] = "I have still hope.";
-    dialog[SILHOUETTE,4] = "I didn't choose this path. But I don't regret it.";
-    dialog[SILHOUETTE,5] = "I have still time to become a permanent piece of the system. I don't know what I will turn into.";
+    dialog[SILHOUETTE,0] = "I don't believe I'm in the dark. I'm only here to observe those who dwell in darkness.";
+    dialog[SILHOUETTE,1] = "Different times, different places... But the act is always the same. Some thinks that only they deserve to live.";
+    dialog[SILHOUETTE,2] = "Existence is pain.";
+    dialog[SILHOUETTE,3] = "They say there is a secret that lies in the furthest east of the road." ;
+    dialog[SILHOUETTE,4] = "Everything is meaningful in this world. Every object says something about this world and those who live in it. I'm exploring their depths to find myself.";
+    dialog[SILHOUETTE,5] = "Just consume everything you can find here, death will nullify your search anyway.";
+  
+    dialog[SILHOUETTE2,0] = "Everyone wants to feel strong. Therefore, some of them choose the easiest way.";
+    dialog[SILHOUETTE2,1] = "And they judge the others, those walking on a harder path. ";
+    dialog[SILHOUETTE2,2] = "Only to justify themselves.";
     
+    dialog[SILHOUETTE3,0] = "Mind is full of rooms." ;
+    dialog[SILHOUETTE3,1] = "We choose which one to lock and which one to unlock.";
+    dialog[SILHOUETTE3,2] = "If you unlock them all, you unleash fear, and the truth about yourself.";
+    
+    dialog[SILHOUETTE4,0] = "Everything is meaningful in this world. ";
+    dialog[SILHOUETTE4,1] = "Every object says something about this world and those who live in it." ;
+    dialog[SILHOUETTE4,2] = "I'm exploring their depths to find myself.";
+    
+    dialog[SILHOUETTE5,0] = "There was once someone, heard a rumor about a tree.";
+    dialog[SILHOUETTE5,1] = "He never saw a tree before, nor he knew it exists in this world.";
+    dialog[SILHOUETTE5,2] = "He pursued the rumor, it gave him a purpose." ;
+    dialog[SILHOUETTE5,3] = "He never find a tree, so he wanted to become a tree." ;
+    dialog[SILHOUETTE5,4] = "When he died, still there wasn't any, but he formed the 'Light of the Tree', for those who seek for a it.";
+    
+    dialog[SILHOUETTE6,0] = "If someone finds great happiness in their life, they question if it is a dream or not.";
+    dialog[SILHOUETTE6,1] = "If someone else see that person's great happiness, they tend to think that person is actually broken inside, so he or she is pretending.";
+    dialog[SILHOUETTE6,2] = "Noone seems to believe there is great happiness, then how can we achieve it? There is always a conflict and coexistence of opposite situations.";
+    dialog[SILHOUETTE6,3] = "Maybe the acceptance of the fact that we will always search for it but we will never fully have it brings us peace.";
+    
+    dialog[SILHOUETTE7,0] = "Are we here because of our free will or do we follow a deterministic way that we don't have any control on it? What do you think?";
+    dialog[SILHOUETTE7,1] = "Options 3";
+    
+    dialog[SILHOUETTES_TWO,0] = "Are you familliar with the concept of illusion of choice?";
+    dialog[SILHOUETTE8,1] = "Options 2";
+    dialog[SILHOUETTE8,2] = "Illusion of choice make you believe that you are making a choice...";
+    dialog[SILHOUETTE8,3] = "...but actually outcome is either independent of your choice and always the same or you don't choose at all.";
+    dialog[SILHOUETTE8,4] = "Like the answer I just gave you. Because no matter what you choose, I was going to say the same sentence anyway.";
+    dialog[SILHOUETTE8,5] = "You believed that if you say no, then conversation would be going somewhere else and if you say yes then you would be hearing it.";
+    dialog[SILHOUETTE8,6] =  "And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question.";
+    dialog[SILHOUETTE8,7] = "Thus, you didn't choose anything at all. That is the illusion of choice." 
+    dialog[SILHOUETTE8,8] = "Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not.";
+    
+    dialog[LAMP_SILHOUETTE_ONE,0] = "She is always here with me. Guiding me. I won't let her go.";
+    dialog[LAMP_SILHOUETTES_THREE,0] = "At least we have each other.";
+      
     dialog[FOUNTAIN,0] = "Curiosity becomes the knowledge, knowledge becomes the future.";
     dialog[FOUNTAIN,1] = "Experience brings the new decisions, for those who seek them.";
     dialog[FOUNTAIN,2] = "When everybody agrees, everybody is wrong.";
@@ -101,12 +140,18 @@
     dialog[FOUNTAIN3,1] = "ınstead, they denied the reality.";
     
     dialog[FOUNTAIN4,0] = "Some thought their existence was only for what is existed. They brought nothing new but they preserved what is there.";
-
     
     dialog[TRASHCAN,0] = "One1."
     dialog[TRASHCAN,1] = "Two2.";
     dialog[TRASHCAN,2] = "Three3.";
     
+    
+    options[SILHOUETTE7,0] = "We have free will.";
+    options[SILHOUETTE7,1] = "Free will is an ilusion.";
+    options[SILHOUETTE7,2] = "I'm not sure.";
+    
+    options[SILHOUETTE8,0] = "Yes";
+    options[SILHOUETTE8,1] = "No";
     
     options[MIRROR,0] = "A passenger";
     options[MIRROR,1] = "A player";
@@ -117,14 +162,6 @@
     options[CHEST,1] = "A depression";
     options[CHEST,2] = "A regret";
     options[CHEST,3] = "Nothing";
-    
-    /*dialog[0] = "Hi, there!";
-    dialog[1] = "Options " +string(3);
-    dialog[2] = "You choose the right one, my friend.";*/
-    
-    /*options[0,0] = "First";
-    options[0,1] = "Second";
-    options[0,2] = "Third";*/
 
 }
 </string>
