@@ -33,6 +33,7 @@
     global.dialog_time = false;
     global.interaction = -1;
     global.key = -1;
+    global.talk = -1;
     global.first_move = false;
     global.item_interaction[MIRROR] = true;
     global.item_interaction[CHEST] = true;
@@ -41,6 +42,10 @@
     global.start = true;
     global.pause = false;
     global.silhouette_max = 20;
+    global.bench = false;
+    global.last_dialog[0] = -1;
+    global.last_dialog[1] = -1;
+    global.last_dialog[2] = -1;
     alpha = 0;
     resume = true;
     quit = false;

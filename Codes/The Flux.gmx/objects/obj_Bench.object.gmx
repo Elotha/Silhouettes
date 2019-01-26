@@ -31,7 +31,7 @@
     depth = -y;
     dep = 0;
     amount = -2;
-    alarm[0] = 180;
+    alarm[0] = 720;
     sitting = false;
 }
 </string>

@@ -16,6 +16,7 @@
     <sprites name="System">
       <sprite>sprites\spr_Particles</sprite>
       <sprite>sprites\spr_TileCreator</sprite>
+      <sprite>sprites\spr_Mask</sprite>
     </sprites>
     <sprites name="Silhouettes">
       <sprite>sprites\spr_CharacterDown</sprite>
@@ -195,8 +196,8 @@
     <constant name="FOUNTAIN4">10</constant>
     <constant name="SILHOUETTE2">5</constant>
     <constant name="SILHOUETTE3">6</constant>
-    <constant name="SILHOUETTE4">8</constant>
-    <constant name="SILHOUETTE5">9</constant>
+    <constant name="SILHOUETTE4">19</constant>
+    <constant name="SILHOUETTE5">20</constant>
     <constant name="SILHOUETTE6">15</constant>
     <constant name="SILHOUETTE7">16</constant>
     <constant name="SILHOUETTE8">17</constant>

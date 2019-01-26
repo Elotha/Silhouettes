@@ -39,7 +39,6 @@
     mov_cd = true;
     hor_total = 0;
     silhouette = 0;
-    //image_blend = make_colour_hsv(150,100,220);
     image_speed = 0;
     depth = -y;
     
@@ -50,7 +49,6 @@
     global.light_xfix = 0;
     global.light_yfix = 0;
     
-    event_inherited();
 }
 </string>
           </argument>
@@ -77,6 +75,32 @@
 {
     var mask = instance_create(x,y,obj_Mask);
     mask.sprite_index = spr_OneSilhouetteMask;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Event Inherited
+
+{
+
+    event_inherited();
 }
 </string>
           </argument>
@@ -269,6 +293,7 @@
             <string>///First Move
 
 {
+    if global.bench then exit;
     if global.pause then exit;
     if !global.first_move
         {

@@ -2,9 +2,9 @@
 
 {
     if instance_number(obj_Character) = 0 then exit;
+    if amount = 0 || amount = -1 then exit;
     if argument0 //Çağıran blok ise
         {
-        if amount = 0 || amount = -1 then exit;
         var check = ((place_meeting(x,y+40,obj_Character) || place_meeting(x,y+16,obj_Character)) && obj_Character.sprite_index = spr_CharacterUp);
         }
     else //Çağıran silüet ise

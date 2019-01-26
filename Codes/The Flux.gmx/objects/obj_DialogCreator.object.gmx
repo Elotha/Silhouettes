@@ -106,16 +106,17 @@
     
     dialog[SILHOUETTE7,0] = "Are we here because of our free will or do we follow a deterministic way that we don't have any control on it? What do you think?";
     dialog[SILHOUETTE7,1] = "Options 3";
+    dialog[SILHOUETTE7,2] = "Interesting.";
     
     dialog[SILHOUETTES_TWO,0] = "Are you familliar with the concept of illusion of choice?";
-    dialog[SILHOUETTE8,1] = "Options 2";
-    dialog[SILHOUETTE8,2] = "Illusion of choice make you believe that you are making a choice...";
-    dialog[SILHOUETTE8,3] = "...but actually outcome is either independent of your choice and always the same or you don't choose at all.";
-    dialog[SILHOUETTE8,4] = "Like the answer I just gave you. Because no matter what you choose, I was going to say the same sentence anyway.";
-    dialog[SILHOUETTE8,5] = "You believed that if you say no, then conversation would be going somewhere else and if you say yes then you would be hearing it.";
-    dialog[SILHOUETTE8,6] =  "And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question.";
-    dialog[SILHOUETTE8,7] = "Thus, you didn't choose anything at all. That is the illusion of choice." 
-    dialog[SILHOUETTE8,8] = "Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not.";
+    dialog[SILHOUETTES_TWO,1] = "Options 2";
+    dialog[SILHOUETTES_TWO,2] = "Illusion of choice make you believe that you are making a choice...";
+    dialog[SILHOUETTES_TWO,3] = "...but actually outcome is either independent of your choice and always the same or you don't choose at all.";
+    dialog[SILHOUETTES_TWO,4] = "Like the answer I just gave you. Because no matter what you choose, I was going to say the same sentence anyway.";
+    dialog[SILHOUETTES_TWO,5] = "You believed that if you say no, then conversation would be going somewhere else and if you say yes then you would be hearing it.";
+    dialog[SILHOUETTES_TWO,6] =  "And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question.";
+    dialog[SILHOUETTES_TWO,7] = "Thus, you didn't choose anything at all. That is the illusion of choice." 
+    dialog[SILHOUETTES_TWO,8] = "Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not.";
     
     dialog[LAMP_SILHOUETTE_ONE,0] = "She is always here with me. Guiding me. I won't let her go.";
     dialog[LAMP_SILHOUETTES_THREE,0] = "At least we have each other.";
@@ -145,13 +146,21 @@
     dialog[TRASHCAN,1] = "Two2.";
     dialog[TRASHCAN,2] = "Three3.";
     
+    dialog[BENCH,0] = "People usually don't come here while in your state. I guess you still have some questions. Maybe I can share some advice with you, if you want?";
+    dialog[BENCH,1] = "Options 2";
+    dialog[BENCH,2] = "What makes us stronger, are our boundaries. We survive as a whole.";
+    dialog[BENCH,3] = "If one pushes the boundaries too far, becomes seperated, becomes alone, and thus, helpless.";
+    dialog[BENCH,4] = "The flux is not here to restrain us, but to keep us safe and whole. If we need a change, we change as a whole, just as water that finds its way.";
+    dialog[BENCH,5] = "I hope this helps." ;
+    dialog[BENCH,6] = "Good luck.";
+    
     
     options[SILHOUETTE7,0] = "We have free will.";
     options[SILHOUETTE7,1] = "Free will is an ilusion.";
     options[SILHOUETTE7,2] = "I'm not sure.";
     
-    options[SILHOUETTE8,0] = "Yes";
-    options[SILHOUETTE8,1] = "No";
+    options[SILHOUETTES_TWO,0] = "Yes";
+    options[SILHOUETTES_TWO,1] = "No";
     
     options[MIRROR,0] = "A passenger";
     options[MIRROR,1] = "A player";
@@ -162,6 +171,9 @@
     options[CHEST,1] = "A depression";
     options[CHEST,2] = "A regret";
     options[CHEST,3] = "Nothing";
+    
+    options[BENCH,0] = "Yes";
+    options[BENCH,1] = "No";
 
 }
 </string>

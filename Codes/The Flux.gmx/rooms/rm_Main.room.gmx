@@ -65,6 +65,9 @@
     <instance objName="obj_Editor" x="0" y="0" name="inst_FBEF3118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Objects" x="192" y="0" name="inst_16C985AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Fountain" x="736" y="192" name="inst_387A28A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Bench" x="1184" y="544" name="inst_520B999A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Lamp" x="1152" y="512" name="inst_00BC1328" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Mask" x="1120" y="384" name="inst_9E40F714" locked="0" code="" scaleX="7" scaleY="6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

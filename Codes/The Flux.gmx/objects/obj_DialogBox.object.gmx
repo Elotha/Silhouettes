@@ -90,7 +90,7 @@
             <string>///Destroy
 
 {
-    with(global.interaction) 
+    with(global.interaction) if object_index != obj_SilhouetteBench
         {
         if amount &gt; 0 then amount--;
         active = false;
@@ -107,6 +107,10 @@
     global.dialog_type = -1;
     global.count = 0;
     global.advance = -1;
+    if global.bench
+        {
+        instance_create(obj_Bench.x+64,obj_Bench.y-80,obj_KeyboardGetUp);
+        }
 }
 </string>
           </argument>
@@ -366,7 +370,12 @@
             control = false;
             alarm[2] = 1;
             if global.advance != -1 then with(global.advance) alarm[2] = 1;
-            }
+            if instance_number(obj_SilhouetteBench) != 0 &amp;&amp; global.bench then with(obj_SilhouetteBench)
+                    {
+                    alarm[1] = 1;
+                    active = false;
+                    }
+                }
         }
     
 }

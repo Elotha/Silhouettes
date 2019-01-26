@@ -204,14 +204,14 @@
     <option_androidtv_use_test_ads>false</option_androidtv_use_test_ads>
     <option_argumenterrors>True</option_argumenterrors>
     <option_audioGroupCount>1</option_audioGroupCount>
-    <option_author></option_author>
+    <option_author>Delusionist Productions</option_author>
     <option_backimage>nil</option_backimage>
     <option_borderless>False</option_borderless>
     <option_changed>false</option_changed>
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
     <option_colordepth>0</option_colordepth>
-    <option_display_name>Silhouettes</option_display_name>
+    <option_display_name>The Flux</option_display_name>
     <option_displayerrors>True</option_displayerrors>
     <option_ecma>0</option_ecma>
     <option_facebook_app_display_name></option_facebook_app_display_name>
@@ -569,7 +569,7 @@
     <option_winUAP_wide_logo>Configs\Default\WindowsUAP\logos\WideLogo.scale-100.png</option_winUAP_wide_logo>
     <option_windowcolor>clBlack</option_windowcolor>
     <option_windows_alternate_sync_method>False</option_windows_alternate_sync_method>
-    <option_windows_build_version>4</option_windows_build_version>
+    <option_windows_build_version>5</option_windows_build_version>
     <option_windows_company_info></option_windows_company_info>
     <option_windows_copyright_info></option_windows_copyright_info>
     <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>

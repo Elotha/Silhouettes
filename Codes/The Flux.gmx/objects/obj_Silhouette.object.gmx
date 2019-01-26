@@ -33,7 +33,7 @@
     depth = -y;
     dep = 0;
     scr_blend();
-    amount = -2;
+    amount = 1;
 }
 </string>
           </argument>
@@ -115,7 +115,22 @@
             <string>///Interaction
 
 {
-    scr_create_dialog(SILHOUETTE,irandom_range(0,array_length_2d(obj_DialogCreator.dialog,SILHOUETTE)-1));
+    /*var slh, slh2;
+    
+    do
+        {
+        slh = choose(SILHOUETTE,SILHOUETTE2,SILHOUETTE3,SILHOUETTE4,SILHOUETTE5,SILHOUETTE6,SILHOUETTE7,SILHOUETTES_TWO);
+        if slh = SILHOUETTE then slh2 = irandom_range(0,array_length_2d(obj_DialogCreator.dialog,slh)-1);
+        else slh2 = 0;
+        }
+    until ((string(slh) + "," + string(slh2)) != global.last_dialog[0] &amp;&amp; (string(slh) + "," + string(slh2)) != global.last_dialog[1] &amp;&amp; (string(slh) + "," + string(slh2)) != global.last_dialog[2])
+    
+    global.last_dialog[0] = global.last_dialog[1];
+    global.last_dialog[1] = global.last_dialog[2];
+    global.last_dialog[2] = string(slh) + "," + string(slh2);
+    scr_create_dialog(slh,slh2);*/
+    
+    scr_create_dialog(SILHOUETTE5,0);
 }
 </string>
           </argument>
