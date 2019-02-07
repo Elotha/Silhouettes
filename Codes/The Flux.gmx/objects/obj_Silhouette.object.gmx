@@ -115,7 +115,8 @@
             <string>///Interaction
 
 {
-    /*var slh, slh2;
+    if !active then exit;
+    var slh, slh2;
     
     do
         {
@@ -123,14 +124,12 @@
         if slh = SILHOUETTE then slh2 = irandom_range(0,array_length_2d(obj_DialogCreator.dialog,slh)-1);
         else slh2 = 0;
         }
-    until ((string(slh) + "," + string(slh2)) != global.last_dialog[0] &amp;&amp; (string(slh) + "," + string(slh2)) != global.last_dialog[1] &amp;&amp; (string(slh) + "," + string(slh2)) != global.last_dialog[2])
+    until ((string(slh) + "," + string(slh2)) != global.last_dialog[SILHOUETTE,0] &amp;&amp; (string(slh) + "," + string(slh2)) != global.last_dialog[SILHOUETTE,1] &amp;&amp; (string(slh) + "," + string(slh2)) != global.last_dialog[SILHOUETTE,2])
     
-    global.last_dialog[0] = global.last_dialog[1];
-    global.last_dialog[1] = global.last_dialog[2];
-    global.last_dialog[2] = string(slh) + "," + string(slh2);
-    scr_create_dialog(slh,slh2);*/
-    
-    scr_create_dialog(SILHOUETTE5,0);
+    global.last_dialog[SILHOUETTE,0] = global.last_dialog[SILHOUETTE,1];
+    global.last_dialog[SILHOUETTE,1] = global.last_dialog[SILHOUETTE,2];
+    global.last_dialog[SILHOUETTE,2] = string(slh) + "," + string(slh2);
+    scr_create_dialog(slh,slh2);
 }
 </string>
           </argument>

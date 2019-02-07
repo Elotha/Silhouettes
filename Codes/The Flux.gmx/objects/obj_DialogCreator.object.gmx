@@ -97,7 +97,7 @@
     dialog[SILHOUETTE5,1] = "He never saw a tree before, nor he knew it exists in this world.";
     dialog[SILHOUETTE5,2] = "He pursued the rumor, it gave him a purpose." ;
     dialog[SILHOUETTE5,3] = "He never find a tree, so he wanted to become a tree." ;
-    dialog[SILHOUETTE5,4] = "When he died, still there wasn't any, but he formed the 'Light of the Tree', for those who seek for a it.";
+    dialog[SILHOUETTE5,4] = "When he died, still there wasn't any, but he formed the 'Light of the Tree', for those who seek for it.";
     
     dialog[SILHOUETTE6,0] = "If someone finds great happiness in their life, they question if it is a dream or not.";
     dialog[SILHOUETTE6,1] = "If someone else see that person's great happiness, they tend to think that person is actually broken inside, so he or she is pretending.";

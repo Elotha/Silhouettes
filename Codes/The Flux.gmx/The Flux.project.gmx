@@ -172,8 +172,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Temp</room>
     <room>rooms\rm_Main</room>
+    <room>rooms\rm_Temp</room>
   </rooms>
   <constants number="26">
     <constant name="MIRROR">0</constant>

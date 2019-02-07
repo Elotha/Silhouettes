@@ -312,16 +312,17 @@
     if object_index = obj_Fountain
         {
         var fnt, fnt2;
-        
-        /*if first_amount = 1 then fnt = choose(FOUNTAIN2,FOUNTAIN3,FOUNTAIN4);
-        else fnt = FOUNTAIN;
-        
-        if fnt = FOUNTAIN2 || fnt = FOUNTAIN3 then fnt2 = 0;
-        else fnt2 = irandom(array_length_2d(obj_DialogCreator.dialog,fnt)-1);*/
-        
-        fnt = FOUNTAIN2;
-        fnt2 = 0;
-        
+        do
+            { 
+            if first_amount = 1 then fnt = choose(FOUNTAIN2,FOUNTAIN3,FOUNTAIN4);
+            else fnt = FOUNTAIN;
+            
+            if fnt = FOUNTAIN2 || fnt = FOUNTAIN3 then fnt2 = 0;
+            else fnt2 = irandom(array_length_2d(obj_DialogCreator.dialog,fnt)-1);
+            }
+        until ((string(fnt) + "," + string(fnt2)) != global.last_dialog[FOUNTAIN,0] &amp;&amp; (string(fnt) + "," + string(fnt2)) != global.last_dialog[FOUNTAIN,1])
+        global.last_dialog[FOUNTAIN,0] = global.last_dialog[FOUNTAIN,1];
+        global.last_dialog[FOUNTAIN,1] = string(fnt) + "," + string(fnt2);
         scr_create_dialog(fnt,fnt2);
         }
 }

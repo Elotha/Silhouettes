@@ -2,13 +2,11 @@
 
 Ayný paketlerin birbirine çok yakýn olmamasý ve ekrandan çýktýklarýnda yenilerinin üretilmesi kodlanacak.
 
-Bankta oturanlarýn konuþmasý kodlanacak. // Bankýn ses çýkartmasý kodlanacak.
+Bankýn ses çýkartmasý kodlanacak.
 
 Diyaloglar kodlanacak.
 
 Oyunun bitiþi ve bitiþ ekraný kodlanacak.
-
-Arka arkaya ayný dialoglarýn çýkmamasý kodlanacak.
 
 
 

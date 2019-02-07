@@ -43,9 +43,11 @@
     global.pause = false;
     global.silhouette_max = 20;
     global.bench = false;
-    global.last_dialog[0] = -1;
-    global.last_dialog[1] = -1;
-    global.last_dialog[2] = -1;
+    global.last_dialog[SILHOUETTE,0] = -1;
+    global.last_dialog[SILHOUETTE,1] = -1;
+    global.last_dialog[SILHOUETTE,2] = -1;
+    global.last_dialog[FOUNTAIN,0] = -1;
+    global.last_dialog[FOUNTAIN,1] = -1;
     alpha = 0;
     resume = true;
     quit = false;
