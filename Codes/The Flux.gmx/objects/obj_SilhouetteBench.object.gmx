@@ -189,7 +189,8 @@
 {
     if image_alpha &lt; 1 then exit;
     if instance_number(obj_CharacterBench) != 0 &amp;&amp; silhouette = 0 then active = true;
-    if scr_create_dialog(BENCH,0) then alarm[1] = -1;
+    var slh = choose(BENCH,BENCH2,BENCH3,BENCH4,BENCH5);
+    if scr_create_dialog(slh,0) then alarm[1] = -1;
 }
 </string>
           </argument>

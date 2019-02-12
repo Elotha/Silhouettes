@@ -80,6 +80,8 @@ BENCH:
 - A choice.
 - I'm not sure.
 
+"I see."
+
 ------
 
 BENCH:
@@ -264,7 +266,8 @@ SILHOUETTE:
 	"What is it?"
 		- A reflection.
 		- A light.
-		- 
+		- A source.
+		- A part of the stones.
 		"I hope I can find myself too, before it is too late."
 - Yes.
 "Yeah, me too. Knowing death is nigh even more worrisome. I'm just waiting."

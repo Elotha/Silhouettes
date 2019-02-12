@@ -120,7 +120,9 @@
     
     do
         {
-        slh = choose(SILHOUETTE,SILHOUETTE2,SILHOUETTE3,SILHOUETTE4,SILHOUETTE5,SILHOUETTE6,SILHOUETTE7,SILHOUETTES_TWO);
+        var irnd = irandom(100);
+        if abs(y-(obj_TileCreator.y+96)) &gt; 15*32 &amp;&amp; irnd &lt; 20 then slh = SILHOUETTE8;
+        else slh = choose(SILHOUETTE,SILHOUETTE2,SILHOUETTE3,SILHOUETTE4,SILHOUETTE5,SILHOUETTE6,SILHOUETTE7,SILHOUETTES_TWO);
         if slh = SILHOUETTE then slh2 = irandom_range(0,array_length_2d(obj_DialogCreator.dialog,slh)-1);
         else slh2 = 0;
         }

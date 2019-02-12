@@ -31,6 +31,7 @@
     global.editor_mode = true;
     global.immortality = false;
     global.draw = false; //Debug Draw modu
+    global.fast_mode = false;
     randomize();
 }
 </string>
@@ -82,6 +83,34 @@
     while file_exists("screenshot_" + string(i) + ".png") i++;
         
     screen_save("screenshot_" + string(i) + ".png");
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="113">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Fast Mode
+
+{
+    global.fast_mode = reverse(global.fast_mode);
+    if global.fast_mode then global.silhouette_max = 2; else global.silhouette_max = 20;
 }
 </string>
           </argument>

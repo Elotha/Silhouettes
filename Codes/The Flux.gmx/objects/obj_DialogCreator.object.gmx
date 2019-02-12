@@ -108,6 +108,46 @@
     dialog[SILHOUETTE7,1] = "Options 3";
     dialog[SILHOUETTE7,2] = "Interesting.";
     
+    dialog[SILHOUETTE8,0] = "You can't run away from the flux forever. I tried.";
+    
+    dialog[SILHOUETTE9,0]  = "I have a story to share. Would you like to hear?";
+    dialog[SILHOUETTE9,1] = "Options 3";
+    dialog[SILHOUETTE9,2] = "Okay then.";
+    dialog[SILHOUETTE9,3] = "Okay then, I'll be around if you change your mind.";
+    dialog[SILHOUETTE9,4] = "I've been told for many times, that I am walking on the wrong way. They said, 'Why don't you trust the common consciousness?'";
+    dialog[SILHOUETTE9,5] = "They always thought happiness comes from being in the flux, walking through it.";
+    dialog[SILHOUETTE9,6] = "But in the end, their legacy only helped to restore some stones of the flux. Maybe add some new stones, at most, but that is all.";
+    dialog[SILHOUETTE9,7] = "Only so the next ones may be able to walk the exact same way. Doing the same things, saying the same words, judging the others as the way the predecessors did.";
+    dialog[SILHOUETTE9,8] = "I responded, 'If there is no change, there is no evolution.'.";
+    dialog[SILHOUETTE9,9] = "When you are inside, you see a continuous change.";
+    dialog[SILHOUETTE9,10] = "But if you look at it from the outside, the changes are always the same, like in a loop, therefore the flux is stationary.";
+    dialog[SILHOUETTE9,11] = "And I had to see the other possibilities, even I would have to do it alone.";
+    dialog[SILHOUETTE9,12] = "Because that was my story, not theirs.";
+    dialog[SILHOUETTE9,13] = "And I never regret it.";
+    dialog[SILHOUETTE9,14] = "Remember, your story is yours, and yours only.";
+    dialog[SILHOUETTE9,15] = "Thanks for your listening, I really needed to share it with someone.";
+    
+    dialog[SILHOUETTE10,0] = "Do you think time to time, why we are here? Why do we exist?";
+    dialog[SILHOUETTE10,1] = "Options 3";
+    dialog[SILHOUETTE10,2] = "Leave the cave, someday.";
+    dialog[SILHOUETTE10,3] = "Me neither. Maybe we're here to think that, who knows.";
+    dialog[SILHOUETTE10,4] = "What do you think is the reason?";
+    dialog[SILHOUETTE10,5] = "Options 4";
+    dialog[SILHOUETTE10,6] = "I wish there is a way to know.";
+    
+    dialog[SILHOUETTE11,0] = "If you are looking for a meaning, go left.";
+    dialog[SILHOUETTE11,1] = "If you are looking for a meaning, go right.";
+    
+    dialog[SILHOUETTE12,0] = "I won't feel my absence when my existence come to an end. But I still couldn't make peace with it. Are you afraid of dying?";
+    dialog[SILHOUETTE12,1] = "Options 2";
+    dialog[SILHOUETTE12,2] = "Yeah, me too. Knowing death is nigh even more worrisome. I'm just waiting.";
+    dialog[SILHOUETTE12,3] = "Have you decided what your legacy will be?";
+    dialog[SILHOUETTE12,4] = "Options 2";
+    dialog[SILHOUETTE12,5] = "Yet you aren't afraid of it. Even when this close. I envy you.";
+    dialog[SILHOUETTE12,6] = "What is it?";
+    dialog[SILHOUETTE12,7] = "Options 4";
+    dialog[SILHOUETTE12,8] = "I hope I can find myself too, before it is too late.";
+    
     dialog[SILHOUETTES_TWO,0] = "Are you familliar with the concept of illusion of choice?";
     dialog[SILHOUETTES_TWO,1] = "Options 2";
     dialog[SILHOUETTES_TWO,2] = "Illusion of choice make you believe that you are making a choice...";
@@ -117,6 +157,14 @@
     dialog[SILHOUETTES_TWO,6] =  "And your decision was based on what you have experienced so far, full of causes and effects that formed your interpretation for this question.";
     dialog[SILHOUETTES_TWO,7] = "Thus, you didn't choose anything at all. That is the illusion of choice." 
     dialog[SILHOUETTES_TWO,8] = "Since everything can happen only once in our timelines, you cannot go back and try the other choices to see if it would be different or not.";
+    
+    dialog[SILHOUETTES_TWO2,0] = "Knowing there is such illusion of choice and there is no free will make us scary.";
+    dialog[SILHOUETTES_TWO2,1] = "But I fear more of illusion of consequence, if such thing exists.";
+    dialog[SILHOUETTES_TWO2,2] = "In our world, everything exists with their contradistinctions. Where there is good, there is bad. Day becomes night, night becomes day.";
+    dialog[SILHOUETTES_TWO2,3] = "Shadows only exists when there is light as well.";
+    dialog[SILHOUETTES_TWO2,4] = "So, what if different consequences occured by different choices doesn't change the total?";
+    dialog[SILHOUETTES_TWO2,5] = "What if when someone chooses A instead of B, someone else chooses B over A, therefore world is going the same way overall?";
+    dialog[SILHOUETTES_TWO2,6] = "I hope this is not the truth.";
     
     dialog[LAMP_SILHOUETTE_ONE,0] = "She is always here with me. Guiding me. I won't let her go.";
     dialog[LAMP_SILHOUETTES_THREE,0] = "At least we have each other.";
@@ -154,10 +202,38 @@
     dialog[BENCH,5] = "I hope this helps." ;
     dialog[BENCH,6] = "Good luck.";
     
+    dialog[BENCH1,0] = "You can always find someone here. Everyone experiences that moment when you feel you need a break or when your path is blurry. To see from the outside." 
+    dialog[BENCH1,1] = "What do you see?";
+    dialog[BENCH1,2] = "Options 4";
+    dialog[BENCH1,3] = "I see.";
+    
+    dialog[BENCH2,0] = "All those people... They are too busy to see the other possibilities. Following the path that is shaped by the predecessors." 
+    dialog[BENCH2,1] = "Did you walk the same way in your life similar to the others?";
+    dialog[BENCH2,2] = "Options 3";
+    dialog[BENCH2,3] = "Same here.";
+    
+    dialog[BENCH3,0] = "I question the skepticals. We can see what is ahead, then why risk it? Why not trust the predecessors?" 
+    dialog[BENCH3,1] = "What do you think, a risky road or one with safe choices?";
+    dialog[BENCH3,2] = "Options 4";
+    dialog[BENCH3,3] = "You follow passion, I guess.";
+    dialog[BENCH3,4] = "That's it.";
+    dialog[BENCH3,5] = "Now that is interesting. I never thought this as an option.";
+    dialog[BENCH3,6] = "Think carefully. You look you don't have much time left.";
+    
+    dialog[BENCH4,0] = "I don't know how many times I've been here to watch they go. What do you call them?";
+    dialog[BENCH4,1] = "Options 5";
+    dialog[BENCH4,2] = "Interesting.";
+    
+    dialog[BENCH5,0] = "Leave me be, I am not in the mood to talk.";
+    
     
     options[SILHOUETTE7,0] = "We have free will.";
     options[SILHOUETTE7,1] = "Free will is an ilusion.";
     options[SILHOUETTE7,2] = "I'm not sure.";
+    
+    options[SILHOUETTE9,0] = "Yes.";
+    options[SILHOUETTE9,1] = "Maybe later.";
+    options[SILHOUETTE9,2] = "No.";
     
     options[SILHOUETTES_TWO,0] = "Yes";
     options[SILHOUETTES_TWO,1] = "No";
@@ -174,7 +250,26 @@
     
     options[BENCH,0] = "Yes";
     options[BENCH,1] = "No";
-
+    
+    options[BENCH1,0] = "Boundaries.";
+    options[BENCH1,1] = "A path.";
+    options[BENCH1,2] = "A choice.";
+    options[BENCH1,3] = "I'm not sure.";
+    
+    options[BENCH2,0] = "I think so.";
+    options[BENCH2,1] = "I've had a unique way.";
+    options[BENCH2,2] =  "I'm not sure.";
+    
+    options[BENCH3,0] = "A risky road.";
+    options[BENCH3,1] = "A safe road.";
+    options[BENCH3,2] = "In between.";
+    options[BENCH3,3] = "I'm not sure.";
+    
+    options[BENCH4,0] = "Sheep";
+    options[BENCH4,0] = "Ordinary";
+    options[BENCH4,0] = "Normal";
+    options[BENCH4,0] = "Devoted";
+    options[BENCH4,0] = "I'm not sure.";
 }
 </string>
           </argument>
